@@ -1,0 +1,59 @@
+// Buttons
+
+.btn-group {
+  .btn {
+    font-size: $font-size-base;
+  }
+}
+
+.btn {
+  font-size: $font-size-base;
+}
+
+.dropdown-toggle-no-caret {
+  &::after {
+    display: none;
+  }
+}
+
+// Dropdown toggle
+
+.dropdown-toggle {
+  &::after {
+    position: relative;
+    top: 2px;
+    opacity: .8;
+  }
+}
+
+.dropright {
+  .dropdown-toggle {
+    &::after {
+      top: 0;
+    }
+  }
+}
+
+.dropdown-toggle-split {
+  border-left: rgba(255, 255, 255, .1) solid 1px;
+}
+
+.btn.btn-shadow {
+  &.active {
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+}
+
+// Links
+
+$link-color: theme-color("primary");
+$link-hover-color: darken($link-color, 15%);
+
+.btn {
+  position: relative;
+  @include transition($btn-transition);
+}
+
+.btn-light {
+  border-color: darken(#f5f5f5, 10%);
+}

@@ -1,0 +1,88 @@
+// Sidebar Light
+
+.app-sidebar {
+  &.text-lighter {
+    .app-sidebar-content {
+      background: none !important;
+    }
+
+    .app-header__logo {
+      background: rgba(255, 255, 255, .1) !important;
+    }
+
+    .logo-src {
+      background: url('./assets/images/logo.png');
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background: rgba(255, 255, 255, .8) !important;
+    }
+
+    .hamburger-box:hover {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background: rgba(255, 255, 255, 1) !important;
+      }
+    }
+
+    .v-sidebar-menu {
+      .vsm-header {
+        color: rgba(255, 255, 255, 0.6);
+
+        &::before {
+          background: rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      %side-link-hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 1);
+      }
+
+      & .vsm-item.active-item {
+        & > .vsm-link {
+          @extend %side-link-hover;
+        }
+      }
+
+      .vsm-arrow,
+      .vsm-icon {
+        opacity: .5;
+      }
+
+      & .vsm-link {
+        color: rgba(255, 255, 255, .7);
+
+        &:hover {
+          .vsm-icon {
+            opacity: .65;
+          }
+        }
+      }
+
+      & .vsm-dropdown {
+        &::before {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+
+    .ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .ps.ps--in-scrolling.ps--y:hover > .ps__scrollbar-y-rail,
+    .ps.ps--in-scrolling.ps--y > .ps__scrollbar-y-rail,
+    .ps:hover > .ps__scrollbar-y-rail:hover {
+      background-color: rgba(255, 255, 255, .1) !important;
+
+      & > .ps__scrollbar-y {
+        background-color: rgba(255, 255, 255, .25) !important;
+      }
+    }
+
+  }
+}

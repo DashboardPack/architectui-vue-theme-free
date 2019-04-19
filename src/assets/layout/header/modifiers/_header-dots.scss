@@ -1,0 +1,86 @@
+// Header Dots
+
+.header-dots {
+  margin-left: auto;
+  display: flex;
+
+  & > .dropdown {
+    display: flex;
+    align-content: center;
+
+    & > .btn-link {
+      text-decoration: none;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .dropdown-item {
+
+      .flag {
+        position: absolute;
+        @include border-radius($border-radius-lg);
+
+        & + span {
+          padding-left: 50px;
+        }
+      }
+
+      &:hover {
+        .flag {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .icon-wrapper-alt {
+    margin: 0;
+    height: 44px;
+    width: 44px;
+    text-align: center;
+    overflow: visible;
+
+    .language-icon {
+      @include border-radius(30px);
+      position: relative;
+      z-index: 4;
+      width: 28px;
+      height: 28px;
+      overflow: hidden;
+      margin: 0 auto;
+
+      .flag {
+        transform: scale(0.7) !important;
+        position: absolute;
+        left: 0;
+        top: -18px;
+      }
+    }
+
+    .icon-wrapper-bg {
+      opacity: .1;
+      transition: opacity .2s;
+      @include border-radius(40px);
+    }
+
+    i {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .icon-wrapper-bg {
+        opacity: .2;
+      }
+    }
+
+    .badge-dot {
+      top: 1px;
+      right: 1px;
+      border: 0;
+    }
+  }
+}

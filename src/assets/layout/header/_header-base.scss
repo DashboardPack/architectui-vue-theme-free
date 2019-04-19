@@ -1,0 +1,72 @@
+// Header Base
+
+.app-header {
+  height: $app-header-height;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  z-index: 10;
+  transition: all .2s;
+  position: fixed;
+  width: 100%;
+
+  .logo-src {
+    display: none;
+  }
+
+  &.header-shadow {
+    box-shadow: $box-shadow-default;
+  }
+
+  .app-header__content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+    padding-left: $app-sidebar-width;
+    height: $app-header-height;
+    transition: all .2s;
+
+    .app-header-left {
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 $layout-spacer-x;
+    }
+
+    .app-header-right {
+      align-items: center;
+      display: flex;
+      margin-left: auto;
+      padding: 0 $layout-spacer-x 0 0;
+    }
+  }
+
+  .header-user-info {
+    & > .widget-heading,
+    & > .widget-subheading {
+      white-space: nowrap;
+    }
+
+    & > .widget-subheading {
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+.app-header__menu,
+.app-header__mobile-menu {
+  display: none;
+  padding: 0 $layout-spacer-x;
+  height: $app-header-height;
+  align-items: center;
+}
+
+// Modifiers
+
+@import "modifiers/header-dots";
+@import "modifiers/header-userarea";
+
+// Header Themes
+
+@import "themes/header-light";
+@import "themes/header-dark";
