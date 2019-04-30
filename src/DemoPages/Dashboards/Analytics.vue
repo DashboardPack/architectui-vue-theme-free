@@ -5,10 +5,7 @@
             <div class="card-header-tab card-header">
                 <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
                     <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
-                    Portfolio Performance
-                </div>
-                <div class="btn-actions-pane-right text-capitalize">
-                    <button class="btn-wide btn-outline-2x mr-md-2 btn btn-outline-focus btn-sm">View All</button>
+                    Data Statistics
                 </div>
             </div>
             <div class="no-gutters row">
@@ -113,82 +110,29 @@
                     </div>
                     <div class="p-0 card-body">
                         <div class="p-1 slick-slider-sm mx-auto">
-                            <slick ref="slick" :options="slickOptions2">
-                                <div class="widget-chart widget-chart2 text-left p-0">
-                                    <div class="widget-chat-wrapper-outer">
-                                        <div class="widget-chart-content widget-chart-content-lg pb-0">
+                            <div class="widget-chart widget-chart2 text-left p-0">
+                                <div class="widget-chat-wrapper-outer">
+                                    <div class="widget-chart-content widget-chart-content-lg pb-0">
+                                        <div class="widget-chart-flex">
+                                            <div class="widget-title opacity-5 text-muted text-uppercase">Helpdesk Tickets</div>
+                                        </div>
+                                        <div class="widget-numbers">
                                             <div class="widget-chart-flex">
-                                                <div class="widget-title opacity-5 text-muted text-uppercase">Helpdesk Tickets</div>
-                                            </div>
-                                            <div class="widget-numbers">
-                                                <div class="widget-chart-flex">
-                                                    <div>
-                                                        <span class="text-warning">34</span>
-                                                    </div>
-                                                    <div class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
-                                                        <span class="opacity-5 text-muted pl-2 pr-1">5%</span>
-                                                        increase
-                                                    </div>
+                                                <div>
+                                                    <span class="text-warning">34</span>
+                                                </div>
+                                                <div class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
+                                                    <span class="opacity-5 text-muted pl-2 pr-1">5%</span>
+                                                    increase
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                                            <chart1 :height="145"/>
-                                        </div>
+                                    </div>
+                                    <div class="widget-chart-wrapper he-auto opacity-10 m-0">
+                                        <chart1 :height="145"/>
                                     </div>
                                 </div>
-                                <div class="widget-chart widget-chart2 text-left p-0">
-                                    <div class="widget-chat-wrapper-outer">
-                                        <div class="widget-chart-content widget-chart-content-lg pb-0">
-                                            <div class="widget-chart-flex">
-                                                <div class="widget-title opacity-5 text-muted text-uppercase">New Accounts since 2018</div>
-                                            </div>
-                                            <div class="widget-numbers">
-                                                <div class="widget-chart-flex">
-                                                    <div>
-                                                        <span class="opacity-10 text-success pr-2">
-                                                            <font-awesome-icon icon="angle-up"/>
-                                                        </span>
-                                                        <span>78</span>
-                                                        <small class="opacity-5 pl-1">%</small>
-                                                    </div>
-                                                    <div class="widget-title ml-2 font-size-lg font-weight-normal text-muted">
-                                                        <span class="text-success pl-2">+14</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                                            <chart2 :height="145"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="widget-chart widget-chart2 text-left p-0">
-                                    <div class="widget-chat-wrapper-outer">
-                                        <div class="widget-chart-content widget-chart-content-lg pb-0">
-                                            <div class="widget-chart-flex">
-                                                <div class="widget-title opacity-5 text-muted text-uppercase">Last Year Total Sales</div>
-                                            </div>
-                                            <div class="widget-numbers">
-                                                <div class="widget-chart-flex">
-                                                    <div>
-                                                        <small class="opacity-3 pr-1">$</small>
-                                                        <span>629</span>
-                                                        <span class="text-primary pl-3">
-                                                            <font-awesome-icon icon="angle-down"/>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                                            <chart3 :height="145"/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </slick>
+                            </div>
                         </div>
 
                         <h6 class="text-muted text-uppercase font-size-md opacity-5 pl-3 pr-3 pb-1 font-weight-normal">Sales Progress</h6>
@@ -231,30 +175,6 @@
                             <i class="header-icon lnr-lighter icon-gradient bg-amy-crisp"> </i>
                             Timeline Example
                         </div>
-                        <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
-                            <b-dropdown toggle-class="btn-icon btn-icon-only" right variant="link" no-caret>
-                                <span slot="button-content"><i class="pe-7s-menu btn-icon-wrapper"></i></span>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item-header nav-item">Activity</li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Chat
-                                        <div class="ml-auto badge badge-pill badge-info">8</div>
-                                    </a></li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Recover Password</a></li>
-                                    <li class="nav-item-header nav-item">My Account</li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Settings
-                                        <div class="ml-auto badge badge-success">New</div>
-                                    </a></li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Messages
-                                        <div class="ml-auto badge badge-warning">512</div>
-                                    </a></li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Logs</a></li>
-                                    <li class="nav-item-divider nav-item"></li>
-                                    <li class="nav-item-btn nav-item">
-                                        <button class="btn-wide btn-shadow btn btn-danger btn-sm">Cancel</button>
-                                    </li>
-                                </ul>
-                            </b-dropdown>
-                        </div>
                     </div>
                     <div class="scroll-area-lg">
                         <VuePerfectScrollbar class="scrollbar-container" v-once>
@@ -292,51 +212,6 @@
                                             <div class="vertical-timeline-element-content bounce-in">
                                                 <h4 class="timeline-title">
                                                     Something not important
-                                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/1.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/2.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/3.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/4.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/5.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/9.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/7.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/8.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
-                                                            <div class="avatar-icon"><i>+</i></div>
-                                                        </div>
-                                                    </div>
                                                 </h4>
                                             </div>
                                         </div>
@@ -487,15 +362,7 @@
                         </div>
                         <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
                             <div class="col-md-12">
-                                <trend
-                                    :data="[0, 8, 5, 7, 7, 8, 5, 2, 7, 8]"
-                                    :gradient="['var(--success)']"
-                                    stroke-width="3"
-                                    :height="80"
-                                    stroke-linecap="round"
-                                    auto-draw
-                                    smooth>
-                                </trend>
+                                trend
                             </div>
                         </div>
                     </div>
@@ -518,15 +385,7 @@
                         </div>
                         <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
                             <div class="col-md-12">
-                                <trend
-                                    :data="[2,8,3,6,8,4,3,6,8,4]"
-                                    :gradient="['var(--primary)']"
-                                    stroke-width="3"
-                                    :height="80"
-                                    stroke-linecap="round"
-                                    auto-draw
-                                    smooth>
-                                </trend>
+                                trend
                             </div>
                         </div>
                     </div>
@@ -549,15 +408,7 @@
                         </div>
                         <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
                             <div class="col-md-12">
-                                <trend
-                                    :data="[5,8,3,6,8,5,3,8,5,3,8]"
-                                    :gradient="['var(--warning)']"
-                                    stroke-width="3"
-                                    :height="80"
-                                    stroke-linecap="round"
-                                    auto-draw
-                                    smooth>
-                                </trend>
+                                trend
                             </div>
                         </div>
                     </div>
@@ -580,15 +431,7 @@
                         </div>
                         <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
                             <div class="col-md-12">
-                                <trend
-                                    :data="[5,7,8,2,5,7,4,2,4,9]"
-                                    :gradient="['var(--danger)']"
-                                    stroke-width="3"
-                                    :height="80"
-                                    stroke-linecap="round"
-                                    auto-draw
-                                    smooth>
-                                </trend>
+                                trend
                             </div>
                         </div>
                     </div>
@@ -599,13 +442,11 @@
             <div class="card-header-tab card-header">
                 <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
                     <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
-                    Easy Dynamic Tables
-                </div>
-                <div class="btn-actions-pane-right actions-icon-btn">
+                    Tables Examples
                 </div>
             </div>
             <div class="card-body">
-                <b-table bordered class="mb-0" striped hover :items="items" :fields="fields"></b-table>
+                table
             </div>
         </div>
         <div class="row">
@@ -613,21 +454,6 @@
                 <div class="card-hover-shadow-2x mb-3 card">
                     <div class="card-header-tab card-header">
                         <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i class="header-icon lnr-database icon-gradient bg-malibu-beach"> </i>Tasks List</div>
-                        <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
-                            <b-dropdown toggle-class="btn-icon btn-icon-only" variant="link" right>
-                                <span slot="button-content"><font-awesome-icon icon="th"/></span>
-                                <div>
-                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-inbox"> </i><span>Menus</span></button>
-                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-file-empty"> </i><span>Settings</span></button>
-                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-book"> </i><span>Actions</span></button>
-                                    <div tabindex="-1" class="dropdown-divider"></div>
-                                    <div class="p-1 text-right">
-                                        <button class="mr-2 btn-shadow btn-sm btn btn-link">View Details</button>
-                                        <button class="mr-2 btn-shadow btn-sm btn btn-primary">Action</button>
-                                    </div>
-                                </div>
-                            </b-dropdown>
-                        </div>
                     </div>
                     <div class="scroll-area-lg">
                         <VuePerfectScrollbar class="scrollbar-container" v-once>
@@ -896,117 +722,10 @@
                             <i class="header-icon lnr-printer icon-gradient bg-ripe-malin"> </i>
                             Chat Box
                         </div>
-                        <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
-                            <b-dropdown toggle-class="btn-icon btn-icon-only" no-caret variant="link" right>
-                                <span slot="button-content"><font-awesome-icon icon="th"/></span>
-                                <div>
-                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-inbox"> </i><span>Menus</span></button>
-                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-file-empty"> </i><span>Settings</span></button>
-                                    <button type="button" tabindex="0" class="dropdown-item"><i class="dropdown-icon lnr-book"> </i><span>Actions</span></button>
-                                    <div tabindex="-1" class="dropdown-divider"></div>
-                                    <div class="p-1 text-right">
-                                        <button class="mr-2 btn-shadow btn-sm btn btn-link">View Details</button>
-                                        <button class="mr-2 btn-shadow btn-sm btn btn-primary">Action</button>
-                                    </div>
-                                </div>
-                            </b-dropdown>
-                        </div>
                     </div>
                     <div class="scroll-area-lg">
                         <VuePerfectScrollbar class="scrollbar-container" v-once>
-                            <div class="chat-wrapper p-1">
-                                <div class="chat-box-wrapper">
-                                    <div>
-                                        <div class="avatar-icon-wrapper mr-1">
-                                            <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                                            <div class="avatar-icon avatar-icon-lg rounded">
-                                                <img src="@/assets/images/avatars/2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="chat-box">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</div>
-                                        <small class="opacity-6">
-                                            <font-awesome-icon icon="calendar-alt" class="mr-1"/>
-                                            11:01 AM | Yesterday
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="float-right">
-                                    <div class="chat-box-wrapper chat-box-wrapper-right">
-                                        <div>
-                                            <div class="chat-box">Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</div>
-                                            <small class="opacity-6">
-                                                <font-awesome-icon icon="calendar-alt" class="mr-1"/>
-                                                11:01 AM | Yesterday
-                                            </small>
-                                        </div>
-                                        <div>
-                                            <div class="avatar-icon-wrapper ml-1">
-                                                <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                                                <div class="avatar-icon avatar-icon-lg rounded">
-                                                    <img src="@/assets/images/avatars/3.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="chat-box-wrapper">
-                                    <div>
-                                        <div class="avatar-icon-wrapper mr-1">
-                                            <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                                            <div class="avatar-icon avatar-icon-lg rounded">
-                                                <img src="@/assets/images/avatars/2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="chat-box">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</div>
-                                        <small class="opacity-6">
-                                            <font-awesome-icon icon="calendar-alt" class="mr-1"/>
-                                            11:01 AM | Yesterday
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="float-right">
-                                    <div class="chat-box-wrapper chat-box-wrapper-right">
-                                        <div>
-                                            <div class="chat-box">Denouncing pleasure and praising pain was born and I will give you a complete account.</div>
-                                            <small class="opacity-6">
-                                                <font-awesome-icon icon="calendar-alt" class="mr-1"/>
-                                                11:01 AM | Yesterday
-                                            </small>
-                                        </div>
-                                        <div>
-                                            <div class="avatar-icon-wrapper ml-1">
-                                                <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                                                <div class="avatar-icon avatar-icon-lg rounded">
-                                                    <img src="@/assets/images/avatars/2.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="float-right">
-                                    <div class="chat-box-wrapper chat-box-wrapper-right">
-                                        <div>
-                                            <div class="chat-box">The master-builder of human happiness.</div>
-                                            <small class="opacity-6">
-                                                <font-awesome-icon icon="calendar-alt" class="mr-1"/>
-                                                11:01 AM | Yesterday
-                                            </small>
-                                        </div>
-                                        <div>
-                                            <div class="avatar-icon-wrapper ml-1">
-                                                <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                                                <div class="avatar-icon avatar-icon-lg rounded">
-                                                    <img src="@/assets/images/avatars/2.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            scrollable
                         </VuePerfectScrollbar>
                     </div>
                     <div class="card-footer">

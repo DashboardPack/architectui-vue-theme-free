@@ -1,18 +1,8 @@
 <template>
   <div>
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
-    <tabs
-      :tabs="tabs"
-      :currentTab="currentTab"
-      :wrapper-class="'body-tabs shadow-tabs'"
-      :tab-class="'tab-item'"
-      :tab-active-class="'tab-item-active'"
-      :line-class="'tab-item-line'"
-      @onClick="handleClick"
-    />
+
     <div class="content">
-      <div v-if="currentTab === 'tab1'">
-        <div>
           <div class="main-card mb-3 card">
             <div class="card-body"><h5 class="card-title">Grid Rows</h5>
               <form class="">
@@ -66,10 +56,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div v-if="currentTab === 'tab2'">
-        <div>
           <div class="main-card mb-3 card">
             <div class="card-body"><h5 class="card-title">Grid</h5>
               <form class="">
@@ -114,8 +100,6 @@
               </form>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -124,33 +108,16 @@
 
   import PageTitle from "../../../Layout/Components/PageTitle.vue";
 
-
-  const TABS = [{
-    title: 'Layout',
-    value: 'tab1',
-  }, {
-    title: 'Grid',
-    value: 'tab2',
-  }];
-
   export default {
     components: {
       PageTitle,
-      Tabs,
     },
     data: () => ({
       heading: 'Form Layouts',
       subheading: 'Build whatever layout you need with our ArchitectUI framework.',
       icon: 'pe-7s-graph text-success',
-
-      tabs: TABS,
-      currentTab: 'tab1',
     }),
 
-    methods: {
-      handleClick(newTab) {
-        this.currentTab = newTab;
-      },
-    }
+
   }
 </script>

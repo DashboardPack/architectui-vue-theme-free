@@ -1,17 +1,8 @@
 <template>
   <div>
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
-    <tabs
-      :tabs="tabs"
-      :currentTab="currentTab"
-      :wrapper-class="'body-tabs shadow-tabs'"
-      :tab-class="'tab-item'"
-      :tab-active-class="'tab-item-active'"
-      :line-class="'tab-item-line'"
-      @onClick="handleClick"
-    />
+
     <div class="content">
-      <div v-if="currentTab === 'tab1'">
         <div class="row">
           <div class="col-lg-6">
             <div class="main-card mb-3 card">
@@ -129,24 +120,6 @@
                         <div><b>52,5%</b></div>
                         YoY Growth
                       </div>
-                      <div class="widget-content-right">
-                        <div class="progress-circle-wrapper">
-                          <div class="circle-progress">
-                            <vue-circle
-                              :progress="50"
-                              :size="50"
-                              :reverse="false"
-                              line-cap="round"
-                              empty-fill="rgba(0, 0, 0, .1)"
-                              :animation-start-value="0.0"
-                              :start-angle="0"
-                              insert-mode="append"
-                              :thickness="3"
-                              :show-percent="true">
-                            </vue-circle>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </li>
@@ -155,25 +128,6 @@
                     <div class="widget-content-wrapper">
                       <div class="widget-content-left">
                         <div class="widget-heading">Product Sales</div>
-                      </div>
-                      <div class="widget-content-right">
-                        <div class="progress-circle-wrapper">
-                          <div class="circle-progress">
-                            <vue-circle
-                              :progress="34"
-                              :size="54"
-                              :reverse="false"
-                              line-cap="round"
-                              :fill="fill"
-                              empty-fill="rgba(0, 0, 0, .1)"
-                              :animation-start-value="0.0"
-                              :start-angle="0"
-                              insert-mode="append"
-                              :thickness="4"
-                              :show-percent="true">
-                            </vue-circle>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -374,107 +328,6 @@
           </div>
           <div class="col-lg-6">
             <div class="main-card mb-3 card">
-              <div class="card-header">Chat Box</div>
-              <div class="scroll-area-sm">
-                <VuePerfectScrollbar class="scrollbar-container" v-once>
-                  <div class="chat-wrapper p-1">
-                    <div class="chat-box-wrapper">
-                      <div>
-                        <div class="avatar-icon-wrapper mr-1">
-                          <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                          <div class="avatar-icon avatar-icon-lg rounded">
-                            <img src="@/assets/images/avatars/2.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="chat-box">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</div>
-                        <small class="opacity-6">
-                          <font-awesome-icon icon="calendar-alt" class="mr-1" />
-                          11:01 AM | Yesterday
-                        </small>
-                      </div>
-                    </div>
-                    <div class="float-right">
-                      <div class="chat-box-wrapper chat-box-wrapper-right">
-                        <div>
-                          <div class="chat-box">Expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</div>
-                          <small class="opacity-6">
-                            <font-awesome-icon icon="calendar-alt" class="mr-1" />
-                            11:01 AM | Yesterday
-                          </small>
-                        </div>
-                        <div>
-                          <div class="avatar-icon-wrapper ml-1">
-                            <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                            <div class="avatar-icon avatar-icon-lg rounded">
-                              <img src="@/assets/images/avatars/3.jpg" alt="">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="chat-box-wrapper">
-                      <div>
-                        <div class="avatar-icon-wrapper mr-1">
-                          <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                          <div class="avatar-icon avatar-icon-lg rounded">
-                            <img src="@/assets/images/avatars/2.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="chat-box">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</div>
-                        <small class="opacity-6">
-                          <font-awesome-icon icon="calendar-alt" class="mr-1" />
-                          11:01 AM | Yesterday
-                        </small>
-                      </div>
-                    </div>
-                    <div class="float-right">
-                      <div class="chat-box-wrapper chat-box-wrapper-right">
-                        <div>
-                          <div class="chat-box">Denouncing pleasure and praising pain was born and I will give you a complete account.</div>
-                          <small class="opacity-6">
-                            <font-awesome-icon icon="calendar-alt" class="mr-1" />
-                            11:01 AM | Yesterday
-                          </small>
-                        </div>
-                        <div>
-                          <div class="avatar-icon-wrapper ml-1">
-                            <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                            <div class="avatar-icon avatar-icon-lg rounded">
-                              <img src="@/assets/images/avatars/2.jpg" alt="">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="float-right">
-                      <div class="chat-box-wrapper chat-box-wrapper-right">
-                        <div>
-                          <div class="chat-box">The master-builder of human happiness.</div>
-                          <small class="opacity-6">
-                            <font-awesome-icon icon="calendar-alt" class="mr-1" />
-                            11:01 AM | Yesterday
-                          </small>
-                        </div>
-                        <div>
-                          <div class="avatar-icon-wrapper ml-1">
-                            <div class="badge badge-bottom btn-shine badge-success badge-dot badge-dot-lg"></div>
-                            <div class="avatar-icon avatar-icon-lg rounded">
-                              <img src="@/assets/images/avatars/2.jpg" alt="">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </VuePerfectScrollbar>
-              </div>
-              <div class="card-footer"><input placeholder="Write here and hit enter to send..." type="text" class="form-control-lg form-control"></div>
-            </div>
-            <div class="main-card mb-3 card">
               <div class="card-body">
                 <ul class="list-group">
                   <li class="list-group-item">
@@ -577,24 +430,6 @@
                           <div><b>52,5%</b></div>
                           YoY Growth
                         </div>
-                        <div class="widget-content-right">
-                          <div class="progress-circle-wrapper">
-                            <div class="circle-progress">
-                              <vue-circle
-                                :progress="76"
-                                :size="50"
-                                :reverse="false"
-                                line-cap="round"
-                                empty-fill="rgba(0, 0, 0, .1)"
-                                :animation-start-value="0.0"
-                                :start-angle="0"
-                                insert-mode="append"
-                                :thickness="3"
-                                :show-percent="true">
-                              </vue-circle>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </li>
@@ -603,24 +438,6 @@
                       <div class="widget-content-wrapper">
                         <div class="widget-content-left">
                           <div class="widget-heading">Product Sales</div>
-                        </div>
-                        <div class="widget-content-right">
-                          <div class="progress-circle-wrapper">
-                            <div class="circle-progress">
-                              <vue-circle
-                                :progress="23"
-                                :size="45"
-                                :reverse="false"
-                                line-cap="round"
-                                empty-fill="rgba(0, 0, 0, .15)"
-                                :animation-start-value="0.0"
-                                :start-angle="0"
-                                insert-mode="append"
-                                :thickness="2"
-                                :show-percent="true">
-                              </vue-circle>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -660,8 +477,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div v-if="currentTab === 'tab2'">
         <div class="row">
           <div class="col-md-6">
             <div class="main-card mb-3 card">
@@ -748,7 +563,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -770,18 +584,10 @@
     faCheck
   );
 
-  const TABS = [{
-    title: 'Advanced',
-    value: 'tab1',
-  }, {
-    title: 'Basic',
-    value: 'tab2',
-  }];
-
   export default {
     components: {
       PageTitle,
-      Tabs,
+
       VuePerfectScrollbar,
       'font-awesome-icon': FontAwesomeIcon,
     },
@@ -790,15 +596,8 @@
       subheading: 'These can be used with other components and elements to create stunning and unique new elements for your UIs.',
       icon: 'pe-7s-paint icon-gradient bg-sunny-morning',
 
-      tabs: TABS,
-      currentTab: 'tab1',
-
     }),
 
-    methods: {
-      handleClick(newTab) {
-        this.currentTab = newTab;
-      },
-    }
+
   }
 </script>

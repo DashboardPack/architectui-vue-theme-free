@@ -17,16 +17,6 @@
                 </div>
             </span>
         </b-dropdown>
-        <b-dropdown toggle-class="p-0 mr-2" variant="link" no-caret right>
-            <span slot="button-content">
-                <div class="icon-wrapper icon-wrapper-alt rounded-circle">
-                    <div class="icon-wrapper-bg bg-focus"></div>
-                    <div class="language-icon">
-                        <country-flag country="DE" class="opacity-8"/>
-                    </div>
-                </div>
-            </span>
-        </b-dropdown>
         <b-dropdown toggle-class="p-0" menu-class="dropdown-menu-xl" variant="link" no-caret right>
             <span slot="button-content">
                 <div class="icon-wrapper icon-wrapper-alt rounded-circle">

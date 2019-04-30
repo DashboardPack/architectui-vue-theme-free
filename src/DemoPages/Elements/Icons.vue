@@ -1,17 +1,8 @@
 <template>
   <div>
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
-    <tabs
-      :tabs="tabs"
-      :currentTab="currentTab"
-      :wrapper-class="'body-tabs shadow-tabs'"
-      :tab-class="'tab-item'"
-      :tab-active-class="'tab-item-active'"
-      :line-class="'tab-item-line'"
-      @onClick="handleClick"
-    />
+
     <div class="content">
-      <div v-if="currentTab === 'tab1'">
         <div class="main-card mb-3 card">
           <div class="card-body">
             <div class="card-title">
@@ -131,8 +122,6 @@
             </b-row>
           </div>
         </div>
-      </div>
-      <div v-if="currentTab === 'tab2'">
         <div class="main-card mb-3 card">
           <div class="card-body">
             <b-row>
@@ -182,88 +171,6 @@
           </div>
         </div>
       </div>
-      <div v-if="currentTab === 'tab3'">
-        <div class="main-card mb-3 card">
-          <div class="card-body">
-            <div class="card-title">
-              Gradient Icons
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-star icon-gradient bg-warm-flame"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-database icon-gradient bg-night-fade"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-apartment icon-gradient bg-sunny-morning"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-cog icon-gradient bg-tempting-azure"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-trash icon-gradient bg-amy-crisp"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-lock icon-gradient bg-malibu-beach"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-screen icon-gradient bg-mean-fruit"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-laptop-phone icon-gradient bg-heavy-rain"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-calendar-full icon-gradient bg-arielle-smile"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-user icon-gradient bg-ripe-malin"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-film-play icon-gradient bg-deep-blue"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-graduation-hat icon-gradient bg-happy-itmeo"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-eye icon-gradient bg-happy-fisher"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-hand icon-gradient bg-plum-plate"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-camera-video icon-gradient bg-grow-early"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-diamond icon-gradient bg-strong-bliss"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-magic-wand icon-gradient bg-mixed-hopes"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-heart icon-gradient bg-premium-dark"> </i>
-            </div>
-            <div class="font-icon-wrapper font-icon-lg">
-              <i class="lnr-hourglass icon-gradient bg-love-kiss"> </i>
-            </div>
-          </div>
-        </div>
-        <div class="main-card mb-3 card">
-          <div class="card-body">
-            <b-row>
-              <template
-                v-for="iconName in ['lnr-apartment', 'lnr-pencil', 'lnr-magic-wand', 'lnr-drop', 'lnr-lighter', 'lnr-poop', 'lnr-sun', 'lnr-moon', 'lnr-cloud', 'lnr-cloud-upload', 'lnr-cloud-download', 'lnr-cloud-sync', 'lnr-cloud-check', 'lnr-database', 'lnr-lock', 'lnr-cog', 'lnr-trash', 'lnr-dice', 'lnr-heart', 'lnr-star', 'lnr-star-half', 'lnr-star-empty', 'lnr-flag', 'lnr-envelope', 'lnr-paperclip', 'lnr-inbox', 'lnr-eye', 'lnr-printer', 'lnr-file-empty', 'lnr-file-add', 'lnr-enter', 'lnr-exit', 'lnr-graduation-hat', 'lnr-license', 'lnr-music-note', 'lnr-film-play', 'lnr-camera-video', 'lnr-camera', 'lnr-picture', 'lnr-book', 'lnr-bookmark', 'lnr-user', 'lnr-users', 'lnr-shirt', 'lnr-store', 'lnr-cart', 'lnr-tag', 'lnr-phone-handset', 'lnr-phone', 'lnr-pushpin', 'lnr-map-marker', 'lnr-map', 'lnr-location', 'lnr-calendar-full', 'lnr-keyboard', 'lnr-spell-check', 'lnr-screen', 'lnr-smartphone', 'lnr-tablet', 'lnr-laptop', 'lnr-laptop-phone', 'lnr-power-switch', 'lnr-bubble', 'lnr-heart-pulse', 'lnr-construction', 'lnr-pie-chart', 'lnr-chart-bars', 'lnr-gift', 'lnr-diamond', 'lnr-linearicons', 'lnr-dinner', 'lnr-coffee-cup', 'lnr-leaf', 'lnr-paw', 'lnr-rocket', 'lnr-briefcase', 'lnr-bus', 'lnr-car', 'lnr-train', 'lnr-bicycle', 'lnr-wheelchair', 'lnr-select', 'lnr-earth', 'lnr-smile', 'lnr-sad', 'lnr-neutral', 'lnr-mustache', 'lnr-alarm', 'lnr-bullhorn', 'lnr-volume-high', 'lnr-volume-medium', 'lnr-volume-low', 'lnr-volume', 'lnr-mic', 'lnr-hourglass', 'lnr-undo', 'lnr-redo', 'lnr-sync', 'lnr-history', 'lnr-clock', 'lnr-download', 'lnr-upload', 'lnr-enter-down', 'lnr-exit-up', 'lnr-bug', 'lnr-code', 'lnr-link', 'lnr-unlink', 'lnr-thumbs-up', 'lnr-thumbs-down', 'lnr-magnifier', 'lnr-cross', 'lnr-menu', 'lnr-list', 'lnr-chevron-up', 'lnr-chevron-down', 'lnr-chevron-left', 'lnr-chevron-right', 'lnr-arrow-up', 'lnr-arrow-down', 'lnr-arrow-left', 'lnr-arrow-right', 'lnr-move', 'lnr-warning', 'lnr-question-circle', 'lnr-menu-circle', 'lnr-checkmark-circle', 'lnr-cross-circle', 'lnr-plus-circle', 'lnr-circle-minus', 'lnr-arrow-up-circle', 'lnr-arrow-down-circle', 'lnr-arrow-left-circle', 'lnr-arrow-right-circle', 'lnr-chevron-up-circle', 'lnr-chevron-down-circle', 'lnr-chevron-left-circle', 'lnr-chevron-right-circle', 'lnr-crop', 'lnr-frame-expand', 'lnr-frame-contract', 'lnr-layers', 'lnr-funnel', 'lnr-text-format', 'lnr-text-format-remove', 'lnr-text-size', 'lnr-bold', 'lnr-italic', 'lnr-underline', 'lnr-strikethrough', 'lnr-highlight', 'lnr-text-align-left', 'lnr-text-align-center', 'lnr-text-align-right', 'lnr-text-align-justify', 'lnr-line-spacing', 'lnr-indent-increase', 'lnr-indent-decrease', 'lnr-pilcrow', 'lnr-direction-ltr', 'lnr-direction-rtl', 'lnr-page-break', 'lnr-sort-alpha-asc', 'lnr-sort-amount-asc', 'lnr-hand', 'lnr-pointer-up', 'lnr-pointer-right', 'lnr-pointer-down', 'lnr-pointer-left']">
-                <b-col md="2">
-                  <div class="font-icon-wrapper">
-                    <i :class=iconName> </i>
-                    <p>{{iconName}}</p>
-                  </div>
-                </b-col>
-              </template>
-            </b-row>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -330,21 +237,10 @@
     faArrowLeft,
   );
 
-  const TABS = [{
-    title: 'Pe7 Icons',
-    value: 'tab1',
-  }, {
-    title: 'FontAwesome',
-    value: 'tab2',
-  }, {
-    title: 'Linecons',
-    value: 'tab3',
-  }];
-
   export default {
     components: {
       PageTitle,
-      Tabs,
+
       'font-awesome-icon': FontAwesomeIcon,
     },
     data: () => ({
@@ -352,14 +248,10 @@
       subheading: 'Wide icons selection including from flag icons to FontAwesome and other icons libraries.',
       icon: 'pe-7s-phone icon-gradient bg-night-fade',
 
-      tabs: TABS,
-      currentTab: 'tab1',
+
+
     }),
 
-    methods: {
-      handleClick(newTab) {
-        this.currentTab = newTab;
-      },
-    }
+
   }
 </script>

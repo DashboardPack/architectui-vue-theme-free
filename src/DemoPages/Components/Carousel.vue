@@ -1,17 +1,8 @@
 <template>
   <div>
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
-    <tabs
-      :tabs="tabs"
-      :currentTab="currentTab"
-      :wrapper-class="'body-tabs shadow-tabs'"
-      :tab-class="'tab-item'"
-      :tab-active-class="'tab-item-active'"
-      :line-class="'tab-item-line'"
-      @onClick="handleClick"
-    />
+
     <div class="content">
-      <div v-if="currentTab === 'tab2'">
         <b-card title="Bootstrap 4 Carousel" class="main-card mb-3">
           <b-carousel id="carousel1"
                       style="text-shadow: 1px 1px 2px #333;"
@@ -66,41 +57,22 @@
         </b-card>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 
   import PageTitle from "../../Layout/Components/PageTitle.vue";
 
-
-  const TABS = [{
-    title: 'Slideshow',
-    value: 'tab1',
-  }, {
-    title: 'Carousel',
-    value: 'tab2',
-  }];
-
   export default {
     components: {
       PageTitle,
-      Tabs,
     },
     data: () => ({
         heading: 'Carousels & Slideshows',
         subheading: 'Create easy and beautiful slideshows with these Vue components.',
         icon: 'pe-7s-album icon-gradient bg-sunny-morning',
-
-        tabs: TABS,
-        currentTab: 'tab2',
-
     }),
 
-    methods: {
-      handleClick(newTab) {
-        this.currentTab = newTab;
-      },
-    }
+
   }
 </script>

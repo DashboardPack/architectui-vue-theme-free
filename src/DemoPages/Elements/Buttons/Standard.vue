@@ -1,17 +1,7 @@
 <template>
   <div>
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
-    <tabs
-      :tabs="tabs"
-      :currentTab="currentTab"
-      :wrapper-class="'body-tabs shadow-tabs'"
-      :tab-class="'tab-item'"
-      :tab-active-class="'tab-item-active'"
-      :line-class="'tab-item-line'"
-      @onClick="handleClick"
-    />
     <div class="content">
-      <div v-if="currentTab === 'tab1'">
         <b-row>
           <b-col lg="6">
             <div class="main-card mb-3 card">
@@ -173,8 +163,6 @@
             </div>
           </b-col>
         </b-row>
-      </div>
-      <div v-if="currentTab === 'tab2'">
         <b-row>
           <b-col lg="6">
             <div class="main-card mb-3 card">
@@ -304,24 +292,6 @@
             </div>
           </b-col>
         </b-row>
-        <div class="main-card mb-3 card">
-          <div class="card-body">
-            <h5 class="card-title">Loading Buttons</h5>
-            <b-row class="text-center">
-              <b-col md="3" v-for="(button, index) in buttons" :key="index">
-                <vue-ladda button-class="ladda-button btn btn-outline-primary mb-2 mr-2"
-                           :loading="button.loading"
-                           :data-style="button.dataStyle"
-                           :progress="button.progress"
-                           @click="submit(button)">
-                  {{button.dataStyle}}
-                </vue-ladda>
-              </b-col>
-            </b-row>
-          </div>
-        </div>
-      </div>
-      <div v-if="currentTab === 'tab3'">
         <b-row>
           <b-col lg="6">
             <div class="main-card mb-3 card">
@@ -471,8 +441,6 @@
             </b-row>
           </div>
         </div>
-      </div>
-      <div v-if="currentTab === 'tab4'">
         <b-row>
           <b-col lg="6">
             <div class="main-card mb-3 card">
@@ -622,7 +590,6 @@
             </b-row>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -631,33 +598,14 @@
 
   import PageTitle from "../../../Layout/Components/PageTitle.vue";
 
-
-  const TABS = [{
-    title: 'Solid',
-    value: 'tab1',
-  }, {
-    title: 'Outline',
-    value: 'tab2',
-  }, {
-    title: 'Outline 2x',
-    value: 'tab3',
-  }, {
-    title: 'Dashed',
-    value: 'tab4',
-  }];
-
   export default {
     components: {
       PageTitle,
-      Tabs,
     },
     data: () => ({
       heading: 'Standard Buttons',
       subheading: 'Wide selection of buttons that feature different styles for backgrounds, borders and hover options!',
       icon: 'pe-7s-plane icon-gradient bg-tempting-azure',
-
-      tabs: TABS,
-      currentTab: 'tab1',
 
       selected: [], // Must be an array reference!
       options: [
@@ -673,12 +621,6 @@
         {text: 'Radio 3 (disabled)', value: 'radio3', disabled: true},
         {text: 'Radio 4', value: 'radio4'}
       ]
-    }),
-
-    methods: {
-      handleClick(newTab) {
-        this.currentTab = newTab;
-      },
-    }
+    })
   }
 </script>

@@ -1,17 +1,7 @@
 <template>
   <div>
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
-    <tabs
-      :tabs="tabs"
-      :currentTab="currentTab"
-      :wrapper-class="'body-tabs shadow-tabs'"
-      :tab-class="'tab-item'"
-      :tab-active-class="'tab-item-active'"
-      :line-class="'tab-item-line'"
-      @onClick="handleClick"
-    />
     <div class="content">
-      <div v-if="currentTab === 'tab1'">
         <b-row>
           <b-col md="6">
             <b-card title="Doughnut" class="main-card mb-3">
@@ -30,8 +20,6 @@
             </b-card>
           </b-col>
         </b-row>
-      </div>
-      <div v-if="currentTab === 'tab2'">
         <b-row>
           <b-col md="6">
             <b-card title="Line Chart" class="main-card mb-3">
@@ -50,7 +38,6 @@
             </b-card>
           </b-col>
         </b-row>
-      </div>
     </div>
   </div>
 </template>
@@ -68,18 +55,9 @@
   import bar from './Chartjs/Bar'
   import barhoriz from './Chartjs/BarHoriz'
 
-  const TABS = [{
-    title: 'Circular Charts',
-    value: 'tab1',
-  }, {
-    title: 'Lines & Bars Charts',
-    value: 'tab2',
-  }];
-
   export default {
     components: {
       PageTitle,
-      Tabs,
 
       doughnut,
       radar,
@@ -95,15 +73,8 @@
       heading: 'ChartJS',
       subheading: 'Huge selection of charts created with the Vue ChartJS Plugin',
       icon: 'pe-7s-bandaid icon-gradient bg-amy-crisp',
-
-      tabs: TABS,
-      currentTab: 'tab2',
     }),
 
-    methods: {
-      handleClick(newTab) {
-        this.currentTab = newTab;
-      },
-    }
+
   }
 </script>
