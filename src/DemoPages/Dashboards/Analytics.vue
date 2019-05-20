@@ -13,7 +13,7 @@
                     <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
                         <div class="icon-wrapper rounded-circle">
                             <div class="icon-wrapper-bg opacity-10 bg-warning"></div>
-                            <i class="lnr-laptop-phone text-dark opacity-8"></i></div>
+                            <i class="pe-7s-scissors text-white opacity-8"></i></div>
                         <div class="widget-chart-content">
                             <div class="widget-subheading">Cash Deposits</div>
                             <div class="widget-numbers">1,7M</div>
@@ -32,7 +32,7 @@
                     <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
                         <div class="icon-wrapper rounded-circle">
                             <div class="icon-wrapper-bg opacity-9 bg-danger"></div>
-                            <i class="lnr-graduation-hat text-white"></i></div>
+                            <i class="pe-7s-radio text-white"></i></div>
                         <div class="widget-chart-content">
                             <div class="widget-subheading">Invested Dividents</div>
                             <div class="widget-numbers"><span>9M</span></div>
@@ -51,7 +51,7 @@
                     <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
                         <div class="icon-wrapper rounded-circle">
                             <div class="icon-wrapper-bg opacity-9 bg-success"></div>
-                            <i class="lnr-apartment text-white"></i></div>
+                            <i class="pe-7s-musiclist text-white"></i></div>
                         <div class="widget-chart-content">
                             <div class="widget-subheading">Capital Gains</div>
                             <div class="widget-numbers text-success"><span>$563</span></div>
@@ -83,30 +83,6 @@
                             <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
                             Technical Support
                         </div>
-                        <div class="btn-actions-pane-right text-capitalize actions-icon-btn">
-                            <b-dropdown toggle-class="btn-icon btn-icon-only" variant="link" no-caret>
-                                <span slot="button-content"><i class="pe-7s-menu btn-icon-wrapper"></i></span>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item-header nav-item">Activity</li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Chat
-                                        <div class="ml-auto badge badge-pill badge-info">8</div>
-                                    </a></li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Recover Password</a></li>
-                                    <li class="nav-item-header nav-item">My Account</li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Settings
-                                        <div class="ml-auto badge badge-success">New</div>
-                                    </a></li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Messages
-                                        <div class="ml-auto badge badge-warning">512</div>
-                                    </a></li>
-                                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Logs</a></li>
-                                    <li class="nav-item-divider nav-item"></li>
-                                    <li class="nav-item-btn nav-item">
-                                        <button class="btn-wide btn-shadow btn btn-danger btn-sm">Cancel</button>
-                                    </li>
-                                </ul>
-                            </b-dropdown>
-                        </div>
                     </div>
                     <div class="p-0 card-body">
                         <div class="p-1 slick-slider-sm mx-auto">
@@ -114,14 +90,17 @@
                                 <div class="widget-chat-wrapper-outer">
                                     <div class="widget-chart-content widget-chart-content-lg pb-0">
                                         <div class="widget-chart-flex">
-                                            <div class="widget-title opacity-5 text-muted text-uppercase">Helpdesk Tickets</div>
+                                            <div class="widget-title opacity-5 text-muted text-uppercase">Helpdesk
+                                                Tickets
+                                            </div>
                                         </div>
                                         <div class="widget-numbers">
                                             <div class="widget-chart-flex">
                                                 <div>
                                                     <span class="text-warning">34</span>
                                                 </div>
-                                                <div class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
+                                                <div
+                                                    class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
                                                     <span class="opacity-5 text-muted pl-2 pr-1">5%</span>
                                                     increase
                                                 </div>
@@ -135,7 +114,8 @@
                             </div>
                         </div>
 
-                        <h6 class="text-muted text-uppercase font-size-md opacity-5 pl-3 pr-3 pb-1 font-weight-normal">Sales Progress</h6>
+                        <h6 class="text-muted text-uppercase font-size-md opacity-5 pl-3 pr-3 pb-1 font-weight-normal">
+                            Sales Progress</h6>
                         <ul class="list-group list-group-flush">
                             <li class="p-3 bg-transparent list-group-item">
                                 <div class="widget-content p-0">
@@ -154,7 +134,9 @@
                                         </div>
                                         <div class="widget-progress-wrapper">
                                             <div class="progress-bar-sm progress-bar-animated-alt progress">
-                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%;"></div>
+                                                <div class="progress-bar bg-primary" role="progressbar"
+                                                     aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 43%;"></div>
                                             </div>
                                             <div class="progress-sub-label">
                                                 <div class="sub-label-left">YoY Growth</div>
@@ -179,7 +161,8 @@
                     <div class="scroll-area-lg">
                         <VuePerfectScrollbar class="scrollbar-container" v-once>
                             <div class="p-4">
-                                <div class="vertical-time-simple vertical-without-time vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+                                <div
+                                    class="vertical-time-simple vertical-without-time vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
                                     <div class="dot-danger vertical-timeline-element">
                                         <div>
                                             <span class="vertical-timeline-element-icon bounce-in"></span>
@@ -282,51 +265,6 @@
                                             <div class="vertical-timeline-element-content bounce-in">
                                                 <h4 class="timeline-title">
                                                     Something not important
-                                                    <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/1.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/2.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/3.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/4.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/5.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/9.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/7.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm">
-                                                            <div class="avatar-icon"><img
-                                                                src="@/assets/images/avatars/8.jpg"
-                                                                alt=""></div>
-                                                        </div>
-                                                        <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
-                                                            <div class="avatar-icon"><i>+</i></div>
-                                                        </div>
-                                                    </div>
                                                 </h4>
                                             </div>
                                         </div>
@@ -337,7 +275,6 @@
                     </div>
                     <div class="d-block text-center card-footer">
                         <button class="btn-shadow btn-wide btn-pill btn btn-focus">
-                            <span class="badge badge-dot badge-dot-lg badge-warning badge-pulse">Badge</span>
                             View All Messages
                         </button>
                     </div>
@@ -346,7 +283,8 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-xl-3">
-                <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
+                <div
+                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content pt-3 pl-3 pb-1">
                             <div class="widget-chart-flex">
@@ -360,16 +298,12 @@
                             </div>
                             <h6 class="widget-subheading mb-0 opacity-5">sales last month</h6>
                         </div>
-                        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
-                            <div class="col-md-12">
-                                trend
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
-                <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-primary border-primary">
+                <div
+                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-primary border-primary">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content pt-3 pl-3 pb-1">
                             <div class="widget-chart-flex">
@@ -383,16 +317,12 @@
                             </div>
                             <h6 class="widget-subheading mb-0 opacity-5">sales Income</h6>
                         </div>
-                        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
-                            <div class="col-md-12">
-                                trend
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
-                <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-warning border-warning">
+                <div
+                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-warning border-warning">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content pt-3 pl-3 pb-1">
                             <div class="widget-chart-flex">
@@ -406,16 +336,12 @@
                             </div>
                             <h6 class="widget-subheading mb-0 opacity-5">last month sales</h6>
                         </div>
-                        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
-                            <div class="col-md-12">
-                                trend
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-xl-3">
-                <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-danger border-danger">
+                <div
+                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-danger border-danger">
                     <div class="widget-chat-wrapper-outer">
                         <div class="widget-chart-content pt-3 pl-3 pb-1">
                             <div class="widget-chart-flex">
@@ -429,31 +355,17 @@
                             </div>
                             <h6 class="widget-subheading mb-0 opacity-5">total revenue</h6>
                         </div>
-                        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
-                            <div class="col-md-12">
-                                trend
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="card-header-tab card-header">
-                <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
-                    Tables Examples
-                </div>
-            </div>
-            <div class="card-body">
-                table
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-lg-6">
                 <div class="card-hover-shadow-2x mb-3 card">
                     <div class="card-header-tab card-header">
-                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i class="header-icon lnr-database icon-gradient bg-malibu-beach"> </i>Tasks List</div>
+                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i
+                            class="header-icon lnr-database icon-gradient bg-malibu-beach"> </i>Tasks List
+                        </div>
                     </div>
                     <div class="scroll-area-lg">
                         <VuePerfectScrollbar class="scrollbar-container" v-once>
@@ -463,8 +375,11 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox12" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                    for="exampleCustomCheckbox12">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox12"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox12">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
@@ -489,8 +404,11 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox1" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                   for="exampleCustomCheckbox1">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox1"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox1">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
@@ -501,32 +419,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="widget-content-right widget-content-actions">
-                                                <div class="d-inline-block">
-                                                    <b-dropdown toggle-class="btn-icon btn-icon-only" right variant="link" no-caret>
-                                                        <span slot="button-content"><i class="pe-7s-menu btn-icon-wrapper"></i></span>
-                                                        <ul class="nav flex-column">
-                                                            <li class="nav-item-header nav-item">Activity</li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Chat
-                                                                <div class="ml-auto badge badge-pill badge-info">8</div>
-                                                            </a></li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Recover Password</a></li>
-                                                            <li class="nav-item-header nav-item">My Account</li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Settings
-                                                                <div class="ml-auto badge badge-success">New</div>
-                                                            </a></li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Messages
-                                                                <div class="ml-auto badge badge-warning">512</div>
-                                                            </a></li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Logs</a></li>
-                                                            <li class="nav-item-divider nav-item"></li>
-                                                            <li class="nav-item-btn nav-item">
-                                                                <button class="btn-wide btn-shadow btn btn-danger btn-sm">Cancel</button>
-                                                            </li>
-                                                        </ul>
-                                                    </b-dropdown>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -535,13 +427,17 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox4" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                   for="exampleCustomCheckbox4">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox4"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox4">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left flex2">
                                                 <div class="widget-heading">Badge on the right task</div>
-                                                <div class="widget-subheading">This task has show on hover actions!</div>
+                                                <div class="widget-subheading">This task has show on hover actions!
+                                                </div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
@@ -559,18 +455,23 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox2" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                   for="exampleCustomCheckbox2">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox2"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox2">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left mr-3">
                                                 <div class="widget-content-left">
-                                                    <img width="42" class="rounded" src="@/assets/images/avatars/1.jpg" alt="">
+                                                    <img width="42" class="rounded" src="@/assets/images/avatars/1.jpg"
+                                                         alt="">
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">Go grocery shopping</div>
-                                                <div class="widget-subheading">A short description for this todo item</div>
+                                                <div class="widget-subheading">A short description for this todo item
+                                                </div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
@@ -588,8 +489,11 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox12" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                    for="exampleCustomCheckbox12">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox12"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox12">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
@@ -614,8 +518,11 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox1" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                   for="exampleCustomCheckbox1">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox1"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox1">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
@@ -627,30 +534,12 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
-                                                <div class="d-inline-block">
-                                                    <b-dropdown toggle-class="btn-icon btn-icon-only" right variant="link" no-caret>
-                                                        <span slot="button-content"><i class="pe-7s-menu btn-icon-wrapper"></i></span>
-                                                        <ul class="nav flex-column">
-                                                            <li class="nav-item-header nav-item">Activity</li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Chat
-                                                                <div class="ml-auto badge badge-pill badge-info">8</div>
-                                                            </a></li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Recover Password</a></li>
-                                                            <li class="nav-item-header nav-item">My Account</li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Settings
-                                                                <div class="ml-auto badge badge-success">New</div>
-                                                            </a></li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Messages
-                                                                <div class="ml-auto badge badge-warning">512</div>
-                                                            </a></li>
-                                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Logs</a></li>
-                                                            <li class="nav-item-divider nav-item"></li>
-                                                            <li class="nav-item-btn nav-item">
-                                                                <button class="btn-wide btn-shadow btn btn-danger btn-sm">Cancel</button>
-                                                            </li>
-                                                        </ul>
-                                                    </b-dropdown>
-                                                </div>
+                                                <button class="border-0 btn-transition btn btn-outline-success">
+                                                    <font-awesome-icon icon="check"/>
+                                                </button>
+                                                <button class="border-0 btn-transition btn btn-outline-danger">
+                                                    <font-awesome-icon icon="trash-alt"/>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -660,13 +549,17 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox4" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                   for="exampleCustomCheckbox4">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox4"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox4">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left flex2">
                                                 <div class="widget-heading">Badge on the right task</div>
-                                                <div class="widget-subheading">This task has show on hover actions!</div>
+                                                <div class="widget-subheading">This task has show on hover actions!
+                                                </div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
@@ -684,8 +577,11 @@
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox3" class="custom-control-input"><label class="custom-control-label"
-                                                                                                                                                                                   for="exampleCustomCheckbox3">&nbsp;</label>
+                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                                                                                   id="exampleCustomCheckbox3"
+                                                                                                   class="custom-control-input"><label
+                                                    class="custom-control-label"
+                                                    for="exampleCustomCheckbox3">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left flex2">
@@ -719,17 +615,74 @@
                 <div class="card-hover-shadow-2x mb-3 card">
                     <div class="card-header-tab card-header">
                         <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                            <i class="header-icon lnr-printer icon-gradient bg-ripe-malin"> </i>
-                            Chat Box
+                            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
+                            Tables Examples
                         </div>
                     </div>
-                    <div class="scroll-area-lg">
-                        <VuePerfectScrollbar class="scrollbar-container" v-once>
-                            scrollable
-                        </VuePerfectScrollbar>
-                    </div>
-                    <div class="card-footer">
-                        <input placeholder="Write here and hit enter to send..." type="text" class="form-control-sm form-control">
+                    <div class="card-body">
+                        <table aria-busy="false" aria-colcount="3"
+                               class="table b-table table-striped table-hover table-bordered border mb-0">
+                            <!----><!---->
+                            <thead role="rowgroup" class=""><!---->
+                            <tr role="row">
+                                <th role="columnheader" scope="col" aria-colindex="1" class="">First Name</th>
+                                <th role="columnheader" scope="col" aria-colindex="2" class="">Last Name</th>
+                                <th role="columnheader" scope="col" aria-colindex="3" class="">Age</th>
+                            </tr>
+                            </thead>
+                            <tfoot role="rowgroup" class="">
+                            <tr role="row">
+                                <th role="columnheader" scope="col" aria-colindex="1" class="">First Name</th>
+                                <th role="columnheader" scope="col" aria-colindex="2" class="">Last Name</th>
+                                <th role="columnheader" scope="col" aria-colindex="3" class="">Age</th>
+                            </tr>
+                            </tfoot>
+                            <tbody role="rowgroup" class=""><!---->
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Dickerson</td>
+                                <td role="cell" aria-colindex="2" class="">Macdonald</td>
+                                <td role="cell" aria-colindex="3" class="">40</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Larsen</td>
+                                <td role="cell" aria-colindex="2" class="">Shaw</td>
+                                <td role="cell" aria-colindex="3" class="">21</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Geneva</td>
+                                <td role="cell" aria-colindex="2" class="">Wilson</td>
+                                <td role="cell" aria-colindex="3" class="">89</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Dickerson</td>
+                                <td role="cell" aria-colindex="2" class="">Macdonald</td>
+                                <td role="cell" aria-colindex="3" class="">40</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Larsen</td>
+                                <td role="cell" aria-colindex="2" class="">Shaw</td>
+                                <td role="cell" aria-colindex="3" class="">21</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Geneva</td>
+                                <td role="cell" aria-colindex="2" class="">Wilson</td>
+                                <td role="cell" aria-colindex="3" class="">89</td>
+                            </tr><tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Dickerson</td>
+                                <td role="cell" aria-colindex="2" class="">Macdonald</td>
+                                <td role="cell" aria-colindex="3" class="">40</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Larsen</td>
+                                <td role="cell" aria-colindex="2" class="">Shaw</td>
+                                <td role="cell" aria-colindex="3" class="">21</td>
+                            </tr>
+                            <tr role="row" class="">
+                                <td role="cell" aria-colindex="1" class="">Geneva</td>
+                                <td role="cell" aria-colindex="2" class="">Wilson</td>
+                                <td role="cell" aria-colindex="3" class="">89</td>
+                            </tr><!----><!----></tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -891,8 +844,7 @@
             icon: 'pe-7s-plane icon-gradient bg-tempting-azure',
         }),
 
-        methods: {
-        },
+        methods: {},
 
     }
 

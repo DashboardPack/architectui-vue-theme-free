@@ -125,7 +125,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
   }
 
   & .vsm-item.parent-active-item,
-    .vsm-item.open-item {
+  .vsm-item.open-item {
     & > .vsm-link {
       font-weight: 600;
     }

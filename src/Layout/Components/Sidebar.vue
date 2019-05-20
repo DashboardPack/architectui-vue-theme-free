@@ -104,10 +104,6 @@
                                 href: '/elements/list-group',
                             },
                             {
-                                title: 'Navigation Menus',
-                                href: '/elements/navigation',
-                            },
-                            {
                                 title: 'Timeline',
                                 href: '/elements/timelines',
                             },
@@ -209,10 +205,20 @@
             }
         },
         props: {
-
-
+            sidebarbg: String,
         },
         methods: {
+
+            toggleBodyClass(className) {
+                const el = document.body;
+                this.isOpen = !this.isOpen;
+
+                if (this.isOpen) {
+                    el.classList.add(className);
+                } else {
+                    el.classList.remove(className);
+                }
+            },
             toggleSidebarHover(add, className) {
                 const el = document.body;
                 this.sidebarActive = !this.sidebarActive;

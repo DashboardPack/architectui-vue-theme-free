@@ -71,11 +71,6 @@ export default new Router({
             component: () => import('../DemoPages/Elements/ListGroups.vue'),
         },
         {
-            path: '/elements/navigation',
-            name: 'navigation',
-            component: () => import('../DemoPages/Elements/NavigationMenus.vue'),
-        },
-        {
             path: '/elements/timelines',
             name: 'timeline',
             component: () => import('../DemoPages/Elements/Timeline.vue'),

@@ -7,17 +7,6 @@
   align-items: center;
   position: relative;
 
-  &::before {
-    position: absolute;
-    left: -1px;
-    top: 50%;
-    background: $border-color;
-    width: 1px;
-    height: 30px;
-    margin-top: -15px;
-    content: '';
-  }
-
   .dropdown-toggle::after {
     position: absolute;
     top: 50%;

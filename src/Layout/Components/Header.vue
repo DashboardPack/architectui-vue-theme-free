@@ -6,7 +6,6 @@
                 <SearchBox/>
             </div>
             <div class="app-header-right">
-                <HeaderDots/>
                 <UserArea/>
             </div>
         </div>
@@ -34,7 +33,6 @@
 <script>
 
     import SearchBox from './Header/SearchBox';
-    import HeaderDots from './Header/HeaderDots';
     import UserArea from './Header/HeaderUserArea';
 
     import {library} from '@fortawesome/fontawesome-svg-core'
@@ -50,7 +48,6 @@
         name: "Header",
         components: {
             SearchBox,
-            HeaderDots,
             UserArea,
             'font-awesome-icon': FontAwesomeIcon,
         },

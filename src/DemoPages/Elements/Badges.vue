@@ -41,16 +41,16 @@
           <div class="col-lg-6">
             <div class="main-card mb-3 card">
               <div class="card-body"><h5 class="card-title">With Buttons</h5>
-                <button class="mb-2 mr-2 btn btn-primary">Primary<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-secondary">Secondary<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-success">Success<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-info">Info<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-warning">Warning<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-danger">Danger<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-focus">Focus<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-alternate">Alt<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-light">Light<span class="badge badge-light">NEW</span></button>
-                <button class="mb-2 mr-2 btn btn-dark">Dark<span class="badge badge-light">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-primary">Primary<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-secondary">Secondary<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-success">Success<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-info">Info<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-warning">Warning<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-danger">Danger<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-focus">Focus<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-alternate">Alt<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-light">Light<span class="badge badge-light ml-2">NEW</span></button>
+                <button class="mb-2 mr-2 btn btn-dark">Dark<span class="badge badge-light ml-2">NEW</span></button>
                 <button class="mb-2 mr-2 btn btn-link">Link 1<span class="badge badge-primary">NEW</span></button>
                 <button class="mb-2 mr-2 btn btn-link">Link 2<span class="badge badge-success">NEW</span></button>
                 <button class="mb-2 mr-2 btn btn-link">Link 3<span class="badge badge-danger">NEW</span></button>
