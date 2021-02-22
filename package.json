@@ -17,7 +17,7 @@
     "chart.js": "^2.8.0",
     "es6-promise": "^4.2.6",
     "increase-memory-limit": "^1.0.6",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.1",
     "pe7-icon": "^1.0.4",
     "perfect-scrollbar": "^1.4.0",
     "popper.js": "^1.15.0",
