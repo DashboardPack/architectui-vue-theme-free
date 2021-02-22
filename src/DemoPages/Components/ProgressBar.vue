@@ -13,7 +13,7 @@
           <b-btn class="mt-4" @click="clicked">Click me</b-btn>
         </b-card>
         <b-card title="Colors" class="mb-3">
-          <div v-for="bar in bars" class="row mb-1">
+          <div v-for="bar in bars" class="row mb-1" :key="bar">
             <div class="col-sm-2">{{ bar.variant }}:</div>
             <div class="col-sm-10 pt-1">
               <b-progress :value="bar.value"
@@ -79,8 +79,7 @@
     methods: {
       clicked () {
         this.counter = Math.random() * this.max
-        console.log('Change progress to ' +
-          Math.round(this.counter * 100) / 100)
+        // console.log('Change progress to ' + Math.round(this.counter * 100) / 100)
       }
     },
     mounted () {

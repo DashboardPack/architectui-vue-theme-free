@@ -8,7 +8,7 @@
               <div class="card-body">
                 <h5 class="card-title">Solid</h5>
                 <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button class="mr-2 mb-2" :variant="variant">
+                  <b-button class="mr-2 mb-2" :variant="variant" :key="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -20,7 +20,7 @@
               <div class="card-body">
                 <h5 class="card-title">Color Transition</h5>
                 <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']">
-                  <b-button class="mr-2 mb-2 btn-transition" :variant="variant">
+                  <b-button class="mr-2 mb-2 btn-transition" :variant="variant" :key="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -32,7 +32,7 @@
               <div class="card-body">
                 <h5 class="card-title">Color Transition no Borders</h5>
                 <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']">
-                  <b-button class="mr-2 mb-2 border-0 btn-transition" :variant="variant">
+                  <b-button class="mr-2 mb-2 border-0 btn-transition" :variant="variant" :key="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -44,7 +44,7 @@
               <div class="card-body">
                 <h5 class="card-title">Hover Shine</h5>
                 <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button class="mr-2 mb-2 btn-hover-shine btn-transition" :variant="variant">
+                  <b-button class="mr-2 mb-2 btn-hover-shine btn-transition" :variant="variant" :key="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -56,7 +56,7 @@
               <div class="card-body">
                 <h5 class="card-title">Active State</h5>
                 <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button :pressed="true" class="mr-2 mb-2" :variant="variant">
+                  <b-button :pressed="true" class="mr-2 mb-2" :variant="variant" :key="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -68,7 +68,7 @@
               <div class="card-body">
                 <h5 class="card-title">Disabled</h5>
                 <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button disabled class="mr-2 mb-2" :variant="variant">
+                  <b-button disabled class="mr-2 mb-2" :variant="variant" :key="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -80,7 +80,7 @@
               <div class="card-body">
                 <h5 class="card-title">Block Level</h5>
                 <template v-for="size in ['sm','','lg']">
-                  <b-button block class="mr-2 mb-2" variant="primary" :size="size">
+                  <b-button block class="mr-2 mb-2" variant="primary" :size="size" :key="size">
                     Block {{size}}
                   </b-button>
                 </template>
@@ -92,7 +92,7 @@
               <div class="card-body">
                 <h5 class="card-title">Wider</h5>
                 <template v-for="size in ['sm','','lg']">
-                  <b-button class="btn-wide mr-2 mb-2" variant="primary" :size="size">
+                  <b-button class="btn-wide mr-2 mb-2" variant="primary" :size="size" :key="size">
                     Wider {{size}}
                   </b-button>
                 </template>
@@ -102,7 +102,7 @@
               <div class="card-body">
                 <h5 class="card-title">Sizing</h5>
                 <template v-for="size in ['sm','','lg']">
-                  <b-button class="mr-2 mb-2" variant="primary" :size="size">
+                  <b-button class="mr-2 mb-2" variant="primary" :size="size" :key="size">
                     Button {{size}}
                   </b-button>
                 </template>

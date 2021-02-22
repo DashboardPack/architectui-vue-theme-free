@@ -570,7 +570,7 @@
 
   import PageTitle from "../../Layout/Components/PageTitle.vue";
 
-  import VuePerfectScrollbar from 'vue-perfect-scrollbar'
+  // import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 
   import {library} from '@fortawesome/fontawesome-svg-core'
   import {
@@ -587,8 +587,6 @@
   export default {
     components: {
       PageTitle,
-
-      VuePerfectScrollbar,
       'font-awesome-icon': FontAwesomeIcon,
     },
     data: () => ({
