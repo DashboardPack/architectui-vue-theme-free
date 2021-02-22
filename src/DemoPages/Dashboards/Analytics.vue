@@ -805,8 +805,8 @@
     import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 
     import chart1 from './Analytics/chart1';
-    import chart2 from './Analytics/chart2';
-    import chart3 from './Analytics/chart3';
+    // import chart2 from './Analytics/chart2';
+    // import chart3 from './Analytics/chart3';
 
     import {library} from '@fortawesome/fontawesome-svg-core'
     import {
@@ -834,8 +834,8 @@
             VuePerfectScrollbar,
             'font-awesome-icon': FontAwesomeIcon,
             chart1,
-            chart2,
-            chart3,
+            // chart2,
+            // chart3,
 
         },
         data: () => ({

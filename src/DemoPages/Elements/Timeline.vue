@@ -101,13 +101,11 @@
 
   import PageTitle from "../../Layout/Components/PageTitle.vue";
 
-  import VuePerfectScrollbar from 'vue-perfect-scrollbar'
+  // import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 
   export default {
     components: {
       PageTitle,
-
-      VuePerfectScrollbar
     },
     data: () => ({
       heading: 'Timelines',
