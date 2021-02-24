@@ -4,6 +4,8 @@
 
 This version of template is provided for free with no support. It is actively maintained and all the dependencies are kept updated and template is always safe to use in production.
 
+For more admin template like this please check out our [Github](https://github.com/DashboardPack) profile or [website](https://dashboardpack.com/).
+
 # ArchitectUI Preview
 
 ![ArchitectUI Vue Template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/architectui-vue-free.jpg)
