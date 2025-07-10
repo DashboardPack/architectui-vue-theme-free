@@ -1,11 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-Vue.use(Router);
-
-export default new Router({
+export default createRouter({
+    history: createWebHistory(),
     scrollBehavior() {
-        return window.scrollTo({ top: 0, behavior: 'smooth' });
+        return { top: 0, behavior: 'smooth' };
     },
     routes: [
 

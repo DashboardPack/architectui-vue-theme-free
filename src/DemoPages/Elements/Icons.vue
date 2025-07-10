@@ -111,8 +111,8 @@
 'pe-7s-check', 'pe-7s-chat', 'pe-7s-cart', 'pe-7s-camera', 'pe-7s-call', 'pe-7s-calculator',
 'pe-7s-browser', 'pe-7s-box2', 'pe-7s-box1', 'pe-7s-bookmarks', 'pe-7s-bicycle', 'pe-7s-bell',
 'pe-7s-battery', 'pe-7s-ball', 'pe-7s-back', 'pe-7s-attention', 'pe-7s-anchor', 'pe-7s-albums',
-'pe-7s-alarm', 'pe-7s-airplay']">
-                <b-col md="2" :key="iconName">
+'pe-7s-alarm', 'pe-7s-airplay']" :key="iconName">
+                <b-col md="2">
                   <div class="font-icon-wrapper">
                     <i :class=iconName> </i>
                     <p>{{iconName}}</p>

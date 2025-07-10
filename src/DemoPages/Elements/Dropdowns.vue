@@ -8,8 +8,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Basic</h5>
-                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-dropdown no-flip :text="variant" class="mb-2 mr-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']" :key="variant">
+                  <b-dropdown no-flip :text="variant" class="mb-2 mr-2" :variant="variant">
                     <button type="button" tabindex="0" class="dropdown-item">Menus</button>
                     <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                     <h6 tabindex="-1" class="dropdown-header">Header</h6>
@@ -23,8 +23,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Split Dropdowns</h5>
-                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-dropdown no-flip split :text="variant" class="mb-2 mr-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']" :key="variant">
+                  <b-dropdown no-flip split :text="variant" class="mb-2 mr-2" :variant="variant">
                     <button type="button" tabindex="0" class="dropdown-item">Menus</button>
                     <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                     <h6 tabindex="-1" class="dropdown-header">Header</h6>
@@ -38,8 +38,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Split Outline Dropdowns</h5>
-                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']">
-                  <b-dropdown no-flip split :text="variant" class="mb-2 mr-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']" :key="variant">
+                  <b-dropdown no-flip split :text="variant" class="mb-2 mr-2" :variant="variant">
                     <button type="button" tabindex="0" class="dropdown-item">Menus</button>
                     <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                     <h6 tabindex="-1" class="dropdown-header">Header</h6>
@@ -55,8 +55,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Outline</h5>
-                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']">
-                  <b-dropdown no-flip :text="variant" class="mb-2 mr-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']" :key="variant">
+                  <b-dropdown no-flip :text="variant" class="mb-2 mr-2" :variant="variant">
                     <button type="button" tabindex="0" class="dropdown-item">Menus</button>
                     <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                     <h6 tabindex="-1" class="dropdown-header">Header</h6>
@@ -70,8 +70,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Sizing</h5>
-                <template v-for="size in ['sm','','lg']">
-                  <b-dropdown no-flip :text="'Button ' + size" class="mb-2 mr-2" variant="outline-primary" :size="size" :key="size">
+                <template v-for="size in ['sm','','lg']" :key="size">
+                  <b-dropdown no-flip :text="'Button ' + size" class="mb-2 mr-2" variant="outline-primary" :size="size">
                     <button type="button" tabindex="0" class="dropdown-item">Menus</button>
                     <button type="button" tabindex="0" class="dropdown-item">Settings</button>
                     <h6 tabindex="-1" class="dropdown-header">Header</h6>

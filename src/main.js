@@ -1,23 +1,19 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import router from './router'
 
 import BootstrapVue from "bootstrap-vue"
 
-import App from './App'
+import App from './App.vue'
 
 import Default from './Layout/Wrappers/baseLayout.vue';
 import Pages from './Layout/Wrappers/pagesLayout.vue';
 
-Vue.config.productionTip = false;
+const app = createApp(App);
 
-Vue.use(BootstrapVue);
+app.use(BootstrapVue);
+app.use(router);
 
-Vue.component('default-layout', Default);
-Vue.component('userpages-layout', Pages);
+app.component('default-layout', Default);
+app.component('userpages-layout', Pages);
 
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-});
+app.mount('#app');
