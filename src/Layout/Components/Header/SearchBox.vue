@@ -5,7 +5,7 @@
                 <input type="text" class="search-input" placeholder="Type to search"/>
                 <button class="search-icon" v-on:click="searchOpen = !searchOpen"><span/></button>
             </div>
-            <button class="close" v-on:click="searchOpen = !searchOpen"/>
+            <div v-if="searchOpen" class="close" v-on:click="searchOpen = !searchOpen"></div>
         </div>
     </div>
 </template>

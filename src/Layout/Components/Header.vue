@@ -11,7 +11,7 @@
         </div>
         <div class="app-header__mobile-menu">
             <div>
-                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" v-bind:class="{ 'is-active' : isOpen }" @click="toggleMobile('closed-sidebar-open')">
+                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" :class="{ 'is-active' : isOpen }" @click="toggleMobile('closed-sidebar-open')">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -20,11 +20,11 @@
         </div>
         <div class="app-header__menu">
             <span>
-                <b-button class="btn-icon btn-icon-only" variant="primary" size="sm" v-bind:class="{ 'active' : isOpenMobileMenu }" @click="toggleMobile2('header-menu-open')">
+                <button class="btn btn-primary btn-sm btn-icon btn-icon-only" :class="{ 'active' : isOpenMobileMenu }" @click="toggleMobile2('header-menu-open')">
                     <div class="btn-icon-wrapper">
-                        <font-awesome-icon icon="ellipsis-v"/>
+                        <font-awesome-icon icon="ellipsis-v" />
                     </div>
-                </b-button>
+                </button>
             </span>
         </div>
     </div>
@@ -35,21 +35,22 @@
     import SearchBox from './Header/SearchBox';
     import UserArea from './Header/HeaderUserArea';
 
-    import {library} from '@fortawesome/fontawesome-svg-core'
-    import {
-        faEllipsisV,
-    } from '@fortawesome/free-solid-svg-icons'
-    import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+    // FontAwesome temporarily replaced with CSS classes
+    // import {library} from '@fortawesome/fontawesome-svg-core'
+    // import {
+    //     faEllipsisV,
+    // } from '@fortawesome/free-solid-svg-icons'
+    // import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-    library.add(
-        faEllipsisV,
-    );
+    // library.add(
+    //     faEllipsisV,
+    // );
     export default {
         name: "Header",
         components: {
             SearchBox,
             UserArea,
-            'font-awesome-icon': FontAwesomeIcon,
+            // 'font-awesome-icon': FontAwesomeIcon,
         },
 
         data() {

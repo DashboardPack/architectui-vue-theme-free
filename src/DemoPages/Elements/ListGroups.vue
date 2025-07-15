@@ -10,7 +10,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <img width="42" class="rounded-circle" src="@/assets/images/avatars/1.jpg" alt="">
                       </div>
                       <div class="widget-content-left">
@@ -29,7 +29,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <img width="42" class="rounded" src="@/assets/images/avatars/2.jpg" alt="">
                       </div>
                       <div class="widget-content-left">
@@ -45,7 +45,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <img width="42" class="rounded-circle" src="@/assets/images/avatars/3.jpg" alt="">
                       </div>
                       <div class="widget-content-left">
@@ -60,7 +60,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <img width="42" class="rounded-circle" src="@/assets/images/avatars/4.jpg" alt="">
                       </div>
                       <div class="widget-content-left">
@@ -85,14 +85,14 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <img width="42" class="rounded-circle" src="@/assets/images/avatars/5.jpg" alt="">
                       </div>
                       <div class="widget-content-left">
                         <div class="widget-heading">Eliot Huber</div>
                       </div>
                       <div class="widget-content-right">
-                        <div class="ml-auto badge badge-pill badge-warning">43</div>
+                        <div class="ms-auto badge rounded-pill badge-warning">43</div>
                       </div>
                     </div>
                   </div>
@@ -100,7 +100,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <div class="widget-content-left">
                           <img width="42" class="rounded" src="@/assets/images/avatars/1.jpg" alt="">
                         </div>
@@ -108,7 +108,7 @@
                       <div class="widget-content-left flex2">
                         <div class="widget-heading">Product Sales</div>
                         <div class="widget-subheading opacity-10">
-                          <span class="pr-2">
+                          <span class="pe-2">
                             <b>43</b> Sales
                           </span>
                           <span>
@@ -116,7 +116,7 @@
                           </span>
                         </div>
                       </div>
-                      <div class="widget-content-right text-right mr-3">
+                      <div class="widget-content-right text-end me-3">
                         <div><b>52,5%</b></div>
                         YoY Growth
                       </div>
@@ -135,7 +135,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <div class="icon-wrapper border-light rounded m-0">
                           <div class="icon-wrapper-bg bg-light"></div>
                           <i class="lnr-cog icon-gradient bg-happy-itmeo"></i></div>
@@ -152,7 +152,7 @@
                 <li class="list-group-item">
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left center-elem mr-2"><i class="pe-7s-file text-muted fsize-2"></i></div>
+                      <div class="widget-content-left center-elem me-2"><i class="pe-7s-file text-muted fsize-2"></i></div>
                       <div class="widget-content-left">
                         <div class="widget-heading">Example file 1</div>
                       </div>
@@ -171,14 +171,14 @@
                   <div class="todo-indicator bg-warning"></div>
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-2">
-                        <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox12" class="custom-control-input"><label class="custom-control-label"
+                      <div class="widget-content-left me-2">
+                        <div class="form-check"><input type="checkbox" id="exampleCustomCheckbox12" class="form-check-input"><label class="form-check-label"
                                                                                                                                                             for="exampleCustomCheckbox12">&nbsp;</label>
                         </div>
                       </div>
                       <div class="widget-content-left">
                         <div class="widget-heading">Wash the car
-                          <div class="badge badge-danger ml-2">Rejected</div>
+                          <div class="badge badge-danger ms-2">Rejected</div>
                         </div>
                         <div class="widget-subheading"><i>Written by Bob</i></div>
                       </div>
@@ -197,8 +197,8 @@
                   <div class="todo-indicator bg-focus"></div>
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-2">
-                        <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox1" class="custom-control-input"><label class="custom-control-label"
+                      <div class="widget-content-left me-2">
+                        <div class="form-check"><input type="checkbox" id="exampleCustomCheckbox1" class="form-check-input"><label class="form-check-label"
                                                                                                                                                            for="exampleCustomCheckbox1">&nbsp;</label>
                         </div>
                       </div>
@@ -206,7 +206,7 @@
                         <div class="widget-heading">Task with hover dropdown menu</div>
                         <div class="widget-subheading">
                           <div>By Johnny
-                            <div class="badge badge-pill badge-info ml-2">NEW</div>
+                            <div class="badge rounded-pill badge-info ms-2">NEW</div>
                           </div>
                         </div>
                       </div>
@@ -217,15 +217,15 @@
                             <ul class="nav flex-column">
                               <li class="nav-item-header nav-item">Activity</li>
                               <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Chat
-                                <div class="ml-auto badge badge-pill badge-info">8</div>
+                                <div class="ms-auto badge rounded-pill badge-info">8</div>
                               </a></li>
                               <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Recover Password</a></li>
                               <li class="nav-item-header nav-item">My Account</li>
                               <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Settings
-                                <div class="ml-auto badge badge-success">New</div>
+                                <div class="ms-auto badge badge-success">New</div>
                               </a></li>
                               <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Messages
-                                <div class="ml-auto badge badge-warning">512</div>
+                                <div class="ms-auto badge badge-warning">512</div>
                               </a></li>
                               <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Logs</a></li>
                               <li class="nav-item-divider nav-item"></li>
@@ -243,8 +243,8 @@
                   <div class="todo-indicator bg-primary"></div>
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-2">
-                        <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox4" class="custom-control-input"><label class="custom-control-label"
+                      <div class="widget-content-left me-2">
+                        <div class="form-check"><input type="checkbox" id="exampleCustomCheckbox4" class="form-check-input"><label class="form-check-label"
                                                                                                                                                            for="exampleCustomCheckbox4">&nbsp;</label>
                         </div>
                       </div>
@@ -257,8 +257,8 @@
                           <font-awesome-icon icon="check"/>
                         </button>
                       </div>
-                      <div class="widget-content-right ml-3">
-                        <div class="badge badge-pill badge-success">Latest Task</div>
+                      <div class="widget-content-right ms-3">
+                        <div class="badge rounded-pill badge-success">Latest Task</div>
                       </div>
                     </div>
                   </div>
@@ -267,12 +267,12 @@
                   <div class="todo-indicator bg-info"></div>
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-2">
-                        <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox2" class="custom-control-input"><label class="custom-control-label"
+                      <div class="widget-content-left me-2">
+                        <div class="form-check"><input type="checkbox" id="exampleCustomCheckbox2" class="form-check-input"><label class="form-check-label"
                                                                                                                                                            for="exampleCustomCheckbox2">&nbsp;</label>
                         </div>
                       </div>
-                      <div class="widget-content-left mr-3">
+                      <div class="widget-content-left me-3">
                         <div class="widget-content-left">
                           <img width="42" class="rounded" src="@/assets/images/avatars/1.jpg" alt="">
                         </div>
@@ -296,8 +296,8 @@
                   <div class="todo-indicator bg-success"></div>
                   <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
-                      <div class="widget-content-left mr-2">
-                        <div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox3" class="custom-control-input"><label class="custom-control-label"
+                      <div class="widget-content-left me-2">
+                        <div class="form-check"><input type="checkbox" id="exampleCustomCheckbox3" class="form-check-input"><label class="form-check-label"
                                                                                                                                                            for="exampleCustomCheckbox3">&nbsp;</label>
                         </div>
                       </div>
@@ -306,7 +306,7 @@
                         <div class="widget-subheading">Finish Vue ToDo List App</div>
                       </div>
                       <div class="widget-content-right">
-                        <div class="badge badge-warning mr-2">69</div>
+                        <div class="badge badge-warning me-2">69</div>
                       </div>
                       <div class="widget-content-right">
                         <button class="border-0 btn-transition btn btn-outline-success">
@@ -320,8 +320,8 @@
                   </div>
                 </li>
               </ul>
-              <div class="d-block text-right card-footer">
-                <button class="mr-2 btn btn-link btn-sm">Cancel</button>
+              <div class="d-block text-end card-footer">
+                <button class="me-2 btn btn-link btn-sm">Cancel</button>
                 <button class="btn btn-success btn-lg">Save</button>
               </div>
             </div>
@@ -333,7 +333,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <img width="42" class="rounded-circle" src="@/assets/images/avatars/4.jpg" alt="">
                         </div>
                         <div class="widget-content-left">
@@ -352,7 +352,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <img width="42" class="rounded" src="@/assets/images/avatars/5.jpg" alt="">
                         </div>
                         <div class="widget-content-left">
@@ -368,7 +368,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <img width="42" class="rounded-circle" src="@/assets/images/avatars/8.jpg" alt="">
                         </div>
                         <div class="widget-content-left">
@@ -383,7 +383,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <img width="42" class="rounded-circle" src="@/assets/images/avatars/1.jpg" alt="">
                         </div>
                         <div class="widget-content-left">
@@ -399,14 +399,14 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <img width="42" class="rounded-circle" src="@/assets/images/avatars/3.jpg" alt="">
                         </div>
                         <div class="widget-content-left">
                           <div class="widget-heading">Eliot Huber</div>
                         </div>
                         <div class="widget-content-right">
-                          <div class="ml-auto badge badge-pill badge-warning">43</div>
+                          <div class="ms-auto badge rounded-pill badge-warning">43</div>
                         </div>
                       </div>
                     </div>
@@ -414,7 +414,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <div class="widget-content-left">
                             <img width="42" class="rounded" src="@/assets/images/avatars/4.jpg" alt="">
                           </div>
@@ -422,11 +422,11 @@
                         <div class="widget-content-left flex2">
                           <div class="widget-heading">Product Sales</div>
                           <div class="widget-subheading opacity-10">
-                            <span class="pr-2"><b>43</b> Sales</span>
+                            <span class="pe-2"><b>43</b> Sales</span>
                             <span><b class="text-success">$156,24</b> Totals</span>
                           </div>
                         </div>
-                        <div class="widget-content-right text-right mr-3">
+                        <div class="widget-content-right text-end me-3">
                           <div><b>52,5%</b></div>
                           YoY Growth
                         </div>
@@ -445,7 +445,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-3">
+                        <div class="widget-content-left me-3">
                           <div class="icon-wrapper border-light rounded m-0">
                             <div class="icon-wrapper-bg bg-light"></div>
                             <i class="lnr-cog icon-gradient bg-happy-itmeo"></i></div>
@@ -462,7 +462,7 @@
                   <li class="list-group-item">
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left center-elem mr-2"><i class="pe-7s-file text-muted fsize-2"></i></div>
+                        <div class="widget-content-left center-elem me-2"><i class="pe-7s-file text-muted fsize-2"></i></div>
                         <div class="widget-content-left">
                           <div class="widget-heading">Example file 1</div>
                         </div>
@@ -510,9 +510,9 @@
             <div class="main-card mb-3 card">
               <div class="card-body"><h5 class="card-title">List group badges</h5>
                 <ul class="list-group">
-                  <li class="justify-content-between list-group-item">Cras justo odio <span class="badge badge-secondary badge-pill">14</span></li>
-                  <li class="justify-content-between list-group-item">Dapibus ac facilisis in <span class="badge badge-secondary badge-pill">2</span></li>
-                  <li class="justify-content-between list-group-item">Morbi leo risus <span class="badge badge-secondary badge-pill">1</span></li>
+                  <li class="justify-content-between list-group-item">Cras justo odio <span class="badge badge-secondary rounded-pill">14</span></li>
+                  <li class="justify-content-between list-group-item">Dapibus ac facilisis in <span class="badge badge-secondary rounded-pill">2</span></li>
+                  <li class="justify-content-between list-group-item">Morbi leo risus <span class="badge badge-secondary rounded-pill">1</span></li>
                 </ul>
               </div>
             </div>

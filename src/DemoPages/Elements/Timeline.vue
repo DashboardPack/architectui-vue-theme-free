@@ -29,7 +29,7 @@
                       <span class="vertical-timeline-element-icon bounce-in"></span>
                       <div class="vertical-timeline-element-content bounce-in">
                         <h4 class="timeline-title">Build the production release
-                          <div class="badge badge-danger ml-2">NEW</div>
+                          <div class="badge badge-danger ms-2">NEW</div>
                         </h4>
                       </div>
                     </div>

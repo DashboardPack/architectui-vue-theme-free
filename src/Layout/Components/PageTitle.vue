@@ -3,7 +3,7 @@
         <div class="page-title-wrapper">
             <div class="page-title-heading">
                 <div class="page-title-icon">
-                    <i :class="icon"/>
+                    <i :class="icon"></i>
                 </div>
                 <div>
                     {{heading}}
@@ -14,11 +14,11 @@
                 </div>
             </div>
             <div class="page-title-actions">
-                <button type="button" class="btn-shadow mr-3 btn btn-dark">
-                    <font-awesome-icon icon="star"/>
+                <button type="button" class="btn-shadow me-3 btn btn-dark">
+                    <font-awesome-icon icon="star" />
                 </button>
                 <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-                    <font-awesome-icon class="mr-2" icon="plus"/>
+                    <font-awesome-icon icon="plus" class="me-2" />
                     Create New
                 </button>
             </div>
@@ -40,6 +40,7 @@
     );
 
     export default {
+        name: 'PageTitle',
         components: {
             'font-awesome-icon': FontAwesomeIcon,
         },

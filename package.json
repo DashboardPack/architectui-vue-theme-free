@@ -8,39 +8,47 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@googlemaps/js-api-loader": "^1.16.10",
+    "@popperjs/core": "^2.11.8",
     "@vue/compat": "^3.5.17",
     "animate-sass": "^0.8.2",
-    "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.0-rc.18",
-    "chart.js": "^2.8.0",
+    "bootstrap": "^5.3.7",
+    "bootstrap-vue-next": "^0.30.4",
+    "chart.js": "^4.5.0",
+    "core-js": "^3.44.0",
     "es6-promise": "^4.2.6",
     "increase-memory-limit": "^1.0.6",
+    "leaflet": "^1.9.4",
     "pe7-icon": "^1.0.4",
     "perfect-scrollbar": "^1.4.0",
-    "popper.js": "^1.15.0",
+    "pinia": "^3.0.3",
+    "regenerator-runtime": "^0.14.1",
     "sass": "^1.89.2",
     "sass-loader": "^10.5.2",
     "vue": "^3.5.17",
-    "vue-chartjs": "^3.4.2",
+    "vue-chartjs": "^5.3.2",
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-router": "^4.5.1",
-    "vue-sidebar-menu": "^3.7.0",
-    "vue2-google-maps": "^0.10.6",
-    "vuex": "^3.1.0"
+    "vue-sidebar-menu": "^5.7.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.6.0",
-    "@vue/cli-plugin-eslint": "^3.6.0",
-    "@vue/cli-service": "^4.5.11",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.2.2",
+    "@babel/eslint-parser": "^7.28.0",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.27.1",
+    "@babel/plugin-transform-optional-chaining": "^7.27.1",
+    "@babel/preset-env": "^7.28.0",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^5.0.8",
+    "cross-spawn": "^7.0.6",
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^9.30.0",
+    "postcss": "^8.4.47",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
-    "vue-template-compiler": "^2.6.10"
+    "webpack-dev-server": "^5.1.0"
   },
   "eslintConfig": {
     "root": true,
@@ -48,12 +56,18 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "vue/no-template-key": "off",
+      "vue/valid-v-for": "off",
+      "vue/require-v-for-key": "off",
+      "no-console": "off"
+    },
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
     }
   },
   "postcss": {
@@ -65,5 +79,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "overrides": {
+    "braces": "3.0.3",
+    "micromatch": "4.0.8"
+  }
 }

@@ -1,16 +1,16 @@
 <template>
     <div>
-        <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
+        <page-title :heading="heading" :subheading="subheading" :icon="icon"></page-title>
         <div class="mb-3 card">
             <div class="card-header-tab card-header">
-                <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                <div class="card-header-title font-size-lg text-capitalize fw-normal">
                     <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
                     Data Statistics
                 </div>
             </div>
-            <div class="no-gutters row">
+            <div class="row g-0">
                 <div class="col-sm-6 col-md-4 col-xl-4">
-                    <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
+                    <div class="card no-shadow rm-border bg-transparent widget-chart text-start">
                         <div class="icon-wrapper rounded-circle">
                             <div class="icon-wrapper-bg opacity-10 bg-warning"></div>
                             <i class="pe-7s-scissors text-white opacity-8"></i></div>
@@ -18,9 +18,9 @@
                             <div class="widget-subheading">Cash Deposits</div>
                             <div class="widget-numbers">1,7M</div>
                             <div class="widget-description opacity-8 text-focus">
-                                <div class="d-inline text-danger pr-1">
-                                    <font-awesome-icon icon="angle-down"/>
-                                    <span class="pl-1">54.1%</span>
+                                <div class="d-inline text-danger pe-1">
+                                    <i class="fas fa-angle-down"></i>
+                                    <span class="ps-1">54.1%</span>
                                 </div>
                                 less earnings
                             </div>
@@ -29,7 +29,7 @@
                     <div class="divider m-0 d-md-none d-sm-block"></div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
-                    <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
+                    <div class="card no-shadow rm-border bg-transparent widget-chart text-start">
                         <div class="icon-wrapper rounded-circle">
                             <div class="icon-wrapper-bg opacity-9 bg-danger"></div>
                             <i class="pe-7s-radio text-white"></i></div>
@@ -38,9 +38,9 @@
                             <div class="widget-numbers"><span>9M</span></div>
                             <div class="widget-description opacity-8 text-focus">
                                 Grow Rate:
-                                <span class="text-info pl-1">
-                                    <font-awesome-icon icon="angle-down"/>
-                                    <span class="pl-1">14.1%</span>
+                                <span class="text-info ps-1">
+                                    <i class="fas fa-angle-down"></i>
+                                    <span class="ps-1">14.1%</span>
                                 </span>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                     <div class="divider m-0 d-md-none d-sm-block"></div>
                 </div>
                 <div class="col-sm-12 col-md-4 col-xl-4">
-                    <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
+                    <div class="card no-shadow rm-border bg-transparent widget-chart text-start">
                         <div class="icon-wrapper rounded-circle">
                             <div class="icon-wrapper-bg opacity-9 bg-success"></div>
                             <i class="pe-7s-musiclist text-white"></i></div>
@@ -57,9 +57,9 @@
                             <div class="widget-numbers text-success"><span>$563</span></div>
                             <div class="widget-description text-focus">
                                 Increased by
-                                <span class="text-warning pl-1">
-                                    <font-awesome-icon icon="angle-up"/>
-                                    <span class="pl-1">7.35%</span>
+                                <span class="text-warning ps-1">
+                                    <i class="fas fa-angle-up"></i>
+                                    <span class="ps-1">7.35%</span>
                                 </span>
                             </div>
                         </div>
@@ -68,10 +68,10 @@
             </div>
             <div class="text-center d-block p-3 card-footer">
                 <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-primary btn-lg">
-                  <span class="mr-2 opacity-7">
+                  <span class="me-2 opacity-7">
                       <i class="icon icon-anim-pulse ion-ios-analytics-outline"></i>
                   </span>
-                    <span class="mr-1">View Complete Report</span>
+                    <span class="me-1">View Complete Report</span>
                 </button>
             </div>
         </div>
@@ -79,14 +79,14 @@
             <div class="col-sm-12 col-lg-6">
                 <div class="mb-3 card">
                     <div class="card-header-tab card-header">
-                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                        <div class="card-header-title font-size-lg text-capitalize fw-normal">
                             <i class="header-icon lnr-cloud-download icon-gradient bg-happy-itmeo"> </i>
                             Technical Support
                         </div>
                     </div>
                     <div class="p-0 card-body">
                         <div class="p-1 slick-slider-sm mx-auto">
-                            <div class="widget-chart widget-chart2 text-left p-0">
+                            <div class="widget-chart widget-chart2 text-start p-0">
                                 <div class="widget-chat-wrapper-outer">
                                     <div class="widget-chart-content widget-chart-content-lg pb-0">
                                         <div class="widget-chart-flex">
@@ -100,21 +100,24 @@
                                                     <span class="text-warning">34</span>
                                                 </div>
                                                 <div
-                                                    class="widget-title ml-2 font-size-lg font-weight-normal text-dark">
-                                                    <span class="opacity-5 text-muted pl-2 pr-1">5%</span>
+                                                    class="widget-title ms-2 font-size-lg fw-normal text-dark">
+                                                    <span class="opacity-5 text-muted ps-2 pe-1">5%</span>
                                                     increase
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="widget-chart-wrapper he-auto opacity-10 m-0">
-                                        <chart1 :height="145"/>
+                                        <!-- chart1 :height="145" / -->
+                                        <div class="chart-placeholder bg-light p-3 text-center">
+                                            <small class="text-muted">Chart component currently disabled (Vue 2 project)</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h6 class="text-muted text-uppercase font-size-md opacity-5 pl-3 pr-3 pb-1 font-weight-normal">
+                        <h6 class="text-muted text-uppercase font-size-md opacity-5 ps-3 pe-3 pb-1 fw-normal">
                             Sales Progress</h6>
                         <ul class="list-group list-group-flush">
                             <li class="p-3 bg-transparent list-group-item">
@@ -153,7 +156,7 @@
             <div class="col-sm-12 col-lg-6">
                 <div class="card-hover-shadow-2x mb-3 card">
                     <div class="card-header-tab card-header">
-                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+                        <div class="card-header-title font-size-lg text-capitalize fw-normal">
                             <i class="header-icon lnr-lighter icon-gradient bg-amy-crisp"> </i>
                             Timeline Example
                         </div>
@@ -184,7 +187,7 @@
                                             <span class="vertical-timeline-element-icon bounce-in"></span>
                                             <div class="vertical-timeline-element-content bounce-in">
                                                 <h4 class="timeline-title">Build the production release
-                                                    <div class="badge badge-danger ml-2">NEW</div>
+                                                    <div class="badge badge-danger ms-2">NEW</div>
                                                 </h4>
                                             </div>
                                         </div>
@@ -212,7 +215,7 @@
                                             <span class="vertical-timeline-element-icon bounce-in"></span>
                                             <div class="vertical-timeline-element-content bounce-in">
                                                 <h4 class="timeline-title">Build the production release
-                                                    <div class="badge badge-danger ml-2">NEW</div>
+                                                    <div class="badge badge-danger ms-2">NEW</div>
                                                 </h4>
                                             </div>
                                         </div>
@@ -254,7 +257,7 @@
                                             <span class="vertical-timeline-element-icon bounce-in"></span>
                                             <div class="vertical-timeline-element-content bounce-in">
                                                 <h4 class="timeline-title">Build the production release
-                                                    <div class="badge badge-danger ml-2">NEW</div>
+                                                    <div class="badge badge-danger ms-2">NEW</div>
                                                 </h4>
                                             </div>
                                         </div>
@@ -284,9 +287,9 @@
         <div class="row">
             <div class="col-md-6 col-xl-3">
                 <div
-                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
+                    class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-success border-success">
                     <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content pt-3 pl-3 pb-1">
+                        <div class="widget-chart-content pt-3 ps-3 pb-1">
                             <div class="widget-chart-flex">
                                 <div class="widget-numbers">
                                     <div class="widget-chart-flex">
@@ -303,9 +306,9 @@
             </div>
             <div class="col-md-6 col-xl-3">
                 <div
-                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-primary border-primary">
+                    class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-primary border-primary">
                     <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content pt-3 pl-3 pb-1">
+                        <div class="widget-chart-content pt-3 ps-3 pb-1">
                             <div class="widget-chart-flex">
                                 <div class="widget-numbers">
                                     <div class="widget-chart-flex">
@@ -322,9 +325,9 @@
             </div>
             <div class="col-md-6 col-xl-3">
                 <div
-                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-warning border-warning">
+                    class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-warning border-warning">
                     <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content pt-3 pl-3 pb-1">
+                        <div class="widget-chart-content pt-3 ps-3 pb-1">
                             <div class="widget-chart-flex">
                                 <div class="widget-numbers">
                                     <div class="widget-chart-flex">
@@ -341,9 +344,9 @@
             </div>
             <div class="col-md-6 col-xl-3">
                 <div
-                    class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-danger border-danger">
+                    class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-danger border-danger">
                     <div class="widget-chat-wrapper-outer">
-                        <div class="widget-chart-content pt-3 pl-3 pb-1">
+                        <div class="widget-chart-content pt-3 ps-3 pb-1">
                             <div class="widget-chart-flex">
                                 <div class="widget-numbers">
                                     <div class="widget-chart-flex">
@@ -363,7 +366,7 @@
             <div class="col-sm-12 col-lg-6">
                 <div class="card-hover-shadow-2x mb-3 card">
                     <div class="card-header-tab card-header">
-                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i
+                        <div class="card-header-title font-size-lg text-capitalize fw-normal"><i
                             class="header-icon lnr-database icon-gradient bg-malibu-beach"> </i>Tasks List
                         </div>
                     </div>
@@ -374,26 +377,26 @@
                                     <div class="todo-indicator bg-warning"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox12"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox12">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">Wash the car
-                                                    <div class="badge badge-danger ml-2">Rejected</div>
+                                                    <div class="badge badge-danger ms-2">Rejected</div>
                                                 </div>
                                                 <div class="widget-subheading"><i>Written by Bob</i></div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                                 <button class="border-0 btn-transition btn btn-outline-danger">
-                                                    <font-awesome-icon icon="trash-alt"/>
+                                                    <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -403,11 +406,11 @@
                                     <div class="todo-indicator bg-focus"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox1"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox1">&nbsp;</label>
                                                 </div>
                                             </div>
@@ -415,7 +418,7 @@
                                                 <div class="widget-heading">Task with hover dropdown menu</div>
                                                 <div class="widget-subheading">
                                                     <div>By Johnny
-                                                        <div class="badge badge-pill badge-info ml-2">NEW</div>
+                                                        <div class="badge rounded-pill badge-info ms-2">NEW</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -426,11 +429,11 @@
                                     <div class="todo-indicator bg-primary"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox4"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox4">&nbsp;</label>
                                                 </div>
                                             </div>
@@ -441,11 +444,11 @@
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                             </div>
-                                            <div class="widget-content-right ml-3">
-                                                <div class="badge badge-pill badge-success">Latest Task</div>
+                                            <div class="widget-content-right ms-3">
+                                                <div class="badge rounded-pill badge-success">Latest Task</div>
                                             </div>
                                         </div>
                                     </div>
@@ -454,15 +457,15 @@
                                     <div class="todo-indicator bg-info"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox2"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox2">&nbsp;</label>
                                                 </div>
                                             </div>
-                                            <div class="widget-content-left mr-3">
+                                            <div class="widget-content-left me-3">
                                                 <div class="widget-content-left">
                                                     <img width="42" class="rounded" src="@/assets/images/avatars/1.jpg"
                                                          alt="">
@@ -475,10 +478,10 @@
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                                 <button class="border-0 btn-transition btn btn-outline-danger">
-                                                    <font-awesome-icon icon="trash-alt"/>
+                                                    <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -488,26 +491,26 @@
                                     <div class="todo-indicator bg-warning"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox12"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox12">&nbsp;</label>
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
                                                 <div class="widget-heading">Wash the car
-                                                    <div class="badge badge-danger ml-2">Rejected</div>
+                                                    <div class="badge badge-danger ms-2">Rejected</div>
                                                 </div>
                                                 <div class="widget-subheading"><i>Written by Bob</i></div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                                 <button class="border-0 btn-transition btn btn-outline-danger">
-                                                    <font-awesome-icon icon="trash-alt"/>
+                                                    <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -517,11 +520,11 @@
                                     <div class="todo-indicator bg-focus"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox1"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox1">&nbsp;</label>
                                                 </div>
                                             </div>
@@ -529,16 +532,16 @@
                                                 <div class="widget-heading">Task with hover dropdown menu</div>
                                                 <div class="widget-subheading">
                                                     <div>By Johnny
-                                                        <div class="badge badge-pill badge-info ml-2">NEW</div>
+                                                        <div class="badge rounded-pill badge-info ms-2">NEW</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                                 <button class="border-0 btn-transition btn btn-outline-danger">
-                                                    <font-awesome-icon icon="trash-alt"/>
+                                                    <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -548,11 +551,11 @@
                                     <div class="todo-indicator bg-primary"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox4"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox4">&nbsp;</label>
                                                 </div>
                                             </div>
@@ -563,11 +566,11 @@
                                             </div>
                                             <div class="widget-content-right widget-content-actions">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                             </div>
-                                            <div class="widget-content-right ml-3">
-                                                <div class="badge badge-pill badge-success">Latest Task</div>
+                                            <div class="widget-content-right ms-3">
+                                                <div class="badge rounded-pill badge-success">Latest Task</div>
                                             </div>
                                         </div>
                                     </div>
@@ -576,11 +579,11 @@
                                     <div class="todo-indicator bg-success"></div>
                                     <div class="widget-content p-0">
                                         <div class="widget-content-wrapper">
-                                            <div class="widget-content-left mr-2">
-                                                <div class="custom-checkbox custom-control"><input type="checkbox"
+                                            <div class="widget-content-left me-2">
+                                                <div class="form-check"><input type="checkbox"
                                                                                                    id="exampleCustomCheckbox3"
-                                                                                                   class="custom-control-input"><label
-                                                    class="custom-control-label"
+                                                                                                   class="form-check-input"><label
+                                                    class="form-check-label"
                                                     for="exampleCustomCheckbox3">&nbsp;</label>
                                                 </div>
                                             </div>
@@ -589,14 +592,14 @@
                                                 <div class="widget-subheading">Finish Vue ToDo List App</div>
                                             </div>
                                             <div class="widget-content-right">
-                                                <div class="badge badge-warning mr-2">69</div>
+                                                <div class="badge badge-warning me-2">69</div>
                                             </div>
                                             <div class="widget-content-right">
                                                 <button class="border-0 btn-transition btn btn-outline-success">
-                                                    <font-awesome-icon icon="check"/>
+                                                    <i class="fas fa-check"></i>
                                                 </button>
                                                 <button class="border-0 btn-transition btn btn-outline-danger">
-                                                    <font-awesome-icon icon="trash-alt"/>
+                                                    <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -605,8 +608,8 @@
                             </ul>
                         </VuePerfectScrollbar>
                     </div>
-                    <div class="d-block text-right card-footer">
-                        <button class="mr-2 btn btn-link btn-sm">Cancel</button>
+                    <div class="d-block text-end card-footer">
+                        <button class="me-2 btn btn-link btn-sm">Cancel</button>
                         <button class="btn btn-primary">Add Task</button>
                     </div>
                 </div>
@@ -614,8 +617,8 @@
             <div class="col-sm-12 col-lg-6">
                 <div class="card-hover-shadow-2x mb-3 card">
                     <div class="card-header-tab card-header">
-                        <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                            <i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>
+                        <div class="card-header-title font-size-lg text-capitalize fw-normal">
+                            <i class="header-icon lnr-laptop-phone me-3 text-muted opacity-6"> </i>
                             Tables Examples
                         </div>
                     </div>
@@ -689,7 +692,7 @@
         </div>
 
         <div class="card mb-3">
-            <div class="no-gutters row">
+            <div class="row g-0">
                 <div class="col-md-12 col-lg-4">
                     <ul class="list-group list-group-flush">
                         <li class="bg-transparent list-group-item">
@@ -804,36 +807,37 @@
     import PageTitle from "../../Layout/Components/PageTitle.vue";
     import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 
-    import chart1 from './Analytics/chart1';
-    // import chart2 from './Analytics/chart2';
-    // import chart3 from './Analytics/chart3';
+    // import chart1 from './Analytics/chart1.vue';
+    // import chart2 from './Analytics/chart2.vue';
+    // import chart3 from './Analytics/chart3.vue';
 
-    import {library} from '@fortawesome/fontawesome-svg-core'
-    import {
-        faTrashAlt,
-        faCheck,
-        faCalendarAlt,
-        faAngleDown,
-        faAngleUp,
-        faTh,
-    } from '@fortawesome/free-solid-svg-icons'
-    import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+    // FontAwesome temporarily replaced with CSS classes
+    // import {library} from '@fortawesome/fontawesome-svg-core'
+    // import {
+    //     faTrashAlt,
+    //     faCheck,
+    //     faCalendarAlt,
+    //     faAngleDown,
+    //     faAngleUp,
+    //     faTh,
+    // } from '@fortawesome/free-solid-svg-icons'
+    // import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
-    library.add(
-        faTrashAlt,
-        faCheck,
-        faAngleDown,
-        faAngleUp,
-        faTh,
-        faCalendarAlt,
-    );
+    // library.add(
+    //     faTrashAlt,
+    //     faCheck,
+    //     faAngleDown,
+    //     faAngleUp,
+    //     faTh,
+    //     faCalendarAlt,
+    // );
 
     export default {
         components: {
             PageTitle,
             VuePerfectScrollbar,
-            'font-awesome-icon': FontAwesomeIcon,
-            chart1,
+            // 'font-awesome-icon': FontAwesomeIcon,
+            // chart1,
             // chart2,
             // chart3,
 

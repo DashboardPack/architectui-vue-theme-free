@@ -7,8 +7,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Solid</h5>
-                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button class="mr-2 mb-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']" :key="variant">
+                  <b-button class="me-2 mb-2" :variant="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -19,8 +19,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Color Transition</h5>
-                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']">
-                  <b-button class="mr-2 mb-2 btn-transition" :variant="variant" :key="variant">
+                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']" :key="variant">
+                  <b-button class="me-2 mb-2 btn-transition" :variant="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -31,8 +31,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Color Transition no Borders</h5>
-                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']">
-                  <b-button class="mr-2 mb-2 border-0 btn-transition" :variant="variant" :key="variant">
+                <template v-for="variant in ['outline-primary','outline-secondary','outline-success','outline-info','outline-warning','outline-danger','outline-focus','outline-alternate','outline-light','outline-dark','outline-link']" :key="variant">
+                  <b-button class="me-2 mb-2 border-0 btn-transition" :variant="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -43,8 +43,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Hover Shine</h5>
-                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button class="mr-2 mb-2 btn-hover-shine btn-transition" :variant="variant" :key="variant">
+                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']" :key="variant">
+                  <b-button class="me-2 mb-2 btn-hover-shine btn-transition" :variant="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -55,8 +55,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Active State</h5>
-                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button :pressed="true" class="mr-2 mb-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']" :key="variant">
+                  <b-button :pressed="true" class="me-2 mb-2" :variant="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -67,8 +67,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Disabled</h5>
-                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']">
-                  <b-button disabled class="mr-2 mb-2" :variant="variant" :key="variant">
+                <template v-for="variant in ['primary','secondary','success','info','warning','danger','focus','alternate','light','dark','link']" :key="variant">
+                  <b-button disabled class="me-2 mb-2" :variant="variant">
                     {{variant}}
                   </b-button>
                 </template>
@@ -79,10 +79,12 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Block Level</h5>
-                <template v-for="size in ['sm','','lg']">
-                  <b-button block class="mr-2 mb-2" variant="primary" :size="size" :key="size">
-                    Block {{size}}
-                  </b-button>
+                <template v-for="size in ['sm','','lg']" :key="size">
+                  <div class="d-grid gap-2 mb-2">
+                    <b-button variant="primary" :size="size">
+                      Block {{size}}
+                    </b-button>
+                  </div>
                 </template>
               </div>
             </div>
@@ -91,8 +93,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Wider</h5>
-                <template v-for="size in ['sm','','lg']">
-                  <b-button class="btn-wide mr-2 mb-2" variant="primary" :size="size" :key="size">
+                <template v-for="size in ['sm','','lg']" :key="size">
+                  <b-button class="btn-wide me-2 mb-2" variant="primary" :size="size">
                     Wider {{size}}
                   </b-button>
                 </template>
@@ -101,8 +103,8 @@
             <div class="main-card mb-3 card">
               <div class="card-body">
                 <h5 class="card-title">Sizing</h5>
-                <template v-for="size in ['sm','','lg']">
-                  <b-button class="mr-2 mb-2" variant="primary" :size="size" :key="size">
+                <template v-for="size in ['sm','','lg']" :key="size">
+                  <b-button class="me-2 mb-2" variant="primary" :size="size">
                     Button {{size}}
                   </b-button>
                 </template>
@@ -115,7 +117,7 @@
                 <h5 class="card-title">Checkbox Buttons</h5>
                 <template>
                   <div class="text-center">
-                    <b-form-checkbox-group buttons v-model="selected" name="butons1" :options="options"></b-form-checkbox-group>
+                    <b-form-checkbox-group buttons v-model="selected" name="buttons1" :options="options"></b-form-checkbox-group>
                     <div class="divider"/>
                     <b-form-checkbox-group v-model="selected"
                                            buttons

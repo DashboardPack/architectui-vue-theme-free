@@ -114,7 +114,7 @@
 'pe-7s-alarm', 'pe-7s-airplay']" :key="iconName">
                 <b-col md="2">
                   <div class="font-icon-wrapper">
-                    <i :class=iconName> </i>
+                    <i :class="iconName"> </i>
                     <p>{{iconName}}</p>
                   </div>
                 </b-col>

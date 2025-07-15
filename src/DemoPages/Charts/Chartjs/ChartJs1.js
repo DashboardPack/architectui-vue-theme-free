@@ -1,22 +1,5 @@
-import {Line} from 'vue-chartjs'
-
+// Chart component temporarily disabled during Vue 3 migration
 export default {
-  extends: Line,
-  mounted() {
-    this.renderChart({
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [
-        {
-          label: 'Data One',
-          backgroundColor: '#FC2525',
-          data: [40, 39, 10, 40, 39, 80, 40]
-        }, {
-          label: 'Data Two',
-          backgroundColor: '#05CBE1',
-          data: [60, 55, 32, 10, 2, 12, 53]
-        }
-      ]
-    }, {responsive: true, maintainAspectRatio: false})
-
-  }
+  name: 'ChartPlaceholder',
+  template: '<div class="chart-placeholder bg-light p-3 text-center"><small class="text-muted">Chart component (Vue 3 migration in progress)</small></div>'
 }

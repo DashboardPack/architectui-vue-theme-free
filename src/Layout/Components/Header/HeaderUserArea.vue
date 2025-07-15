@@ -1,31 +1,34 @@
 <template>
     <div class="d-flex">
-        <div class="header-btn-lg pr-0">
+        <div class="header-btn-lg pe-0">
             <div class="widget-content p-0">
                 <div class="widget-content-wrapper">
                     <div class="widget-content-left">
-                        <b-dropdown toggle-class="p-0 mr-2" menu-class="dropdown-menu-lg" variant="link" right>
-                            <span slot="button-content">
+                        <b-dropdown variant="link" class="p-0 me-2" menu-class="dropdown-menu-lg" right>
+                            <template #button-content>
                                 <div class="icon-wrapper icon-wrapper-alt rounded-circle">
                                     <img width="42" class="rounded-circle" src="@/assets/images/avatars/1.jpg" alt="">
                                 </div>
-                            </span>
-                            <button type="button" tabindex="0" class="dropdown-item">Menus</button>
-                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                            <div tabindex="-1" class="dropdown-divider"></div>
-                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                            </template>
+                            <b-dropdown-item-button>Menus</b-dropdown-item-button>
+                            <b-dropdown-item-button>Settings</b-dropdown-item-button>
+                            <b-dropdown-header>Header</b-dropdown-header>
+                            <b-dropdown-item-button>Actions</b-dropdown-item-button>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            <b-dropdown-item-button>Dividers</b-dropdown-item-button>
                         </b-dropdown>
                     </div>
-                    <div class="widget-content-left  ml-3 header-user-info">
+                    <div class="widget-content-left ms-3 header-user-info">
                         <div class="widget-heading">Alina Mclourd</div>
                         <div class="widget-subheading">VP People Manager</div>
                     </div>
-                    <div class="widget-content-right header-user-info ml-3">
-                        <b-btn v-b-tooltip.hover title="Tooltip Example" class="btn-shadow p-1" size="sm" variant="info">
-                            <font-awesome-icon icon="calendar-alt" class="mr-1 ml-1"/>
-                        </b-btn>
+                    <div class="widget-content-right header-user-info ms-3">
+                        <b-tooltip target="calendar-btn" placement="bottom">
+                            Calendar Events
+                        </b-tooltip>
+                        <button id="calendar-btn" class="btn btn-info btn-sm btn-shadow p-1">
+                            <font-awesome-icon icon="calendar-alt" class="me-1 ms-1" />
+                        </button>
                     </div>
                 </div>
             </div>
@@ -34,46 +37,15 @@
 </template>
 
 <script>
-    // import VuePerfectScrollbar from 'vue-perfect-scrollbar'
-
-    import {library} from '@fortawesome/fontawesome-svg-core'
-    import {
-        faAngleDown,
-        faCalendarAlt,
-        faTrashAlt,
-        faCheck,
-        faFileAlt,
-        faCloudDownloadAlt,
-        faFileExcel,
-        faFilePdf,
-        faFileArchive,
-        faEllipsisH,
-    } from '@fortawesome/free-solid-svg-icons'
-    import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-
-    library.add(
-        faAngleDown,
-        faCalendarAlt,
-        faTrashAlt,
-        faCheck,
-        faFileAlt,
-        faCloudDownloadAlt,
-        faFileExcel,
-        faFilePdf,
-        faFileArchive,
-        faEllipsisH,
-    );
-
     export default {
-        components: {
-            'font-awesome-icon': FontAwesomeIcon,
+        name: 'HeaderUserArea',
+        data() {
+            return {
+                // Component data
+            }
         },
-        data: () => ({
-
-        }),
-
-        methods: {}
+        methods: {
+            // Component methods
+        }
     }
-
-
 </script>

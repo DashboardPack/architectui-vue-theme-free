@@ -20,11 +20,11 @@
                                     <Form>
                                         <b-row form>
                                             <b-col md="12">
-                                                <b-form-group>
+                                                <div class="mb-3">
                                                     <Label for="exampleEmail">Email</Label>
                                                     <b-form-input type="email" name="email" id="exampleEmail"
                                                                   placeholder="Email here..."/>
-                                                </b-form-group>
+                                                </div>
                                             </b-col>
                                         </b-row>
                                     </Form>
@@ -35,14 +35,14 @@
                                 </h6>
                             </div>
                             <div class="modal-footer clearfix">
-                                <div class="float-right">
+                                <div class="float-end">
                                     <b-button variant="primary" size="lg">Recover Password</b-button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="text-center text-white opacity-8 mt-3">
-                        Copyright &copy; ArchitectUI 2019
+                        Copyright &copy; ArchitectUI 2025
                     </div>
                 </b-col>
             </div>

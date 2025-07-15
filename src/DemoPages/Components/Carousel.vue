@@ -3,56 +3,53 @@
     <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
 
     <div class="content">
-        <b-card title="Bootstrap 4 Carousel" class="main-card mb-3">
-          <b-carousel id="carousel1"
-                      style="text-shadow: 1px 1px 2px #333;"
-                      controls
-                      indicators
-                      background="#ababab"
-                      :interval="4000"
-                      img-width="1024"
-                      img-height="480"
-                      v-model="slide"
-                      @sliding-start="onSlideStart"
-                      @sliding-end="onSlideEnd"
-          >
-
-            <!-- Text slides with image -->
-            <b-carousel-slide caption="First slide"
-                              text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-                              img-src="https://picsum.photos/1024/480/?image=52"
-            ></b-carousel-slide>
-
-            <!-- Slides with custom text -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-              <h1>Hello world!</h1>
-            </b-carousel-slide>
-
-            <!-- Slides with image only -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">
-            </b-carousel-slide>
-
-            <!-- Slides with img slot -->
-            <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-            <b-carousel-slide>
-              <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-                   src="https://picsum.photos/1024/480/?image=55" alt="image slot">
-            </b-carousel-slide>
-
-            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
-                ut lacus vel interdum.
-              </p>
-            </b-carousel-slide>
-
-          </b-carousel>
+        <b-card title="Bootstrap 5 Carousel" class="main-card mb-3">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <div class="carousel-indicators">
+              <button 
+                v-for="(slide, index) in slides" 
+                :key="index"
+                type="button" 
+                :data-bs-target="'#carouselExample'" 
+                :data-bs-slide-to="index" 
+                :class="{ active: index === currentSlide }"
+                :aria-current="index === currentSlide ? 'true' : 'false'"
+                :aria-label="'Slide ' + (index + 1)"
+                @click="goToSlide(index)">
+              </button>
+            </div>
+            
+            <!-- Carousel slides -->
+            <div class="carousel-inner">
+              <div 
+                v-for="(slide, index) in slides" 
+                :key="index"
+                :class="['carousel-item', { active: index === currentSlide }]">
+                <img :src="slide.image" class="d-block w-100" :alt="slide.alt" style="height: 400px; object-fit: cover;">
+                <div v-if="slide.caption || slide.text" class="carousel-caption d-none d-md-block" style="text-shadow: 1px 1px 2px #333;">
+                  <h5 v-if="slide.caption">{{ slide.caption }}</h5>
+                  <p v-if="slide.text">{{ slide.text }}</p>
+                  <div v-if="slide.customContent" v-html="slide.customContent"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" @click="previousSlide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" @click="nextSlide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
           <div class="divider"></div>
           <p class="mt-4">
-            Slide #: {{ slide }}<br>
-            Sliding: {{ sliding }}
+            Current Slide: {{ currentSlide + 1 }} of {{ slides.length }}<br>
+            Auto-play: {{ isAutoPlaying ? 'On' : 'Off' }}
           </p>
         </b-card>
       </div>
@@ -60,19 +57,92 @@
 </template>
 
 <script>
+import PageTitle from "../../Layout/Components/PageTitle.vue";
 
-  import PageTitle from "../../Layout/Components/PageTitle.vue";
-
-  export default {
-    components: {
-      PageTitle,
+export default {
+  name: 'Carousel',
+  components: {
+    PageTitle,
+  },
+  data() {
+    return {
+      heading: 'Carousels & Slideshows',
+      subheading: 'Create easy and beautiful slideshows with these Vue components.',
+      icon: 'pe-7s-album icon-gradient bg-sunny-morning',
+      currentSlide: 0,
+      isAutoPlaying: true,
+      autoPlayInterval: null,
+      slides: [
+        {
+          image: 'https://picsum.photos/1024/480/?image=52',
+          caption: 'First slide',
+          text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
+          alt: 'First slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=54',
+          caption: 'Hello world!',
+          text: '',
+          customContent: '<h1>Hello world!</h1>',
+          alt: 'Second slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=58',
+          caption: '',
+          text: '',
+          alt: 'Third slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=55',
+          caption: 'Image slot example',
+          text: 'Example using direct image slot',
+          alt: 'Fourth slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=60',
+          caption: 'Fifth Slide',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.',
+          alt: 'Fifth slide'
+        }
+      ]
+    }
+  },
+  mounted() {
+    this.startAutoPlay();
+  },
+  beforeUnmount() {
+    this.stopAutoPlay();
+  },
+  methods: {
+    goToSlide(index) {
+      this.currentSlide = index;
+      this.restartAutoPlay();
     },
-    data: () => ({
-        heading: 'Carousels & Slideshows',
-        subheading: 'Create easy and beautiful slideshows with these Vue components.',
-        icon: 'pe-7s-album icon-gradient bg-sunny-morning',
-    }),
-
-
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+      this.restartAutoPlay();
+    },
+    previousSlide() {
+      this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+      this.restartAutoPlay();
+    },
+    startAutoPlay() {
+      if (this.isAutoPlaying) {
+        this.autoPlayInterval = setInterval(() => {
+          this.nextSlide();
+        }, 4000);
+      }
+    },
+    stopAutoPlay() {
+      if (this.autoPlayInterval) {
+        clearInterval(this.autoPlayInterval);
+        this.autoPlayInterval = null;
+      }
+    },
+    restartAutoPlay() {
+      this.stopAutoPlay();
+      this.startAutoPlay();
+    }
   }
+}
 </script>

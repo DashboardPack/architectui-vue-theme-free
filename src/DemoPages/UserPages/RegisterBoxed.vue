@@ -8,14 +8,12 @@
                     <div class="modal-dialog w-100">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <h5 class="modal-title">
-                                    <h4 class="mt-2">
-                                        <div>Welcome,</div>
-                                        <span>It only takes a <span class="text-success">few seconds</span> to create your account</span>
-                                    </h4>
-                                </h5>
+                                <h4 class="modal-title mt-2">
+                                    <div>Welcome,</div>
+                                    <span>It only takes a <span class="text-success">few seconds</span> to create your account</span>
+                                </h4>
                                 <div class="divider"/>
-                                <b-form-group id="exampleInputGroup1"
+                                <div class="mb-3" id="exampleInputGroup1"
                                               label-for="exampleInput1"
                                               description="We'll never share your email with anyone else.">
                                     <b-form-input id="exampleInput1"
@@ -23,35 +21,35 @@
                                                   required
                                                   placeholder="Enter email...">
                                     </b-form-input>
-                                </b-form-group>
-                                <b-form-group id="exampleInputGroup12"
+                                </div>
+                                <div class="mb-3" id="exampleInputGroup12"
                                               label-for="exampleInput12">
                                     <b-form-input id="exampleInput12"
                                                   type="text"
                                                   required
                                                   placeholder="Enter username...">
                                     </b-form-input>
-                                </b-form-group>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <b-form-group id="exampleInputGroup2"
+                                        <div class="mb-3" id="exampleInputGroup2"
                                                       label-for="exampleInput2">
                                             <b-form-input id="exampleInput2"
                                                           type="password"
                                                           required
                                                           placeholder="Enter password...">
                                             </b-form-input>
-                                        </b-form-group>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <b-form-group id="exampleInputGroup2"
-                                                      label-for="exampleInput2">
-                                            <b-form-input id="exampleInput2"
+                                        <div class="mb-3" id="exampleInputGroup3"
+                                                      label-for="exampleInput3">
+                                            <b-form-input id="exampleInput3"
                                                           type="password"
                                                           required
                                                           placeholder="Repeat password...">
                                             </b-form-input>
-                                        </b-form-group>
+                                        </div>
                                     </div>
                                 </div>
                                 <b-form-checkbox name="check" id="exampleCheck">
@@ -67,17 +65,23 @@
                                 </h6>
                             </div>
                             <div class="modal-footer d-block text-center">
-                                <b-button color="primary" class="btn-wide btn-pill btn-shadow btn-hover-shine"
+                                <b-button variant="primary" class="btn-wide btn-pill btn-shadow btn-hover-shine"
                                           size="lg">Create Account
                                 </b-button>
                             </div>
                         </div>
                     </div>
                     <div class="text-center text-white opacity-8 mt-3">
-                        Copyright &copy; ArchitectUI 2019
+                        Copyright &copy; ArchitectUI 2025
                     </div>
                 </b-col>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'RegisterBoxed'
+}
+</script>

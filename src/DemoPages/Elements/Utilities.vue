@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-warning fade show" role="alert"><h5>Bootstrap Helpers</h5>
-                    <p class="mb-0">All Bootstrap 4 helper classes available in the official Bootstrap documentation are
+                    <p class="mb-0">All Bootstrap 5 helper classes available in the official Bootstrap documentation are
                         also available in ArchitectUI Framework: Spacing, resets, typography utilities, sizing and
                         others.</p></div>
             </div>
@@ -67,10 +67,10 @@
                 <div class="row">
                     <div class="col-sm">
                         <div class="clearfix">
-                            <div class="d-inline-block float-left h-50p bg-light p-5 mr-5 mb-5">50px</div>
-                            <div class="d-inline-block float-left h-75p bg-light p-5 mr-5 mb-5">75px</div>
-                            <div class="d-inline-block float-left h-100p bg-light p-5 mr-5 mb-5">100px</div>
-                            <div class="d-inline-block float-left h-125p bg-light p-5 mr-5 mb-5">125px</div>
+                            <div class="d-inline-block float-start h-50p bg-light p-5 me-5 mb-5">50px</div>
+                            <div class="d-inline-block float-start h-75p bg-light p-5 me-5 mb-5">75px</div>
+                            <div class="d-inline-block float-start h-100p bg-light p-5 me-5 mb-5">100px</div>
+                            <div class="d-inline-block float-start h-125p bg-light p-5 me-5 mb-5">125px</div>
                         </div>
                         <div class="table-wrap mt-40">
                             <table class="table table-bordered mb-0">
@@ -111,12 +111,12 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="h-200p">
-                            <div class="d-inline-block float-left h-auto bg-light p-5 mr-5 mb-2">auto</div>
-                            <div class="d-inline-block float-left h-25 bg-light p-5 mr-5 mb-2">25%</div>
-                            <div class="d-inline-block float-left h-50 bg-light p-5 mr-5 mb-2">50%</div>
-                            <div class="d-inline-block float-left h-75 bg-light p-5 mr-5 mb-2">75%</div>
-                            <div class="d-inline-block float-left h-100 bg-light p-5 mr-5 mb-2">100%</div>
+                        <div class="h-200p d-flex flex-wrap">
+                            <div class="h-auto bg-light p-5 me-5 mb-2">auto</div>
+                            <div class="h-25 bg-light p-5 me-5 mb-2">25%</div>
+                            <div class="h-50 bg-light p-5 me-5 mb-2">50%</div>
+                            <div class="h-75 bg-light p-5 me-5 mb-2">75%</div>
+                            <div class="h-100 bg-light p-5 me-5 mb-2">100%</div>
                         </div>
                         <div class="table-wrap mt-40">
                             <table class="table table-bordered mb-0">
@@ -151,11 +151,11 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm">
-                        <div>
-                            <div class="w-50p bg-light p-0 mr-5 mb-5">50px</div>
-                            <div class="w-75p bg-light p-0 mr-5 mb-5">75px</div>
-                            <div class="w-100p bg-light p-0 mr-5 mb-5">100px</div>
-                            <div class="w-150p bg-light p-0 mr-5 mb-5">150px</div>
+                        <div class="d-flex flex-column">
+                            <div class="w-50p bg-light p-2 me-5 mb-2">50px</div>
+                            <div class="w-75p bg-light p-2 me-5 mb-2">75px</div>
+                            <div class="w-100p bg-light p-2 me-5 mb-2">100px</div>
+                            <div class="w-150p bg-light p-2 me-5 mb-2">150px</div>
                         </div>
                         <div class="table-wrap mt-40">
                             <table class="table table-bordered mb-0">
@@ -201,12 +201,12 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm">
-                        <div>
-                            <div class="w-25 bg-light p-5 mr-5 mb-5">25%</div>
-                            <div class="w-50 bg-light p-5 mr-5 mb-5">50%</div>
-                            <div class="w-75 bg-light p-5 mr-5 mb-5">75%</div>
-                            <div class="w-100 bg-light p-5 mr-5 mb-5">100%</div>
-                            <div class="w-auto bg-light p-5 mr-5 mb-5">auto</div>
+                        <div class="d-flex flex-column">
+                            <div class="w-25 bg-light p-5 me-5 mb-2">25%</div>
+                            <div class="w-50 bg-light p-5 me-5 mb-2">50%</div>
+                            <div class="w-75 bg-light p-5 me-5 mb-2">75%</div>
+                            <div class="w-100 bg-light p-5 me-5 mb-2">100%</div>
+                            <div class="w-auto bg-light p-5 me-5 mb-2">auto</div>
                         </div>
                         <div class="table-wrap mt-40">
                             <table class="table table-bordered mb-0">
@@ -250,14 +250,14 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="clearfix">
-                            <div class="d-inline-block  float-left d-46 bg-light mr-5 mb-5">
+                        <div class="d-flex flex-wrap">
+                            <div class="d-46 bg-light me-5 mb-5">
                                 <div class="d-flex justify-content-center align-items-center h-100 w-100">d-46</div>
                             </div>
-                            <div class="d-inline-block  float-left d-74 bg-light mr-5 mb-5">
+                            <div class="d-74 bg-light me-5 mb-5">
                                 <div class="d-flex justify-content-center align-items-center h-100 w-100">d-74</div>
                             </div>
-                            <div class="d-inline-block  float-left d-100 bg-light mr-5 mb-5">
+                            <div class="d-100 bg-light me-5 mb-5">
                                 <div class="d-flex justify-content-center align-items-center h-100 w-100">d-100</div>
                             </div>
                         </div>
