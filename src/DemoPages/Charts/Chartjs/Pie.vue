@@ -4,14 +4,7 @@
 
 <script>
 import { Pie } from 'vue-chartjs'
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  ArcElement,
-  CategoryScale
-} from 'chart.js'
+import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 
@@ -24,27 +17,15 @@ export default {
     return {
       chartData: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-        datasets: [{
-          label: 'Sales Data',
-          data: [40, 20, 80, 10, 16, 24],
-          backgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56',
-            '#4BC0C0',
-            '#9966FF',
-            '#FF9F40'
-          ],
-          borderColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56',
-            '#4BC0C0',
-            '#9966FF',
-            '#FF9F40'
-          ],
-          borderWidth: 2
-        }]
+        datasets: [
+          {
+            label: 'Sales Data',
+            data: [40, 20, 80, 10, 16, 24],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'],
+            borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'],
+            borderWidth: 2
+          }
+        ]
       },
       chartOptions: {
         responsive: true,
@@ -59,7 +40,7 @@ export default {
           },
           tooltip: {
             mode: 'index',
-            intersect: false,
+            intersect: false
           }
         }
       }

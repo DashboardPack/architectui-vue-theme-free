@@ -4,10 +4,10 @@
   &.text-lighter {
     .app-header-left .header-megamenu > li > .dropdown > .btn,
     .app-header-left .header-megamenu > li > .btn {
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255, 255, 255, 0.7);
 
       .nav-link-icon {
-        color: rgba(255, 255, 255, .8);
+        color: rgba(255, 255, 255, 0.8);
       }
 
       &:hover {
@@ -17,17 +17,16 @@
 
     .app-header-right {
       .icon-wrapper-alt {
-
         .fa,
         i,
         .icon {
-          color: rgba(255, 255, 255, .7) !important;
-          transition: all .2s;
+          color: rgba(255, 255, 255, 0.7) !important;
+          transition: all 0.2s;
         }
 
         .icon-wrapper-bg {
-          background: rgba(255, 255, 255, .1) !important;
-          transition: all .2s;
+          background: rgba(255, 255, 255, 0.1) !important;
+          transition: all 0.2s;
           opacity: 1;
         }
 
@@ -35,11 +34,11 @@
           .fa,
           i,
           .icon {
-            color: rgba(255, 255, 255, .9) !important;
+            color: rgba(255, 255, 255, 0.9) !important;
           }
 
           .icon-wrapper-bg {
-            background: rgba(255, 255, 255, .15) !important;
+            background: rgba(255, 255, 255, 0.15) !important;
           }
         }
 
@@ -49,15 +48,14 @@
       }
 
       .header-btn-lg {
-
         .widget-content-left > .dropdown .btn-link {
           svg path {
-            fill: rgba(255, 255, 255, .5);
+            fill: rgba(255, 255, 255, 0.5);
           }
 
           &:hover {
             svg path {
-              fill: rgba(255, 255, 255, .8);
+              fill: rgba(255, 255, 255, 0.8);
             }
           }
         }
@@ -65,11 +63,13 @@
         .header-user-info {
           .widget-heading,
           .widget-subheading {
-            color: rgba(255, 255, 255, .8);
+            color: rgba(255, 255, 255, 0.8);
           }
 
           & > .btn-shadow {
-            box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, .1), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+            box-shadow:
+              0 0.125rem 0.625rem rgba(0, 0, 0, 0.1),
+              0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
           }
         }
       }
@@ -78,7 +78,7 @@
     .search-wrapper {
       .input-holder {
         .search-icon {
-          background: rgba(0, 0, 0, .1);
+          background: rgba(0, 0, 0, 0.1);
         }
 
         .search-input::placeholder,
@@ -86,20 +86,20 @@
         .search-input:-ms-input-placeholder,
         .search-input:-moz-placeholder,
         .search-input::-moz-placeholder {
-          color: rgba(255, 255, 255, .5) !important;
+          color: rgba(255, 255, 255, 0.5) !important;
         }
       }
 
       &.active {
         .input-holder {
-          background: rgba(255, 255, 255, .1);
+          background: rgba(255, 255, 255, 0.1);
 
           .search-input {
-            color: rgba(255, 255, 255, .8);
+            color: rgba(255, 255, 255, 0.8);
           }
 
           .search-icon {
-            background: rgba(255, 255, 255, .1);
+            background: rgba(255, 255, 255, 0.1);
           }
         }
       }
@@ -107,7 +107,7 @@
 
     .header-btn-lg {
       &::before {
-        background: rgba(255, 255, 255, .2);
+        background: rgba(255, 255, 255, 0.2);
       }
     }
 
@@ -117,28 +117,26 @@
       .hamburger.is-active .hamburger-inner,
       .hamburger-inner::before,
       .hamburger-inner::after {
-        background-color: rgba(255, 255, 255, .8) !important;
+        background-color: rgba(255, 255, 255, 0.8) !important;
       }
     }
 
     .search-wrapper .input-holder .search-icon span::after {
-      border-color: rgba(255, 255, 255, .8);
+      border-color: rgba(255, 255, 255, 0.8);
     }
 
     .search-wrapper .close::before,
     .search-wrapper .close::after,
     .search-wrapper .input-holder .search-icon span::before {
-      background: rgba(255, 255, 255, .8);
+      background: rgba(255, 255, 255, 0.8);
     }
 
     .app-header__mobile-menu {
       .hamburger-inner,
       .hamburger-inner::before,
       .hamburger-inner::after {
-        background: rgba(255, 255, 255, .9);
+        background: rgba(255, 255, 255, 0.9);
       }
     }
-
   }
-
 }

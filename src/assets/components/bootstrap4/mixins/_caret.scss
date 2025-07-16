@@ -29,9 +29,9 @@
   @if $enable-caret {
     &::after {
       display: inline-block;
-      margin-left: $caret-width * .85;
-      vertical-align: $caret-width * .85;
-      content: "";
+      margin-left: $caret-width * 0.85;
+      vertical-align: $caret-width * 0.85;
+      content: '';
       @if $direction == down {
         @include caret-down;
       } @else if $direction == up {
@@ -48,9 +48,9 @@
 
       &::before {
         display: inline-block;
-        margin-right: $caret-width * .85;
-        vertical-align: $caret-width * .85;
-        content: "";
+        margin-right: $caret-width * 0.85;
+        vertical-align: $caret-width * 0.85;
+        content: '';
         @include caret-left;
       }
     }

@@ -7,17 +7,17 @@
     }
 
     .app-header__logo {
-      background: rgba(255, 255, 255, .1) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
     }
 
     .logo-src {
-      background: url('./assets/images/logo.png');
+      background: url('@/assets/images/logo.png');
     }
 
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
-      background: rgba(255, 255, 255, .8) !important;
+      background: rgba(255, 255, 255, 0.8) !important;
     }
 
     .hamburger-box:hover {
@@ -50,15 +50,15 @@
 
       .vsm-arrow,
       .vsm-icon {
-        opacity: .5;
+        opacity: 0.5;
       }
 
       & .vsm-link {
-        color: rgba(255, 255, 255, .7);
+        color: rgba(255, 255, 255, 0.7);
 
         &:hover {
           .vsm-icon {
-            opacity: .65;
+            opacity: 0.65;
           }
         }
       }
@@ -77,12 +77,11 @@
     .ps.ps--in-scrolling.ps--y:hover > .ps__scrollbar-y-rail,
     .ps.ps--in-scrolling.ps--y > .ps__scrollbar-y-rail,
     .ps:hover > .ps__scrollbar-y-rail:hover {
-      background-color: rgba(255, 255, 255, .1) !important;
+      background-color: rgba(255, 255, 255, 0.1) !important;
 
       & > .ps__scrollbar-y {
-        background-color: rgba(255, 255, 255, .25) !important;
+        background-color: rgba(255, 255, 255, 0.25) !important;
       }
     }
-
   }
 }

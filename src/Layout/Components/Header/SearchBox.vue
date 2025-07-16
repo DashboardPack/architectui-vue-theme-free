@@ -1,22 +1,47 @@
 <template>
-    <div>
-        <div class="search-wrapper" v-bind:class="{ active: searchOpen }">
-            <div class="input-holder">
-                <input type="text" class="search-input" placeholder="Type to search"/>
-                <button class="search-icon" v-on:click="searchOpen = !searchOpen"><span/></button>
-            </div>
-            <div v-if="searchOpen" class="close" v-on:click="searchOpen = !searchOpen"></div>
-        </div>
+  <div>
+    <div class="search-wrapper" v-bind:class="{ active: searchOpen() }">
+      <div class="input-holder">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Type to search"
+          v-model="searchQuery"
+          @keyup.enter="handleSearch"
+        />
+        <button class="search-icon" @click="toggleSearch"><span /></button>
+      </div>
+      <div v-if="searchOpen()" class="close" @click="toggleSearch"></div>
     </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                searchOpen: false,
-            }
-        },
-    }
-</script>
+import { defineComponent, ref } from 'vue'
+import { useUIStore } from '@/stores/ui'
 
+export default defineComponent({
+  name: 'SearchBox',
+  setup() {
+    const uiStore = useUIStore()
+    const searchQuery = ref('')
+
+    const toggleSearch = () => {
+      uiStore.toggleHeaderSearch()
+    }
+
+    const handleSearch = event => {
+      // Implement search functionality here
+      console.log('Search query:', searchQuery.value)
+      event.preventDefault()
+    }
+
+    return {
+      searchOpen: () => uiStore.headerSearchOpen,
+      searchQuery,
+      toggleSearch,
+      handleSearch
+    }
+  }
+})
+</script>

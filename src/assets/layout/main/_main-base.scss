@@ -6,7 +6,7 @@
   display: flex;
   z-index: 8;
   padding: $app-header-height 0 0 $app-sidebar-width;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .app-main__inner {
@@ -16,4 +16,4 @@
 
 // Themes
 
-@import "themes/main-white";
+@import 'themes/main-white';

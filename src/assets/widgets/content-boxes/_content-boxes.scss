@@ -17,14 +17,13 @@ $widget-spacer: $spacer;
   }
 
   .widget-content-left {
-
     .widget-heading {
-      opacity: .8;
+      opacity: 0.8;
       font-weight: bold;
     }
 
     .widget-subheading {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 
@@ -49,13 +48,12 @@ $widget-spacer: $spacer;
 
     .progress-sub-label {
       margin-top: ($widget-spacer / 3);
-      opacity: .5;
+      opacity: 0.5;
       display: flex;
       align-content: center;
       align-items: center;
 
       .sub-label-left {
-
       }
 
       .sub-label-right {
@@ -68,7 +66,7 @@ $widget-spacer: $spacer;
     &.widget-content-actions {
       visibility: hidden;
       opacity: 0;
-      transition: opacity .2s;
+      transition: opacity 0.2s;
     }
   }
 

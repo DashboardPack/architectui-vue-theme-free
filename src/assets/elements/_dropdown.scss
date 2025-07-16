@@ -1,10 +1,11 @@
 // Dropdown
 
 .dropdown-menu {
-  box-shadow: 0 0.46875rem 2.1875rem rgba(darken($primary, 50%), .03),
-  0 0.9375rem 1.40625rem rgba(darken($primary, 50%), .03),
-  0 0.25rem 0.53125rem rgba(darken($primary, 50%), .05),
-  0 0.125rem 0.1875rem rgba(darken($primary, 50%), .03);
+  box-shadow:
+    0 0.46875rem 2.1875rem rgba(darken($primary, 50%), 0.03),
+    0 0.9375rem 1.40625rem rgba(darken($primary, 50%), 0.03),
+    0 0.25rem 0.53125rem rgba(darken($primary, 50%), 0.05),
+    0 0.125rem 0.1875rem rgba(darken($primary, 50%), 0.03);
 
   margin: $dropdown-spacer;
 }
@@ -15,7 +16,7 @@
   &::after {
     position: relative;
     top: 2px;
-    opacity: .8;
+    opacity: 0.8;
     margin-left: 5px;
   }
 }
@@ -35,5 +36,5 @@
 }
 
 .dropdown-toggle-split {
-  border-left: rgba(255, 255, 255, .1) solid 2px;
+  border-left: rgba(255, 255, 255, 0.1) solid 2px;
 }

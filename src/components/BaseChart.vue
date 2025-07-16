@@ -94,7 +94,7 @@ export default {
       if (this.chart) {
         this.chart.destroy()
       }
-      
+
       const ctx = this.$refs.chartCanvas.getContext('2d')
       this.chart = new ChartJS(ctx, {
         type: this.type,

@@ -3,7 +3,7 @@
 .popover,
 .tooltip {
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 
   &.show {
     opacity: 1;

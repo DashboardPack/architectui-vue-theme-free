@@ -1,138 +1,134 @@
 <template>
   <div>
-    <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
+    <page-title :heading="heading" :subheading="subheading" :icon="icon"></page-title>
     <div class="content">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Doughnut Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <doughnut></doughnut>
-                </div>
-              </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Doughnut Chart</h5>
             </div>
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Radar Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <radar></radar>
-                </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <doughnut></doughnut>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Polar Area Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <polar></polar>
-                </div>
-              </div>
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Radar Chart</h5>
             </div>
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Pie Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <pie></pie>
-                </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <radar></radar>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Line Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <lineeg></lineeg>
-                </div>
-              </div>
+        <div class="col-md-6">
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Polar Area Chart</h5>
             </div>
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Area Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <areaeg></areaeg>
-                </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <polar></polar>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Vertical Bar Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <bar></bar>
-                </div>
-              </div>
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Pie Chart</h5>
             </div>
-            <div class="main-card mb-3 card">
-              <div class="card-header">
-                <h5 class="card-title mb-0">Horizontal Bar Chart</h5>
-              </div>
-              <div class="card-body">
-                <div class="chart-container">
-                  <barhoriz></barhoriz>
-                </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <pie></pie>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Line Chart</h5>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <lineeg></lineeg>
+              </div>
+            </div>
+          </div>
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Area Chart</h5>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <areaeg></areaeg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Vertical Bar Chart</h5>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <bar></bar>
+              </div>
+            </div>
+          </div>
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Horizontal Bar Chart</h5>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <barhoriz></barhoriz>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import PageTitle from '../../Layout/Components/PageTitle.vue'
 
-  import PageTitle from "../../Layout/Components/PageTitle.vue";
+import doughnut from './Chartjs/DoughnutSimple.vue'
+import radar from './Chartjs/RadarSimple.vue'
+import polar from './Chartjs/PolarSimple.vue'
+import pie from './Chartjs/PieSimple.vue'
+import lineeg from './Chartjs/LineSimple.vue'
+import areaeg from './Chartjs/AreaSimple.vue'
+import bar from './Chartjs/BarSimple.vue'
+import barhoriz from './Chartjs/BarHorizontalSimple.vue'
 
-  import doughnut from './Chartjs/DoughnutSimple.vue'
-  import radar from './Chartjs/RadarSimple.vue'
-  import polar from './Chartjs/PolarSimple.vue'
-  import pie from './Chartjs/PieSimple.vue'
-  import lineeg from './Chartjs/LineSimple.vue'
-  import areaeg from './Chartjs/AreaSimple.vue'
-  import bar from './Chartjs/BarSimple.vue'
-  import barhoriz from './Chartjs/BarHorizontalSimple.vue'
+export default {
+  components: {
+    PageTitle,
 
-  export default {
-    components: {
-      PageTitle,
-
-      doughnut,
-      radar,
-      polar,
-      pie,
-      lineeg,
-      areaeg,
-      bar,
-      barhoriz,
-
-    },
-    data: () => ({
-      heading: 'ChartJS',
-      subheading: 'Huge selection of charts created with the Vue ChartJS Plugin',
-      icon: 'pe-7s-bandaid icon-gradient bg-amy-crisp',
-    }),
-
-
-  }
+    doughnut,
+    radar,
+    polar,
+    pie,
+    lineeg,
+    areaeg,
+    bar,
+    barhoriz
+  },
+  data: () => ({
+    heading: 'ChartJS',
+    subheading: 'Huge selection of charts created with the Vue ChartJS Plugin',
+    icon: 'pe-7s-bandaid icon-gradient bg-amy-crisp'
+  })
+}
 </script>
 
 <style scoped>

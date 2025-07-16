@@ -1,0 +1,13 @@
+dist/
+node_modules/
+build/
+coverage/
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+architectui-vue-free/
+public/
+devtools-stub.js
+CHANGELOG.md
+package-lock.json

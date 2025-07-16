@@ -13,7 +13,7 @@
         </div>
         <div class="card-body">
           <p class="text-muted mb-4">Form fields arranged in a grid layout with responsive columns.</p>
-          
+
           <form @submit.prevent="submitGridForm">
             <b-row>
               <b-col md="6">
@@ -27,9 +27,7 @@
                     :state="getValidationState('email')"
                     required
                   ></b-form-input>
-                  <b-form-invalid-feedback>
-                    Please enter a valid email address.
-                  </b-form-invalid-feedback>
+                  <b-form-invalid-feedback> Please enter a valid email address. </b-form-invalid-feedback>
                 </div>
               </b-col>
               <b-col md="6">
@@ -43,9 +41,7 @@
                     :state="getValidationState('password')"
                     required
                   ></b-form-input>
-                  <b-form-invalid-feedback>
-                    Password must be at least 6 characters.
-                  </b-form-invalid-feedback>
+                  <b-form-invalid-feedback> Password must be at least 6 characters. </b-form-invalid-feedback>
                 </div>
               </b-col>
             </b-row>
@@ -73,11 +69,7 @@
               <b-col md="6">
                 <div class="position-relative mb-3">
                   <label for="gridCity" class="form-label">City</label>
-                  <b-form-input
-                    id="gridCity"
-                    v-model="gridForm.city"
-                    required
-                  ></b-form-input>
+                  <b-form-input id="gridCity" v-model="gridForm.city" required></b-form-input>
                 </div>
               </b-col>
               <b-col md="4">
@@ -94,22 +86,13 @@
               <b-col md="2">
                 <div class="position-relative mb-3">
                   <label for="gridZip" class="form-label">Zip</label>
-                  <b-form-input
-                    id="gridZip"
-                    v-model="gridForm.zip"
-                    placeholder="12345"
-                    required
-                  ></b-form-input>
+                  <b-form-input id="gridZip" v-model="gridForm.zip" placeholder="12345" required></b-form-input>
                 </div>
               </b-col>
             </b-row>
 
             <div class="position-relative mb-3">
-              <b-form-checkbox
-                id="gridCheck"
-                v-model="gridForm.acceptTerms"
-                required
-              >
+              <b-form-checkbox id="gridCheck" v-model="gridForm.acceptTerms" required>
                 I agree to the terms and conditions
               </b-form-checkbox>
             </div>
@@ -138,7 +121,7 @@
         </div>
         <div class="card-body">
           <p class="text-muted mb-4">Form fields arranged horizontally in a single row.</p>
-          
+
           <form @submit.prevent="submitInlineForm" class="mb-4">
             <div class="row align-items-end">
               <div class="col-md-5">
@@ -176,27 +159,13 @@
             <h6 class="mb-3">Inline Checkboxes</h6>
             <div class="row">
               <div class="col-12">
-                <b-form-checkbox
-                  v-model="inlineForm.newsletter"
-                  inline
-                  class="me-3"
-                >
+                <b-form-checkbox v-model="inlineForm.newsletter" inline class="me-3">
                   Subscribe to newsletter
                 </b-form-checkbox>
-                <b-form-checkbox
-                  v-model="inlineForm.notifications"
-                  inline
-                  class="me-3"
-                >
+                <b-form-checkbox v-model="inlineForm.notifications" inline class="me-3">
                   Enable notifications
                 </b-form-checkbox>
-                <b-form-checkbox
-                  v-model="inlineForm.marketing"
-                  inline
-                  class="me-3"
-                >
-                  Marketing emails
-                </b-form-checkbox>
+                <b-form-checkbox v-model="inlineForm.marketing" inline class="me-3"> Marketing emails </b-form-checkbox>
               </div>
             </div>
           </div>
@@ -206,12 +175,7 @@
           <form @submit.prevent="submitQuickForm">
             <div class="row align-items-center">
               <div class="col-md-4">
-                <b-form-input
-                  v-model="quickForm.email"
-                  type="email"
-                  placeholder="Email"
-                  required
-                ></b-form-input>
+                <b-form-input v-model="quickForm.email" type="email" placeholder="Email" required></b-form-input>
               </div>
               <div class="col-md-4">
                 <b-form-input
@@ -242,7 +206,7 @@
         </div>
         <div class="card-body">
           <p class="text-muted mb-4">Form fields with labels positioned to the left of inputs.</p>
-          
+
           <form @submit.prevent="submitHorizontalForm">
             <b-row class="mb-3">
               <label for="horizontalEmail" class="col-sm-3 col-form-label">Email Address</label>
@@ -255,9 +219,7 @@
                   :state="getHorizontalValidationState('email')"
                   required
                 ></b-form-input>
-                <b-form-invalid-feedback>
-                  Please enter a valid email address.
-                </b-form-invalid-feedback>
+                <b-form-invalid-feedback> Please enter a valid email address. </b-form-invalid-feedback>
               </b-col>
             </b-row>
 
@@ -272,9 +234,7 @@
                   :state="getHorizontalValidationState('password')"
                   required
                 ></b-form-input>
-                <b-form-invalid-feedback>
-                  Password must be at least 6 characters.
-                </b-form-invalid-feedback>
+                <b-form-invalid-feedback> Password must be at least 6 characters. </b-form-invalid-feedback>
               </b-col>
             </b-row>
 
@@ -344,9 +304,7 @@
 
             <b-row class="mb-3">
               <b-col sm="9" offset-sm="3">
-                <b-form-checkbox
-                  v-model="horizontalForm.available"
-                >
+                <b-form-checkbox v-model="horizontalForm.available">
                   I am available for immediate hire
                 </b-form-checkbox>
               </b-col>
@@ -418,11 +376,7 @@
                 <div class="mb-3">
                   <label for="searchInput" class="form-label">Search</label>
                   <b-input-group>
-                    <b-form-input
-                      id="searchInput"
-                      v-model="advancedForm.search"
-                      placeholder="Search..."
-                    ></b-form-input>
+                    <b-form-input id="searchInput" v-model="advancedForm.search" placeholder="Search..."></b-form-input>
                     <b-input-group-append>
                       <b-button variant="outline-secondary" class="search-button">
                         <i class="fas fa-search"></i>
@@ -449,20 +403,12 @@
 
                 <div class="mb-3">
                   <label for="colorInput" class="form-label">Color</label>
-                  <b-form-input
-                    id="colorInput"
-                    v-model="advancedForm.color"
-                    type="color"
-                  ></b-form-input>
+                  <b-form-input id="colorInput" v-model="advancedForm.color" type="color"></b-form-input>
                 </div>
 
                 <div class="mb-3">
                   <label for="dateInput" class="form-label">Date</label>
-                  <b-form-input
-                    id="dateInput"
-                    v-model="advancedForm.date"
-                    type="date"
-                  ></b-form-input>
+                  <b-form-input id="dateInput" v-model="advancedForm.date" type="date"></b-form-input>
                 </div>
               </div>
             </b-col>
@@ -485,19 +431,19 @@
 </template>
 
 <script>
-import PageTitle from "../../../Layout/Components/PageTitle.vue";
+import PageTitle from '../../../Layout/Components/PageTitle.vue'
 
 export default {
   name: 'FormLayouts',
   components: {
-    PageTitle,
+    PageTitle
   },
   data() {
     return {
       heading: 'Form Layouts',
       subheading: 'Build whatever layout you need with our comprehensive form components.',
       icon: 'pe-7s-graph text-success',
-      
+
       // Grid Form Data
       gridForm: {
         email: '',
@@ -509,7 +455,7 @@ export default {
         zip: '',
         acceptTerms: false
       },
-      
+
       // Inline Form Data
       inlineForm: {
         email: '',
@@ -518,13 +464,13 @@ export default {
         notifications: true,
         marketing: false
       },
-      
+
       // Quick Form Data
       quickForm: {
         email: '',
         password: ''
       },
-      
+
       // Horizontal Form Data
       horizontalForm: {
         email: '',
@@ -536,7 +482,7 @@ export default {
         experience: '',
         available: false
       },
-      
+
       // Advanced Form Data
       advancedForm: {
         website: '',
@@ -546,7 +492,7 @@ export default {
         color: '#007bff',
         date: ''
       },
-      
+
       // Form Options
       stateOptions: [
         { value: '', text: 'Choose state...' },
@@ -556,7 +502,7 @@ export default {
         { value: 'fl', text: 'Florida' },
         { value: 'wa', text: 'Washington' }
       ],
-      
+
       departmentOptions: [
         { value: '', text: 'Select department...' },
         { value: 'engineering', text: 'Engineering' },
@@ -565,7 +511,7 @@ export default {
         { value: 'sales', text: 'Sales' },
         { value: 'support', text: 'Support' }
       ],
-      
+
       skillOptions: [
         { value: 'vue', text: 'Vue.js' },
         { value: 'react', text: 'React' },
@@ -576,7 +522,7 @@ export default {
         { value: 'php', text: 'PHP' },
         { value: 'design', text: 'UI/UX Design' }
       ],
-      
+
       experienceOptions: [
         { text: 'Entry Level (0-2 years)', value: 'entry' },
         { text: 'Mid Level (3-5 years)', value: 'mid' },
@@ -585,37 +531,39 @@ export default {
       ]
     }
   },
-  
+
   methods: {
     // Grid Form Methods
     submitGridForm() {
       if (this.validateGridForm()) {
-        alert('Grid form submitted successfully!');
+        alert('Grid form submitted successfully!')
         // Handle form submission
         // Form data available in this.gridForm
       }
     },
-    
+
     validateGridForm() {
-      return this.gridForm.email && 
-             this.gridForm.password.length >= 6 && 
-             this.gridForm.address && 
-             this.gridForm.city && 
-             this.gridForm.state && 
-             this.gridForm.zip && 
-             this.gridForm.acceptTerms;
+      return (
+        this.gridForm.email &&
+        this.gridForm.password.length >= 6 &&
+        this.gridForm.address &&
+        this.gridForm.city &&
+        this.gridForm.state &&
+        this.gridForm.zip &&
+        this.gridForm.acceptTerms
+      )
     },
-    
+
     getValidationState(field) {
       if (field === 'email') {
-        return this.gridForm.email ? (this.isValidEmail(this.gridForm.email) ? true : false) : null;
+        return this.gridForm.email ? (this.isValidEmail(this.gridForm.email) ? true : false) : null
       }
       if (field === 'password') {
-        return this.gridForm.password ? (this.gridForm.password.length >= 6 ? true : false) : null;
+        return this.gridForm.password ? (this.gridForm.password.length >= 6 ? true : false) : null
       }
-      return null;
+      return null
     },
-    
+
     resetGridForm() {
       this.gridForm = {
         email: '',
@@ -626,49 +574,51 @@ export default {
         state: '',
         zip: '',
         acceptTerms: false
-      };
+      }
     },
-    
+
     // Inline Form Methods
     submitInlineForm() {
       if (this.inlineForm.email && this.inlineForm.password) {
-        alert('Inline form submitted successfully!');
+        alert('Inline form submitted successfully!')
         // Form data available in this.inlineForm
       }
     },
-    
+
     submitQuickForm() {
       if (this.quickForm.email && this.quickForm.password) {
-        alert('Quick form submitted successfully!');
+        alert('Quick form submitted successfully!')
         // Form data available in this.quickForm
       }
     },
-    
+
     // Horizontal Form Methods
     submitHorizontalForm() {
       if (this.validateHorizontalForm()) {
-        alert('Horizontal form submitted successfully!');
+        alert('Horizontal form submitted successfully!')
         // Form data available in this.horizontalForm
       }
     },
-    
+
     validateHorizontalForm() {
-      return this.horizontalForm.email && 
-             this.horizontalForm.password.length >= 6 && 
-             this.horizontalForm.department && 
-             this.horizontalForm.experience;
+      return (
+        this.horizontalForm.email &&
+        this.horizontalForm.password.length >= 6 &&
+        this.horizontalForm.department &&
+        this.horizontalForm.experience
+      )
     },
-    
+
     getHorizontalValidationState(field) {
       if (field === 'email') {
-        return this.horizontalForm.email ? (this.isValidEmail(this.horizontalForm.email) ? true : false) : null;
+        return this.horizontalForm.email ? (this.isValidEmail(this.horizontalForm.email) ? true : false) : null
       }
       if (field === 'password') {
-        return this.horizontalForm.password ? (this.horizontalForm.password.length >= 6 ? true : false) : null;
+        return this.horizontalForm.password ? (this.horizontalForm.password.length >= 6 ? true : false) : null
       }
-      return null;
+      return null
     },
-    
+
     resetHorizontalForm() {
       this.horizontalForm = {
         email: '',
@@ -679,13 +629,13 @@ export default {
         file: null,
         experience: '',
         available: false
-      };
+      }
     },
-    
+
     // Utility Methods
     isValidEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email);
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      return re.test(email)
     }
   }
 }
@@ -831,15 +781,15 @@ export default {
   .col-md-2 {
     margin-bottom: 1rem;
   }
-  
+
   .offset-sm-3 {
     margin-left: 0;
   }
-  
+
   .d-flex.justify-content-between {
     flex-direction: column;
   }
-  
+
   .d-flex.justify-content-between .btn {
     width: 100%;
     margin-bottom: 0.5rem;
@@ -857,12 +807,12 @@ export default {
 }
 
 /* Range input styling */
-input[type="range"] {
+input[type='range'] {
   width: 100%;
 }
 
 /* Color input styling */
-input[type="color"] {
+input[type='color'] {
   width: 100%;
   height: 38px;
   border: 1px solid #ced4da;

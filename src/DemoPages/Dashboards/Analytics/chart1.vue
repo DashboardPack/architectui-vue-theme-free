@@ -1,9 +1,5 @@
 <template>
-  <Line
-    :data="chartData"
-    :options="chartOptions"
-    :height="height"
-  />
+  <Line :data="chartData" :options="chartOptions" :height="height" />
 </template>
 
 <script>
@@ -20,16 +16,7 @@ import {
   Filler
 } from 'chart.js'
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Filler
-)
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler)
 
 export default {
   name: 'Chart1',

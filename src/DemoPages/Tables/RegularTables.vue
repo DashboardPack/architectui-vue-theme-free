@@ -1,7 +1,7 @@
 <template>
   <div>
     <page-title :heading="heading" :subheading="subheading" :icon="icon"></page-title>
-    
+
     <!-- Table Options Card -->
     <b-card title="Bootstrap 5 Table Options" class="main-card mb-4">
       <b-row>
@@ -31,7 +31,7 @@
           <b-col md="6">
             <div class="d-flex align-items-center">
               <label class="form-label me-2 mb-0">Show:</label>
-              <select v-model="perPage" class="form-select form-select-sm" style="width: auto;">
+              <select v-model="perPage" class="form-select form-select-sm" style="width: auto">
                 <option :value="5">5</option>
                 <option :value="10">10</option>
                 <option :value="25">25</option>
@@ -42,18 +42,19 @@
           </b-col>
           <b-col md="6">
             <div class="d-flex justify-content-end">
-              <input 
-                v-model="filter" 
-                type="text" 
-                class="form-control form-control-sm" 
-                placeholder="Search..." 
-                style="width: 200px;">
+              <input
+                v-model="filter"
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Search..."
+                style="width: 200px"
+              />
             </div>
           </b-col>
         </b-row>
       </div>
 
-      <b-table 
+      <b-table
         :items="paginatedItems"
         :fields="tableFields"
         :striped="striped"
@@ -64,23 +65,23 @@
         :responsive="responsive"
         :show-empty="showEmpty"
         empty-text="No data available"
-        class="mb-0">
-        
+        class="mb-0"
+      >
         <!-- Custom slot for status column -->
         <template #cell(status)="data">
           <span :class="getStatusClass(data.value)" class="badge">
             {{ data.value }}
           </span>
         </template>
-        
+
         <!-- Custom slot for actions column -->
         <template #cell(actions)="data">
           <div class="btn-group btn-group-sm">
             <button class="btn btn-outline-primary btn-sm" @click="editItem(data.item)">
-              <i class="fa fa-edit"></i>
+              <font-awesome-icon icon="edit" />
             </button>
             <button class="btn btn-outline-danger btn-sm" @click="deleteItem(data.item)">
-              <i class="fa fa-trash"></i>
+              <font-awesome-icon icon="trash" />
             </button>
           </div>
         </template>
@@ -89,14 +90,20 @@
       <!-- Pagination -->
       <div v-if="totalRows > perPage" class="d-flex justify-content-between align-items-center mt-3">
         <div class="text-muted">
-          Showing {{ (currentPage - 1) * perPage + 1 }} to {{ Math.min(currentPage * perPage, totalRows) }} of {{ totalRows }} entries
+          Showing {{ (currentPage - 1) * perPage + 1 }} to {{ Math.min(currentPage * perPage, totalRows) }} of
+          {{ totalRows }} entries
         </div>
         <nav aria-label="Table pagination">
           <ul class="pagination pagination-sm mb-0">
             <li class="page-item" :class="{ disabled: currentPage === 1 }">
               <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)">Previous</a>
             </li>
-            <li v-for="page in getVisiblePages()" :key="page" class="page-item" :class="{ active: page === currentPage }">
+            <li
+              v-for="page in getVisiblePages()"
+              :key="page"
+              class="page-item"
+              :class="{ active: page === currentPage }"
+            >
               <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
             </li>
             <li class="page-item" :class="{ disabled: currentPage === totalPages }">
@@ -146,12 +153,12 @@
 </template>
 
 <script>
-import PageTitle from "../../Layout/Components/PageTitle.vue";
+import PageTitle from '../../Layout/Components/PageTitle.vue'
 
 export default {
   name: 'RegularTables',
   components: {
-    PageTitle,
+    PageTitle
   },
   data() {
     return {
@@ -277,88 +284,88 @@ export default {
   computed: {
     filteredItems() {
       if (!this.filter || !Array.isArray(this.items)) {
-        return this.items || [];
+        return this.items || []
       }
-      const filterLower = this.filter.toLowerCase();
+      const filterLower = this.filter.toLowerCase()
       return this.items.filter(item => {
-        if (!item || typeof item !== 'object') return false;
+        if (!item || typeof item !== 'object') return false
         return Object.values(item).some(value => {
-          if (value === null || value === undefined) return false;
-          return String(value).toLowerCase().includes(filterLower);
-        });
-      });
+          if (value === null || value === undefined) return false
+          return String(value).toLowerCase().includes(filterLower)
+        })
+      })
     },
     paginatedItems() {
-      const filtered = this.filteredItems;
-      if (!Array.isArray(filtered)) return [];
-      
-      const start = (this.currentPage - 1) * this.perPage;
-      const end = start + this.perPage;
-      return filtered.slice(start, end);
+      const filtered = this.filteredItems
+      if (!Array.isArray(filtered)) return []
+
+      const start = (this.currentPage - 1) * this.perPage
+      const end = start + this.perPage
+      return filtered.slice(start, end)
     },
     totalRows() {
-      return Array.isArray(this.filteredItems) ? this.filteredItems.length : 0;
+      return Array.isArray(this.filteredItems) ? this.filteredItems.length : 0
     },
     totalPages() {
-      return Math.ceil(this.totalRows / this.perPage);
+      return Math.ceil(this.totalRows / this.perPage)
     }
   },
   mounted() {
     // Ensure data is properly initialized
     if (!Array.isArray(this.items)) {
-      this.items = [];
+      this.items = []
     }
   },
   methods: {
     getStatusClass(status) {
       const statusClasses = {
-        'Active': 'bg-success',
-        'Inactive': 'bg-danger',
-        'Pending': 'bg-warning text-dark'
-      };
-      return statusClasses[status] || 'bg-secondary';
+        Active: 'bg-success',
+        Inactive: 'bg-danger',
+        Pending: 'bg-warning text-dark'
+      }
+      return statusClasses[status] || 'bg-secondary'
     },
     editItem(item) {
       // Handle edit action
-      alert(`Edit item: ${item.name}`);
+      alert(`Edit item: ${item.name}`)
     },
     deleteItem(item) {
       // Handle delete action
       if (confirm(`Are you sure you want to delete ${item.name}?`)) {
-        const index = this.items.findIndex(i => i.id === item.id);
+        const index = this.items.findIndex(i => i.id === item.id)
         if (index > -1) {
-          this.items.splice(index, 1);
+          this.items.splice(index, 1)
           // Reset to first page if current page is now empty
           if (this.paginatedItems.length === 0 && this.currentPage > 1) {
-            this.currentPage = 1;
+            this.currentPage = 1
           }
         }
       }
     },
     changePage(page) {
       if (page >= 1 && page <= this.totalPages) {
-        this.currentPage = page;
+        this.currentPage = page
       }
     },
     getVisiblePages() {
-      if (this.totalPages <= 1) return [1];
-      
-      const pages = [];
-      const maxPages = Math.min(5, this.totalPages);
-      
-      let start = Math.max(1, this.currentPage - 2);
-      let end = Math.min(this.totalPages, start + maxPages - 1);
-      
+      if (this.totalPages <= 1) return [1]
+
+      const pages = []
+      const maxPages = Math.min(5, this.totalPages)
+
+      let start = Math.max(1, this.currentPage - 2)
+      const end = Math.min(this.totalPages, start + maxPages - 1)
+
       // Adjust start if we're near the end
       if (end - start < maxPages - 1) {
-        start = Math.max(1, end - maxPages + 1);
+        start = Math.max(1, end - maxPages + 1)
       }
-      
+
       for (let i = start; i <= end; i++) {
-        pages.push(i);
+        pages.push(i)
       }
-      
-      return pages;
+
+      return pages
     }
   }
 }
@@ -421,15 +428,15 @@ export default {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .table-controls .justify-content-end {
     justify-content: start !important;
   }
-  
+
   .btn-group {
     flex-direction: column;
   }
-  
+
   .btn-group .btn {
     border-radius: 0.375rem !important;
     margin-bottom: 0.25rem;

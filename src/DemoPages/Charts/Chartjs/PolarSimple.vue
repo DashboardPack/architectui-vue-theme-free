@@ -1,9 +1,5 @@
 <template>
-  <BaseChart
-    type="polarArea"
-    :data="chartData"
-    :options="chartOptions"
-  />
+  <BaseChart type="polarArea" :data="chartData" :options="chartOptions" />
 </template>
 
 <script>
@@ -18,25 +14,15 @@ export default {
     return {
       chartData: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
-        datasets: [{
-          label: 'My First Dataset',
-          data: [11, 16, 7, 3, 14],
-          backgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56',
-            '#4BC0C0',
-            '#9966FF'
-          ],
-          borderColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56',
-            '#4BC0C0',
-            '#9966FF'
-          ],
-          borderWidth: 1
-        }]
+        datasets: [
+          {
+            label: 'My First Dataset',
+            data: [11, 16, 7, 3, 14],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+            borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+            borderWidth: 1
+          }
+        ]
       },
       chartOptions: {
         plugins: {

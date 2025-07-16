@@ -19,7 +19,8 @@
             <b-collapse :visible="collapseStates.collapse1" id="collapse1">
               <b-card class="border-primary">
                 <p class="card-text">
-                  This is a collapsible content area. You can put any content here including text, images, forms, or other components.
+                  This is a collapsible content area. You can put any content here including text, images, forms, or
+                  other components.
                 </p>
                 <b-button @click="toggleCollapse('collapse1_inner')" size="sm" variant="outline-primary">
                   <i class="fas fa-chevron-down" :class="{ 'fa-rotate-180': collapseStates.collapse1_inner }"></i>
@@ -54,7 +55,9 @@
                   <h6 class="mb-0">Section A</h6>
                 </b-card-header>
                 <b-card-body>
-                  <p class="mb-0">Content for section A. This demonstrates how multiple collapse elements can be controlled together.</p>
+                  <p class="mb-0">
+                    Content for section A. This demonstrates how multiple collapse elements can be controlled together.
+                  </p>
                 </b-card-body>
               </b-card>
             </b-collapse>
@@ -64,7 +67,9 @@
                   <h6 class="mb-0">Section B</h6>
                 </b-card-header>
                 <b-card-body>
-                  <p class="mb-0">Content for section B. Both sections will toggle together when using the button above.</p>
+                  <p class="mb-0">
+                    Content for section B. Both sections will toggle together when using the button above.
+                  </p>
                 </b-card-body>
               </b-card>
             </b-collapse>
@@ -88,14 +93,17 @@
               <b-card class="border-warning">
                 <div class="alert alert-warning mb-0">
                   <h6 class="mb-1">👋 Initially Visible</h6>
-                  <p class="mb-0">This collapse element starts in the open state by default. The <code>visible</code> prop was set to <code>true</code> initially.</p>
+                  <p class="mb-0">
+                    This collapse element starts in the open state by default. The <code>visible</code> prop was set to
+                    <code>true</code> initially.
+                  </p>
                 </div>
               </b-card>
             </b-collapse>
           </b-card-body>
         </b-card>
       </b-col>
-      
+
       <b-col md="6">
         <b-card class="main-card mb-3">
           <b-card-header>
@@ -105,12 +113,15 @@
             </div>
           </b-card-header>
           <b-card-body>
-            <p class="text-muted mb-3">True accordion behavior - only one panel open at a time. <strong>Click the headers below to toggle panels.</strong></p>
+            <p class="text-muted mb-3">
+              True accordion behavior - only one panel open at a time.
+              <strong>Click the headers below to toggle panels.</strong>
+            </p>
             <div role="tablist" class="accordion-container">
               <b-card no-body class="mb-1 accordion-item">
                 <b-card-header class="p-0" role="tab">
-                  <b-button 
-                    @click="toggleAccordion('accordion1')" 
+                  <b-button
+                    @click="toggleAccordion('accordion1')"
                     class="accordion-header w-100 text-start"
                     :class="{ 'accordion-active': accordionStates.accordion1 }"
                     variant="light"
@@ -120,7 +131,10 @@
                         <i class="fas fa-star text-warning me-2"></i>
                         <strong>Getting Started</strong>
                       </div>
-                      <i class="fas fa-chevron-down accordion-arrow" :class="{ 'fa-rotate-180': accordionStates.accordion1 }"></i>
+                      <i
+                        class="fas fa-chevron-down accordion-arrow"
+                        :class="{ 'fa-rotate-180': accordionStates.accordion1 }"
+                      ></i>
                     </div>
                   </b-button>
                 </b-card-header>
@@ -128,16 +142,19 @@
                   <b-card-body>
                     <div class="alert alert-info">
                       <h6 class="mb-2">🚀 Welcome to Accordions!</h6>
-                      <p class="mb-0">This panel starts open by default. Accordions are perfect for organizing content in a space-efficient way.</p>
+                      <p class="mb-0">
+                        This panel starts open by default. Accordions are perfect for organizing content in a
+                        space-efficient way.
+                      </p>
                     </div>
                   </b-card-body>
                 </b-collapse>
               </b-card>
-              
+
               <b-card no-body class="mb-1 accordion-item">
                 <b-card-header class="p-0" role="tab">
-                  <b-button 
-                    @click="toggleAccordion('accordion2')" 
+                  <b-button
+                    @click="toggleAccordion('accordion2')"
                     class="accordion-header w-100 text-start"
                     :class="{ 'accordion-active': accordionStates.accordion2 }"
                     variant="light"
@@ -147,7 +164,10 @@
                         <i class="fas fa-cog text-primary me-2"></i>
                         <strong>Configuration</strong>
                       </div>
-                      <i class="fas fa-chevron-down accordion-arrow" :class="{ 'fa-rotate-180': accordionStates.accordion2 }"></i>
+                      <i
+                        class="fas fa-chevron-down accordion-arrow"
+                        :class="{ 'fa-rotate-180': accordionStates.accordion2 }"
+                      ></i>
                     </div>
                   </b-button>
                 </b-card-header>
@@ -163,11 +183,11 @@
                   </b-card-body>
                 </b-collapse>
               </b-card>
-              
+
               <b-card no-body class="mb-1 accordion-item">
                 <b-card-header class="p-0" role="tab">
-                  <b-button 
-                    @click="toggleAccordion('accordion3')" 
+                  <b-button
+                    @click="toggleAccordion('accordion3')"
                     class="accordion-header w-100 text-start"
                     :class="{ 'accordion-active': accordionStates.accordion3 }"
                     variant="light"
@@ -177,7 +197,10 @@
                         <i class="fas fa-code text-success me-2"></i>
                         <strong>Code Example</strong>
                       </div>
-                      <i class="fas fa-chevron-down accordion-arrow" :class="{ 'fa-rotate-180': accordionStates.accordion3 }"></i>
+                      <i
+                        class="fas fa-chevron-down accordion-arrow"
+                        :class="{ 'fa-rotate-180': accordionStates.accordion3 }"
+                      ></i>
                     </div>
                   </b-button>
                 </b-card-header>
@@ -207,8 +230,8 @@
             <p class="text-muted mb-3">Frequently Asked Questions style accordion.</p>
             <div role="tablist" class="faq-container">
               <div class="faq-item mb-2" v-for="(faq, index) in faqs" :key="index">
-                <div 
-                  @click="toggleFaq(index)" 
+                <div
+                  @click="toggleFaq(index)"
                   class="faq-question p-3 border rounded cursor-pointer d-flex justify-content-between align-items-center"
                   :class="{ 'faq-active': faq.isOpen }"
                 >
@@ -234,86 +257,90 @@
 </template>
 
 <script>
+import PageTitle from '../../Layout/Components/PageTitle.vue'
 
-  import PageTitle from "../../Layout/Components/PageTitle.vue";
-
-  export default {
-    components: {
-      PageTitle,
+export default {
+  components: {
+    PageTitle
+  },
+  data: () => ({
+    heading: 'Accordions',
+    subheading: 'Accordions represent collapsable component with extended functionality.',
+    icon: 'pe-7s-diamond icon-gradient bg-warm-flame',
+    collapseStates: {
+      collapse1: false,
+      collapse1_inner: false,
+      collapseA: false,
+      collapseB: false,
+      collapse3: true // starts opened
     },
-    data: () => ({
-      heading: 'Accordions',
-      subheading: 'Accordions represent collapsable component with extended functionality.',
-      icon: 'pe-7s-diamond icon-gradient bg-warm-flame',
-      collapseStates: {
-        collapse1: false,
-        collapse1_inner: false,
-        collapseA: false,
-        collapseB: false,
-        collapse3: true // starts opened
+    accordionStates: {
+      accordion1: true, // starts opened
+      accordion2: false,
+      accordion3: false
+    },
+    faqs: [
+      {
+        question: 'What are Bootstrap Vue accordions?',
+        answer:
+          'Bootstrap Vue accordions are collapsible components that allow you to organize content in a space-efficient way. They consist of headers that can be clicked to show or hide associated content panels.',
+        isOpen: false
       },
-      accordionStates: {
-        accordion1: true, // starts opened
-        accordion2: false,
-        accordion3: false
+      {
+        question: 'How do I implement accordion behavior?',
+        answer:
+          'To implement true accordion behavior (where only one panel can be open at a time), you need to manage the state of all panels and ensure that when one opens, all others close. This is typically done in the toggle method.',
+        isOpen: false
       },
-      faqs: [
-        {
-          question: 'What are Bootstrap Vue accordions?',
-          answer: 'Bootstrap Vue accordions are collapsible components that allow you to organize content in a space-efficient way. They consist of headers that can be clicked to show or hide associated content panels.',
-          isOpen: false
-        },
-        {
-          question: 'How do I implement accordion behavior?',
-          answer: 'To implement true accordion behavior (where only one panel can be open at a time), you need to manage the state of all panels and ensure that when one opens, all others close. This is typically done in the toggle method.',
-          isOpen: false
-        },
-        {
-          question: 'Can I have multiple accordions on the same page?',
-          answer: 'Yes, you can have multiple accordion components on the same page. Each accordion group should have its own state management to avoid conflicts between different accordion sections.',
-          isOpen: false
-        },
-        {
-          question: 'Are accordions mobile-friendly?',
-          answer: 'Yes, Bootstrap Vue accordions are fully responsive and work well on mobile devices. They provide an excellent way to save space on smaller screens while maintaining full functionality.',
-          isOpen: false
-        },
-        {
-          question: 'Can I customize the accordion appearance?',
-          answer: 'Absolutely! You can customize accordions using CSS classes, custom styling, icons, colors, and animations. Bootstrap Vue provides many built-in options, and you can also add your own custom styles.',
-          isOpen: false
-        }
-      ]
-    }),
-    methods: {
-      toggleCollapse(collapseId) {
-        this.collapseStates[collapseId] = !this.collapseStates[collapseId];
+      {
+        question: 'Can I have multiple accordions on the same page?',
+        answer:
+          'Yes, you can have multiple accordion components on the same page. Each accordion group should have its own state management to avoid conflicts between different accordion sections.',
+        isOpen: false
       },
-      toggleMultipleCollapse(collapseIds) {
-        collapseIds.forEach(id => {
-          this.collapseStates[id] = !this.collapseStates[id];
-        });
+      {
+        question: 'Are accordions mobile-friendly?',
+        answer:
+          'Yes, Bootstrap Vue accordions are fully responsive and work well on mobile devices. They provide an excellent way to save space on smaller screens while maintaining full functionality.',
+        isOpen: false
       },
-      toggleAccordion(accordionId) {
-        // For accordion behavior, close all others and open the clicked one
-        const wasOpen = this.accordionStates[accordionId];
-        
-        // Close all accordion panels first
-        Object.keys(this.accordionStates).forEach(key => {
-          this.accordionStates[key] = false;
-        });
-        
-        // If the clicked panel was closed, open it
-        if (!wasOpen) {
-          this.accordionStates[accordionId] = true;
-        }
-      },
-      toggleFaq(index) {
-        // Toggle the specific FAQ item
-        this.faqs[index].isOpen = !this.faqs[index].isOpen;
+      {
+        question: 'Can I customize the accordion appearance?',
+        answer:
+          'Absolutely! You can customize accordions using CSS classes, custom styling, icons, colors, and animations. Bootstrap Vue provides many built-in options, and you can also add your own custom styles.',
+        isOpen: false
       }
+    ]
+  }),
+  methods: {
+    toggleCollapse(collapseId) {
+      this.collapseStates[collapseId] = !this.collapseStates[collapseId]
+    },
+    toggleMultipleCollapse(collapseIds) {
+      collapseIds.forEach(id => {
+        this.collapseStates[id] = !this.collapseStates[id]
+      })
+    },
+    toggleAccordion(accordionId) {
+      // For accordion behavior, close all others and open the clicked one
+      const wasOpen = this.accordionStates[accordionId]
+
+      // Close all accordion panels first
+      Object.keys(this.accordionStates).forEach(key => {
+        this.accordionStates[key] = false
+      })
+
+      // If the clicked panel was closed, open it
+      if (!wasOpen) {
+        this.accordionStates[accordionId] = true
+      }
+    },
+    toggleFaq(index) {
+      // Toggle the specific FAQ item
+      this.faqs[index].isOpen = !this.faqs[index].isOpen
     }
   }
+}
 </script>
 
 <style scoped>
@@ -339,13 +366,13 @@
 .accordion-header:hover {
   background-color: #e9ecef !important;
   border-bottom-color: #adb5bd !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 .accordion-header.accordion-active {
   background-color: #e7f3ff !important;
   border-bottom-color: #b3d9ff !important;
-  box-shadow: 0 1px 3px rgba(0,123,255,0.1) !important;
+  box-shadow: 0 1px 3px rgba(0, 123, 255, 0.1) !important;
 }
 
 .accordion-header.accordion-active:hover {
@@ -353,7 +380,7 @@
 }
 
 .accordion-header:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
 }
 
 .accordion-arrow {
@@ -444,11 +471,11 @@
 
 /* Enhanced visual feedback */
 .accordion-item:hover {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .faq-item:hover .faq-question {
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 </style>
