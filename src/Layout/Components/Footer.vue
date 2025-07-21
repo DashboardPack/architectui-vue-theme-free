@@ -38,13 +38,11 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Footer',
   setup() {
-    const handleFooterAction = action => {
-      console.log('Footer action:', action)
+    const handleFooterAction = _action => {
       // Handle navigation or action based on the action parameter
     }
 
-    const handleSocialAction = platform => {
-      console.log('Social action:', platform)
+    const handleSocialAction = _platform => {
       // Handle social media links or actions
     }
 

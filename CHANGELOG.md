@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.0.0] - 2025-07-15 - **Vue 3 Modernization Complete**
+## [2.0.0] - 2025-01-21 - **Vue 3 Modernization Complete**
 
 ### 🚀 **Major Release - Complete Vue 3 Migration**
 
@@ -57,6 +57,12 @@ This release represents a **complete modernization** of the ArchitectUI Vue temp
 - **NEW**: Bundle size optimization (1MB+ → 88KB for FontAwesome)
 - **NEW**: Modern icon loading patterns
 
+#### **UI/UX Enhancements**
+- **NEW**: Calendar button tooltip with "View Calendar Events" message
+- **NEW**: Profile dropdown indicator with clean chevron design
+- **NEW**: Optimized header spacing and layout positioning
+- **NEW**: Professional header component with proper visual hierarchy
+
 ### 🔄 **Changed**
 
 #### **Framework Migration**
@@ -103,6 +109,9 @@ This release represents a **complete modernization** of the ArchitectUI Vue temp
 - **FIXED**: Sidebar icons missing or misaligned
 - **FIXED**: Mobile responsiveness issues
 - **FIXED**: FontAwesome icon loading problems
+- **FIXED**: Header component spacing and layout inconsistencies
+- **FIXED**: Profile section container padding issues causing gaps
+- **FIXED**: BootstrapVueNext tooltip integration and functionality
 
 #### **Performance Issues**
 - **FIXED**: Bundle size optimization

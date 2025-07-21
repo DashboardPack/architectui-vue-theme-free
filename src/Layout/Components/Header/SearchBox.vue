@@ -32,7 +32,6 @@ export default defineComponent({
 
     const handleSearch = event => {
       // Implement search functionality here
-      console.log('Search query:', searchQuery.value)
       event.preventDefault()
     }
 

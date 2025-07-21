@@ -1,6 +1,6 @@
 {
   "name": "architectui-vue-free",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -46,13 +46,13 @@
     "@babel/eslint-parser": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@eslint/js": "^9.31.0",
+    "@types/node": "^24.0.15",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^8.37.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vitejs/plugin-vue-jsx": "^5.0.1",
     "@vitest/ui": "^3.2.4",
     "@vue/test-utils": "^2.4.6",
-    "@vue/typescript": "^1.8.20",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.31.0",
     "eslint-plugin-vue": "^10.3.0",
@@ -72,18 +72,9 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "lint-staged": {
-    "*.{js,ts,vue}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{json,css,scss,md}": [
-      "prettier --write"
-    ]
+    "*.{js,ts,vue}": ["prettier --write", "eslint --fix"],
+    "*.{json,css,scss,md}": ["prettier --write"]
   }
 }

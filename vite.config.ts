@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,8 +8,8 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      'vue': 'vue/dist/vue.esm-bundler.js'
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      vue: 'vue/dist/vue.esm-bundler.js'
     }
   },
 
@@ -28,7 +28,11 @@ export default defineConfig({
           vendor: ['vue', 'vue-router', 'pinia'],
           bootstrap: ['bootstrap', 'bootstrap-vue-next'],
           charts: ['chart.js', 'vue-chartjs'],
-          icons: ['@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome']
+          icons: [
+            '@fortawesome/fontawesome-svg-core',
+            '@fortawesome/free-solid-svg-icons',
+            '@fortawesome/vue-fontawesome'
+          ]
         }
       }
     }
@@ -37,7 +41,14 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'mixed-decls', 'color-functions', 'slash-div']
+        silenceDeprecations: [
+          'legacy-js-api',
+          'import',
+          'global-builtin',
+          'mixed-decls',
+          'color-functions',
+          'slash-div'
+        ]
       }
     }
   },

@@ -42,6 +42,9 @@ import {
   BTab
 } from 'bootstrap-vue-next'
 
+// Import directives separately
+import { createBootstrap } from 'bootstrap-vue-next'
+
 // Import FontAwesome - Vue 3 Proper Setup
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -96,7 +99,8 @@ import {
   faSpinner,
   faCheckSquare,
   faAngry,
-  faStar
+  faStar,
+  faChevronDown
 } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App.vue'
@@ -155,13 +159,15 @@ library.add(
   faSpinner,
   faCheckSquare,
   faAngry,
-  faStar
+  faStar,
+  faChevronDown
 )
 
 const app = createApp(App)
 
 app.use(router)
 app.use(pinia) // Vue 3 state management
+app.use(createBootstrap()) // BootstrapVueNext with directives
 // Register BootstrapVueNext components with kebab-case names
 app.component('b-button', BButton)
 app.component('b-row', BRow)

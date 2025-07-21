@@ -1,10 +1,11 @@
-# ArchitectUI Vue 3 Admin Dashboard (Modernized)
+# ArchitectUI Vue 3 Admin Dashboard v2.0
 
 [ArchitectUI](https://dashboardpack.com/theme-details/architectui-dashboard-html-pro) is one of the most popular admin dashboard templates ever released. It is used by thousands of developers to create webapps and SaaS totaling 100 million monthly active users. We have converted this template to support various frontend frameworks such as [Angular](https://dashboardpack.com/theme-details/architectui-angular-7-bootstrap-material-design-pro?v=7516fd43adaa), [Vue](https://dashboardpack.com/theme-details/architectui-dashboard-vue-pro) and [React](https://dashboardpack.com/theme-details/architectui-dashboard-react-pro?v=7516fd43adaa). This particular version of ArchitectUI is based on Vue 3 with modern tooling and best practices.
 
 ## 🚀 **Vue 3 Modernization Complete**
 
 This template has been **completely modernized** to Vue 3 with:
+
 - ✅ **Zero vulnerabilities** (migrated from 21 vulnerabilities to 0)
 - ✅ **Vue 3.5.17** with latest features and optimizations
 - ✅ **Modern build system** with Vite
@@ -18,6 +19,7 @@ This template has been **completely modernized** to Vue 3 with:
 ## 📊 **Key Features**
 
 ### **Modern Architecture**
+
 - **Vue 3 Composition API**: Clean, reusable component patterns
 - **Pinia Store Management**: Centralized state with reactive updates
 - **Vite Build System**: Fast development and optimized production builds
@@ -25,6 +27,7 @@ This template has been **completely modernized** to Vue 3 with:
 - **ESLint + Prettier**: Code quality and consistent formatting
 
 ### **Developer Experience**
+
 - **Hot Module Replacement**: Lightning-fast development
 - **Component Reusability**: Modular widget system
 - **TypeScript Support**: Full type safety ready
@@ -32,13 +35,16 @@ This template has been **completely modernized** to Vue 3 with:
 - **Modern Testing**: Vitest integration ready
 
 ### **Dashboard Components**
+
 - **Analytics Dashboard**: Real-time data visualization
 - **Responsive Sidebar**: Mobile-first navigation
 - **Interactive Charts**: Chart.js 4.x integration
+- **Enhanced Header**: Professional layout with tooltips and indicators
 - **User Management**: Authentication pages
 - **UI Components**: Buttons, cards, modals, tables, forms
 
 ### **State Management**
+
 - **Dashboard Store**: Analytics data and statistics
 - **UI Store**: Theme, sidebar, and layout preferences
 - **Notifications Store**: System messages and alerts
@@ -46,20 +52,21 @@ This template has been **completely modernized** to Vue 3 with:
 
 ## 🛠️ **Technology Stack**
 
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Vue.js | 3.5.17 | Frontend framework |
-| Pinia | 3.x | State management |
-| Vite | 7.x | Build tool |
-| Bootstrap | 5.x | CSS framework |
-| Chart.js | 4.x | Data visualization |
-| FontAwesome | 6.x | Icons |
-| ESLint | 9.x | Code quality |
+| Technology  | Version | Purpose            |
+| ----------- | ------- | ------------------ |
+| Vue.js      | 3.5.17  | Frontend framework |
+| Pinia       | 3.x     | State management   |
+| Vite        | 7.x     | Build tool         |
+| Bootstrap   | 5.x     | CSS framework      |
+| Chart.js    | 4.x     | Data visualization |
+| FontAwesome | 6.x     | Icons              |
+| ESLint      | 9.x     | Code quality       |
 
 ## 🚀 **Getting Started**
 
 ### **Prerequisites**
-- Node.js 18+ 
+
+- Node.js 18+
 - npm 9+ or yarn 1.22+
 
 ### **Installation**
@@ -141,7 +148,7 @@ uiStore.toggleSidebar()
 
 ```vue
 <template>
-  <DashboardWidget 
+  <DashboardWidget
     stat-key="cashDeposits"
     icon-class="pe-7s-scissors"
     icon-bg-class="bg-warning"
@@ -152,12 +159,15 @@ uiStore.toggleSidebar()
 ## 🔧 **Configuration**
 
 ### **Vite Configuration**
+
 The project uses Vite for fast development and optimized builds. Configuration is in `vite.config.js`.
 
 ### **ESLint Configuration**
+
 Code quality is enforced with ESLint. Configuration is in `.eslintrc.js`.
 
 ### **Store Configuration**
+
 Pinia stores are configured in `src/stores/index.js` with persistence and devtools support.
 
 ## 🚦 **Migration Guide**
@@ -165,6 +175,7 @@ Pinia stores are configured in `src/stores/index.js` with persistence and devtoo
 This template has been migrated from Vue 2 to Vue 3.5.17. Key changes include:
 
 ### **Vue 3.5.17 Features**
+
 - **Composition API**: Modern reactive patterns with latest optimizations
 - **defineComponent**: Better TypeScript support
 - **Pinia**: Vue 3 native state management
@@ -172,6 +183,7 @@ This template has been migrated from Vue 2 to Vue 3.5.17. Key changes include:
 - **Latest Vue 3 optimizations**: Performance improvements and bug fixes
 
 ### **Breaking Changes Addressed**
+
 - Updated all dependencies to Vue 3.5.17 compatible versions
 - Migrated BootstrapVue to Bootstrap 5 + BootstrapVueNext
 - Replaced Vuex with Pinia
@@ -181,11 +193,13 @@ This template has been migrated from Vue 2 to Vue 3.5.17. Key changes include:
 ## 📚 **Documentation**
 
 ### **Store Usage**
+
 - **Dashboard Store**: Analytics data, statistics, todos
 - **UI Store**: Sidebar state, theme management, mobile responsiveness
 - **Notifications Store**: System messages and alerts
 
 ### **Component Patterns**
+
 - Use `defineComponent` for better TypeScript support
 - Leverage Composition API for reactive state
 - Follow single responsibility principle
@@ -219,6 +233,7 @@ For more admin templates like this, please check out our [Github profile](https:
 ## 🎯 **Perfect for Modern Development**
 
 This Vue 3 modernized version of ArchitectUI provides developers with:
+
 - **Modern tooling** for efficient development
 - **Best practices** for Vue 3 applications
 - **Production-ready** code structure
