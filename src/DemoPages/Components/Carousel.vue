@@ -3,58 +3,30 @@
     <page-title :heading="heading" :subheading="subheading" :icon="icon"></page-title>
 
     <div class="content">
-      <b-card title="Bootstrap 5 Carousel" class="main-card mb-3">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-          <!-- Carousel indicators -->
-          <div class="carousel-indicators">
-            <button
-              v-for="(slide, index) in slides"
-              :key="index"
-              type="button"
-              :data-bs-target="'#carouselExample'"
-              :data-bs-slide-to="index"
-              :class="{ active: index === currentSlide }"
-              :aria-current="index === currentSlide ? 'true' : 'false'"
-              :aria-label="'Slide ' + (index + 1)"
-              @click="goToSlide(index)"
-            ></button>
-          </div>
-
-          <!-- Carousel slides -->
-          <div class="carousel-inner">
-            <div
-              v-for="(slide, index) in slides"
-              :key="index"
-              :class="['carousel-item', { active: index === currentSlide }]"
-            >
+      <b-card title="BootstrapVueNext Carousel" class="main-card mb-3">
+        <b-carousel
+          v-model="currentSlide"
+          :interval="4000"
+          controls
+          indicators
+          background="#ababab"
+          style="text-shadow: 1px 1px 2px #333"
+        >
+          <b-carousel-slide v-for="(slide, index) in slides" :key="index" :img-src="slide.image">
+            <template #img>
               <img :src="slide.image" class="d-block w-100" :alt="slide.alt" style="height: 400px; object-fit: cover" />
-              <div
-                v-if="slide.caption || slide.text"
-                class="carousel-caption d-none d-md-block"
-                style="text-shadow: 1px 1px 2px #333"
-              >
-                <h5 v-if="slide.caption">{{ slide.caption }}</h5>
-                <p v-if="slide.text">{{ slide.text }}</p>
-                <div v-if="slide.customContent" v-html="slide.customContent"></div>
-              </div>
-            </div>
-          </div>
+            </template>
 
-          <!-- Carousel controls -->
-          <button class="carousel-control-prev" type="button" @click="previousSlide">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" @click="nextSlide">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+            <h5 v-if="slide.caption">{{ slide.caption }}</h5>
+            <p v-if="slide.text">{{ slide.text }}</p>
+            <div v-if="slide.customContent" v-html="slide.customContent"></div>
+          </b-carousel-slide>
+        </b-carousel>
 
         <div class="divider"></div>
         <p class="mt-4">
           Current Slide: {{ currentSlide + 1 }} of {{ slides.length }}<br />
-          Auto-play: {{ isAutoPlaying ? 'On' : 'Off' }}
+          Auto-play: On (4 second interval)
         </p>
       </b-card>
     </div>
@@ -72,11 +44,9 @@ export default {
   data() {
     return {
       heading: 'Carousels & Slideshows',
-      subheading: 'Create easy and beautiful slideshows with these Vue components.',
+      subheading: 'Create easy and beautiful slideshows with these BootstrapVueNext components.',
       icon: 'pe-7s-album icon-gradient bg-sunny-morning',
       currentSlide: 0,
-      isAutoPlaying: true,
-      autoPlayInterval: null,
       slides: [
         {
           image: 'https://picsum.photos/1024/480/?image=52',
@@ -110,43 +80,6 @@ export default {
           alt: 'Fifth slide'
         }
       ]
-    }
-  },
-  mounted() {
-    this.startAutoPlay()
-  },
-  beforeUnmount() {
-    this.stopAutoPlay()
-  },
-  methods: {
-    goToSlide(index) {
-      this.currentSlide = index
-      this.restartAutoPlay()
-    },
-    nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.slides.length
-      this.restartAutoPlay()
-    },
-    previousSlide() {
-      this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1
-      this.restartAutoPlay()
-    },
-    startAutoPlay() {
-      if (this.isAutoPlaying) {
-        this.autoPlayInterval = setInterval(() => {
-          this.nextSlide()
-        }, 4000)
-      }
-    },
-    stopAutoPlay() {
-      if (this.autoPlayInterval) {
-        clearInterval(this.autoPlayInterval)
-        this.autoPlayInterval = null
-      }
-    },
-    restartAutoPlay() {
-      this.stopAutoPlay()
-      this.startAutoPlay()
     }
   }
 }

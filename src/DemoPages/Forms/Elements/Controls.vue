@@ -6,61 +6,37 @@
         <div class="main-card mb-3 card">
           <div class="card-body">
             <h5 class="card-title">Controls Types</h5>
-            <form class="">
-              <div class="position-relative mb-3">
-                <label for="exampleEmail" class="">Email</label
-                ><input
-                  name="email"
-                  id="exampleEmail"
-                  placeholder="with a placeholder"
-                  type="email"
-                  class="form-control"
-                />
+            <b-form>
+              <div class="mb-3">
+                <label for="exampleEmail" class="form-label">Email</label>
+                <b-form-input id="exampleEmail" type="email" placeholder="with a placeholder"></b-form-input>
               </div>
-              <div class="position-relative mb-3">
-                <label for="examplePassword" class="">Password</label
-                ><input
-                  name="password"
-                  id="examplePassword"
-                  placeholder="password placeholder"
-                  type="password"
-                  class="form-control"
-                />
+              <div class="mb-3">
+                <label for="examplePassword" class="form-label">Password</label>
+                <b-form-input id="examplePassword" type="password" placeholder="password placeholder"></b-form-input>
               </div>
-              <div class="position-relative mb-3">
-                <label for="exampleSelect" class="">Select</label
-                ><select name="select" id="exampleSelect" class="form-select">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
+              <div class="mb-3">
+                <label for="exampleSelect" class="form-label">Select</label>
+                <b-form-select id="exampleSelect" :options="['1', '2', '3', '4', '5']"></b-form-select>
               </div>
-              <div class="position-relative mb-3">
-                <label for="exampleSelectMulti" class="">Select Multiple</label
-                ><select multiple="" name="selectMulti" id="exampleSelectMulti" class="form-select">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
+              <div class="mb-3">
+                <label for="exampleSelectMulti" class="form-label">Select Multiple</label>
+                <b-form-select id="exampleSelectMulti" multiple :options="['1', '2', '3', '4', '5']"></b-form-select>
               </div>
-              <div class="position-relative mb-3">
-                <label for="exampleText" class="">Text Area</label
-                ><textarea name="text" id="exampleText" class="form-control"></textarea>
+              <div class="mb-3">
+                <label for="exampleText" class="form-label">Text Area</label>
+                <b-form-textarea id="exampleText" rows="3"></b-form-textarea>
               </div>
-              <div class="position-relative mb-3">
-                <label for="exampleFile" class="">File</label
-                ><input name="file" id="exampleFile" type="file" class="form-control" />
-                <small class="form-text text-muted"
-                  >This is some placeholder block-level help text for the above input. It's a bit lighter and easily
+              <div class="mb-3">
+                <label for="exampleFile" class="form-label">File</label>
+                <b-form-file id="exampleFile"></b-form-file>
+                <small class="form-text text-muted">
+                  This is some placeholder block-level help text for the above input. It's a bit lighter and easily
                   wraps to a new line.
                 </small>
               </div>
-              <button class="mt-1 btn btn-primary">Submit</button>
-            </form>
+              <b-button variant="primary" type="submit" class="mt-1">Submit</b-button>
+            </b-form>
           </div>
         </div>
       </div>
@@ -68,296 +44,279 @@
         <div class="main-card mb-3 card">
           <div class="card-body">
             <h5 class="card-title">Sizing</h5>
-            <form class="">
-              <input placeholder="lg" type="text" class="mb-2 form-control-lg form-control" /><input
-                placeholder="default"
-                type="text"
-                class="mb-2 form-control"
-              /><input placeholder="sm" type="text" class="mb-2 form-control-sm form-control" />
+            <b-form>
+              <b-form-input size="lg" placeholder="Large input" class="mb-2"></b-form-input>
+              <b-form-input placeholder="Default input" class="mb-2"></b-form-input>
+              <b-form-input size="sm" placeholder="Small input" class="mb-2"></b-form-input>
               <div class="divider"></div>
-              <select class="mb-2 form-select form-select-lg">
-                <option>Large Select</option></select
-              ><select class="mb-2 form-select">
-                <option>Default Select</option></select
-              ><select class="form-select form-select-sm">
-                <option>Small Select</option>
-              </select>
-            </form>
+              <b-form-select size="lg" :options="['Large Select']" class="mb-2"></b-form-select>
+              <b-form-select :options="['Default Select']" class="mb-2"></b-form-select>
+              <b-form-select size="sm" :options="['Small Select']"></b-form-select>
+            </b-form>
           </div>
         </div>
         <div class="main-card mb-3 card">
           <div class="card-body">
             <h5 class="card-title">Checkboxes &amp; Radios</h5>
-            <form class="">
-              <fieldset class="position-relative mb-3">
-                <div class="position-relative form-check">
-                  <label class="form-check-label"
-                    ><input name="radio1" type="radio" class="form-check-input" /> Option one is this and that—be sure
-                    to include why it's great</label
-                  >
-                </div>
-                <div class="position-relative form-check">
-                  <label class="form-check-label"
-                    ><input name="radio1" type="radio" class="form-check-input" /> Option two can be something else and
-                    selecting it will deselect option one</label
-                  >
-                </div>
-                <div class="position-relative form-check disabled">
-                  <label class="form-check-label"
-                    ><input name="radio1" disabled type="radio" class="form-check-input" /> Option three is
-                    disabled</label
-                  >
-                </div>
-              </fieldset>
-              <div class="position-relative form-check">
-                <label class="form-check-label"><input type="checkbox" class="form-check-input" /> Check me out</label>
-              </div>
-            </form>
+            <b-form>
+              <b-form-radio-group
+                v-model="formData.radio"
+                :options="[
+                  { text: 'Option one is this and that—be sure to include why it\'s great', value: 'option1' },
+                  {
+                    text: 'Option two can be something else and selecting it will deselect option one',
+                    value: 'option2'
+                  },
+                  { text: 'Option three is disabled', value: 'option3', disabled: true }
+                ]"
+                name="radio1"
+                class="mb-3"
+              ></b-form-radio-group>
+
+              <b-form-checkbox v-model="formData.checkbox"> Check me out </b-form-checkbox>
+            </b-form>
           </div>
         </div>
       </div>
     </div>
-    <form class="">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="main-card mb-3 card">
-            <div class="card-body">
-              <h5 class="card-title">Checkboxes</h5>
-              <div class="position-relative mb-3">
-                <div>
-                  <div class="form-check">
-                    <input type="checkbox" id="exampleCustomCheckbox" class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomCheckbox"
-                      >Check this custom checkbox</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" id="exampleCustomCheckbox2" class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomCheckbox2"
-                      >Or this one</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" id="exampleCustomCheckbox3" disabled class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomCheckbox3"
-                      >But not this disabled one</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="main-card mb-3 card">
-            <div class="card-body">
-              <h5 class="card-title">Inline</h5>
-              <div class="position-relative mb-3">
-                <div>
-                  <div class="form-check form-check-inline">
-                    <input type="checkbox" id="exampleCustomInline" class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomInline"
-                      >An inline custom input</label
-                    >
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="checkbox" id="exampleCustomInline2" class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomInline2"
-                      >and another one</label
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="main-card mb-3 card">
+          <div class="card-body">
+            <h5 class="card-title">Checkboxes</h5>
+            <b-form-checkbox-group
+              v-model="formData.checkboxGroup"
+              :options="[
+                { text: 'Check this custom checkbox', value: 'option1' },
+                { text: 'Or this one', value: 'option2' },
+                { text: 'But not this disabled one', value: 'option3', disabled: true }
+              ]"
+            ></b-form-checkbox-group>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="main-card mb-3 card">
-            <div class="card-body">
-              <h5 class="card-title">Radios</h5>
-              <div class="position-relative mb-3">
-                <div>
-                  <div class="form-check">
-                    <input type="radio" id="exampleCustomRadio" name="customRadio" class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomRadio"
-                      >Select this custom radio</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input type="radio" id="exampleCustomRadio2" name="customRadio" class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomRadio2"
-                      >Or this one</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input type="radio" id="exampleCustomRadio3" disabled class="form-check-input" /><label
-                      class="form-check-label"
-                      for="exampleCustomRadio3"
-                      >But not this disabled one</label
-                    >
-                  </div>
+        <div class="main-card mb-3 card">
+          <div class="card-body">
+            <h5 class="card-title">Inline</h5>
+            <b-form-checkbox-group
+              v-model="formData.inlineCheckboxes"
+              :options="[
+                { text: 'An inline custom input', value: 'inline1' },
+                { text: 'and another one', value: 'inline2' }
+              ]"
+              stacked="false"
+            ></b-form-checkbox-group>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="main-card mb-3 card">
+          <div class="card-body">
+            <h5 class="card-title">Radios</h5>
+            <b-form-radio-group
+              v-model="formData.customRadio"
+              :options="[
+                { text: 'Select this custom radio', value: 'radio1' },
+                { text: 'Or this one', value: 'radio2' },
+                { text: 'But not this disabled one', value: 'radio3', disabled: true }
+              ]"
+              name="customRadio"
+            ></b-form-radio-group>
+          </div>
+        </div>
+        <div class="main-card mb-3 card">
+          <div class="card-body">
+            <h5 class="card-title">Form Select</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleCustomSelect" class="form-label">Form Select</label>
+                  <b-form-select
+                    id="exampleCustomSelect"
+                    v-model="formData.customSelect"
+                    :options="[
+                      { value: '', text: 'Select' },
+                      { value: 'value1', text: 'Value 1' },
+                      { value: 'value2', text: 'Value 2' },
+                      { value: 'value3', text: 'Value 3' },
+                      { value: 'value4', text: 'Value 4' },
+                      { value: 'value5', text: 'Value 5' }
+                    ]"
+                  ></b-form-select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleCustomMutlipleSelect" class="form-label">Form Multiple Select</label>
+                  <b-form-select
+                    id="exampleCustomMutlipleSelect"
+                    v-model="formData.customMultiSelect"
+                    multiple
+                    :options="[
+                      { value: '', text: 'Select' },
+                      { value: 'value1', text: 'Value 1' },
+                      { value: 'value2', text: 'Value 2' },
+                      { value: 'value3', text: 'Value 3' },
+                      { value: 'value4', text: 'Value 4' },
+                      { value: 'value5', text: 'Value 5' }
+                    ]"
+                  ></b-form-select>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="main-card mb-3 card">
-            <div class="card-body">
-              <h5 class="card-title">Form Select</h5>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="position-relative mb-3">
-                    <label for="exampleCustomSelect" class="">Form Select</label
-                    ><select type="select" id="exampleCustomSelect" name="customSelect" class="form-select">
-                      <option value="">Select</option>
-                      <option>Value 1</option>
-                      <option>Value 2</option>
-                      <option>Value 3</option>
-                      <option>Value 4</option>
-                      <option>Value 5</option>
-                    </select>
-                  </div>
-                  <div class="position-relative mb-3">
-                    <label for="exampleCustomMutlipleSelect" class="">Form Multiple Select</label
-                    ><select
-                      multiple=""
-                      type="select"
-                      id="exampleCustomMutlipleSelect"
-                      name="customSelect"
-                      class="form-select"
-                    >
-                      <option value="">Select</option>
-                      <option>Value 1</option>
-                      <option>Value 2</option>
-                      <option>Value 3</option>
-                      <option>Value 4</option>
-                      <option>Value 5</option>
-                    </select>
-                  </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleCustomSelectDisabled" class="form-label">Form Select Disabled</label>
+                  <b-form-select
+                    id="exampleCustomSelectDisabled"
+                    disabled
+                    :options="[
+                      { value: '', text: 'Select' },
+                      { value: 'value1', text: 'Value 1' },
+                      { value: 'value2', text: 'Value 2' },
+                      { value: 'value3', text: 'Value 3' },
+                      { value: 'value4', text: 'Value 4' },
+                      { value: 'value5', text: 'Value 5' }
+                    ]"
+                  ></b-form-select>
                 </div>
-                <div class="col-md-6">
-                  <div class="position-relative mb-3">
-                    <label for="exampleCustomSelectDisabled" class="">Form Select Disabled</label
-                    ><select
-                      type="select"
-                      id="exampleCustomSelectDisabled"
-                      name="customSelect"
-                      disabled
-                      class="form-select"
-                    >
-                      <option value="">Select</option>
-                      <option>Value 1</option>
-                      <option>Value 2</option>
-                      <option>Value 3</option>
-                      <option>Value 4</option>
-                      <option>Value 5</option>
-                    </select>
-                  </div>
-                  <div class="position-relative mb-3">
-                    <label for="exampleCustomMutlipleSelectDisabled" class="">Form Multiple Select Disabled</label
-                    ><select
-                      multiple=""
-                      type="select"
-                      id="exampleCustomMutlipleSelectDisabled"
-                      name="customSelect"
-                      disabled
-                      class="form-select"
-                    >
-                      <option value="">Select</option>
-                      <option>Value 1</option>
-                      <option>Value 2</option>
-                      <option>Value 3</option>
-                      <option>Value 4</option>
-                      <option>Value 5</option>
-                    </select>
-                  </div>
+                <div class="mb-3">
+                  <label for="exampleCustomMutlipleSelectDisabled" class="form-label"
+                    >Form Multiple Select Disabled</label
+                  >
+                  <b-form-select
+                    id="exampleCustomMutlipleSelectDisabled"
+                    disabled
+                    multiple
+                    :options="[
+                      { value: '', text: 'Select' },
+                      { value: 'value1', text: 'Value 1' },
+                      { value: 'value2', text: 'Value 2' },
+                      { value: 'value3', text: 'Value 3' },
+                      { value: 'value4', text: 'Value 4' },
+                      { value: 'value5', text: 'Value 5' }
+                    ]"
+                  ></b-form-select>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </form>
+    </div>
     <div>
       <div class="row">
         <div class="col-md-6">
           <div class="main-card mb-3 card">
             <div class="card-body">
-              <h5 class="card-title">Input Groups</h5>
-              <div>
-                <div class="input-group mb-3">
-                  <span class="input-group-text">@</span>
-                  <input placeholder="username" type="text" class="form-control" />
-                </div>
+              <h5 class="card-title">Basic Input Groups</h5>
 
-                <div class="input-group mb-3">
-                  <div class="input-group-text">
-                    <input aria-label="Checkbox for following text input" type="checkbox" class="" />
-                  </div>
-                  <input placeholder="Check it out" type="text" class="form-control" />
-                </div>
+              <!-- Basic prepend -->
+              <b-input-group class="mb-3" prepend="@">
+                <b-form-input placeholder="Username"></b-form-input>
+              </b-input-group>
 
-                <div class="input-group mb-3">
-                  <input placeholder="username" type="text" class="form-control" />
-                  <span class="input-group-text">@example.com</span>
-                </div>
+              <!-- Basic append -->
+              <b-input-group class="mb-3" append="@example.com">
+                <b-form-input placeholder="Recipient's username"></b-form-input>
+              </b-input-group>
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text">$</span>
-                  <span class="input-group-text">$</span>
-                  <input placeholder="Dolla dolla billz yo!" type="text" class="form-control" />
-                  <span class="input-group-text">$</span>
-                  <span class="input-group-text">$</span>
-                </div>
+              <!-- With both prepend and append -->
+              <b-input-group class="mb-3" prepend="$" append=".00">
+                <b-form-input placeholder="Amount" type="number"></b-form-input>
+              </b-input-group>
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text">$</span>
-                  <input placeholder="Amount" step="1" type="number" class="form-control" />
-                  <span class="input-group-text">.00</span>
-                </div>
-              </div>
+              <!-- With prepend slot -->
+              <label for="website-input" class="form-label">Your website URL</label>
+              <b-input-group class="mb-3">
+                <template #prepend>
+                  <b-input-group-text>https://</b-input-group-text>
+                </template>
+                <b-form-input id="website-input" placeholder="example.com"></b-form-input>
+              </b-input-group>
+
+              <!-- With textarea -->
+              <b-input-group prepend="Comment">
+                <b-form-textarea rows="3"></b-form-textarea>
+              </b-input-group>
             </div>
           </div>
           <div class="main-card mb-3 card">
             <div class="card-body">
-              <h5 class="card-title">Input Group Button Dropdown</h5>
-              <div class="input-group mb-3">
-                <b-dropdown text="Dropdown" variant="info" class="me-0">
-                  <b-dropdown-item>Action A</b-dropdown-item>
-                  <b-dropdown-item>Action B</b-dropdown-item>
-                </b-dropdown>
-                <input type="text" class="form-control" placeholder="Input with dropdowns" />
-                <b-dropdown text="Dropdown" variant="outline-secondary" class="ms-0">
-                  <b-dropdown-item>Action C</b-dropdown-item>
-                  <b-dropdown-item>Action D</b-dropdown-item>
-                </b-dropdown>
-              </div>
+              <h5 class="card-title">Input Groups with Checkboxes & Radios</h5>
+
+              <!-- Checkbox example -->
+              <b-input-group class="mb-3">
+                <template #prepend>
+                  <b-input-group-text>
+                    <input
+                      class="form-check-input mt-0"
+                      type="checkbox"
+                      value=""
+                      aria-label="Checkbox for following text input"
+                    />
+                  </b-input-group-text>
+                </template>
+                <b-form-input
+                  placeholder="Text input with checkbox"
+                  aria-label="Text input with checkbox"
+                ></b-form-input>
+              </b-input-group>
+
+              <!-- Radio example -->
+              <b-input-group>
+                <template #prepend>
+                  <b-input-group-text>
+                    <input
+                      class="form-check-input mt-0"
+                      type="radio"
+                      value=""
+                      aria-label="Radio button for following text input"
+                    />
+                  </b-input-group-text>
+                </template>
+                <b-form-input
+                  placeholder="Text input with radio button"
+                  aria-label="Text input with radio button"
+                ></b-form-input>
+              </b-input-group>
             </div>
           </div>
           <div class="main-card mb-3 card">
             <div class="card-body">
-              <h5 class="card-title">Input Group Button Shorthand</h5>
-              <div>
-                <div class="input-group mb-3">
-                  <button class="btn btn-secondary" type="button">To the Left!</button>
-                  <input type="text" class="form-control" placeholder="Input with left button" />
-                </div>
+              <h5 class="card-title">Input Group Buttons</h5>
 
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Input with right button" />
-                  <button class="btn btn-secondary" type="button">To the Right!</button>
-                </div>
+              <!-- Button on left -->
+              <b-input-group class="mb-3">
+                <template #prepend>
+                  <b-button variant="outline-secondary">Button</b-button>
+                </template>
+                <b-form-input placeholder="Input with button"></b-form-input>
+              </b-input-group>
 
-                <div class="input-group mb-3">
-                  <button class="btn btn-danger" type="button">Left Button</button>
-                  <input type="text" class="form-control" placeholder="Both sides" />
-                  <button class="btn btn-success" type="button">Right Button</button>
-                </div>
-              </div>
+              <!-- Button on right -->
+              <b-input-group class="mb-3">
+                <b-form-input placeholder="Input with button"></b-form-input>
+                <template #append>
+                  <b-button variant="outline-secondary">Button</b-button>
+                </template>
+              </b-input-group>
+
+              <!-- Multiple buttons prepend -->
+              <b-input-group class="mb-3">
+                <template #prepend>
+                  <b-button variant="outline-secondary">Button</b-button>
+                  <b-button variant="outline-secondary">Button</b-button>
+                </template>
+                <b-form-input placeholder="Input with multiple buttons"></b-form-input>
+              </b-input-group>
+
+              <!-- Buttons on both sides -->
+              <b-input-group>
+                <template #prepend>
+                  <b-button variant="outline-secondary">Left</b-button>
+                </template>
+                <b-form-input placeholder="Input with buttons on both sides"></b-form-input>
+                <template #append>
+                  <b-button variant="outline-secondary">Right</b-button>
+                </template>
+              </b-input-group>
             </div>
           </div>
         </div>
@@ -365,69 +324,92 @@
           <div class="main-card mb-3 card">
             <div class="card-body">
               <h5 class="card-title">Input Group Sizing</h5>
-              <div>
-                <div class="input-group input-group-lg mb-3">
-                  <span class="input-group-text">@lg</span>
-                  <input type="text" class="form-control" placeholder="Large input group" />
-                </div>
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text">@normal</span>
-                  <input type="text" class="form-control" placeholder="Default input group" />
-                </div>
+              <!-- Large input group -->
+              <b-input-group size="lg" prepend="Large" class="mb-3">
+                <b-form-input placeholder="Large input group"></b-form-input>
+              </b-input-group>
 
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text">@sm</span>
-                  <input type="text" class="form-control" placeholder="Small input group" />
-                </div>
-              </div>
+              <!-- Default input group -->
+              <b-input-group prepend="Default" class="mb-3">
+                <b-form-input placeholder="Default input group"></b-form-input>
+              </b-input-group>
+
+              <!-- Small input group -->
+              <b-input-group size="sm" prepend="Small" class="mb-3">
+                <b-form-input placeholder="Small input group"></b-form-input>
+              </b-input-group>
             </div>
           </div>
           <div class="main-card mb-3 card">
             <div class="card-body">
-              <h5 class="card-title">Input Group Addon</h5>
-              <div>
-                <div class="input-group mb-3">
-                  <span class="input-group-text">To the Left!</span>
-                  <input type="text" class="form-control" placeholder="Input with left addon" />
-                </div>
+              <h5 class="card-title">Input Groups with Dropdowns</h5>
 
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Input with right addon" />
-                  <span class="input-group-text">To the Right!</span>
-                </div>
-
-                <div class="input-group mb-3">
-                  <span class="input-group-text">Left Addon</span>
-                  <input type="text" class="form-control" placeholder="Both sides" />
-                  <span class="input-group-text">Right Addon</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="main-card mb-3 card">
-            <div class="card-body">
-              <h5 class="card-title">Input Group Button</h5>
-              <div>
-                <div class="input-group mb-3">
-                  <button class="btn btn-secondary" type="button">I'm a button</button>
-                  <input type="text" class="form-control" placeholder="Input with left button" />
-                </div>
-
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Input with right dropdown" />
-                  <b-dropdown text="Dropdown" variant="secondary" class="ms-0">
-                    <b-dropdown-item>Action C</b-dropdown-item>
-                    <b-dropdown-item>Action D</b-dropdown-item>
+              <!-- Dropdown prepend -->
+              <b-input-group class="mb-3">
+                <template #prepend>
+                  <b-dropdown text="Dropdown" variant="outline-secondary">
+                    <b-dropdown-item>Action</b-dropdown-item>
+                    <b-dropdown-item>Another action</b-dropdown-item>
+                    <b-dropdown-divider></b-dropdown-divider>
+                    <b-dropdown-item>Something else here</b-dropdown-item>
                   </b-dropdown>
-                </div>
+                </template>
+                <b-form-input placeholder="Input with dropdown"></b-form-input>
+              </b-input-group>
 
-                <div class="input-group mb-3">
-                  <button class="btn btn-info" type="button">Search</button>
-                  <input type="text" class="form-control" placeholder="Enter search term" />
-                  <button class="btn btn-success" type="button">Go</button>
-                </div>
-              </div>
+              <!-- Dropdown append -->
+              <b-input-group class="mb-3">
+                <b-form-input placeholder="Input with dropdown"></b-form-input>
+                <template #append>
+                  <b-dropdown text="Dropdown" variant="outline-secondary">
+                    <b-dropdown-item>Action</b-dropdown-item>
+                    <b-dropdown-item>Another action</b-dropdown-item>
+                    <b-dropdown-divider></b-dropdown-divider>
+                    <b-dropdown-item>Something else here</b-dropdown-item>
+                  </b-dropdown>
+                </template>
+              </b-input-group>
+
+              <!-- Multiple addons -->
+              <b-input-group>
+                <template #prepend>
+                  <b-input-group-text>$</b-input-group-text>
+                  <b-input-group-text>0.00</b-input-group-text>
+                </template>
+                <b-form-input placeholder="Amount" type="number"></b-form-input>
+              </b-input-group>
+            </div>
+          </div>
+          <div class="main-card mb-3 card">
+            <div class="card-body">
+              <h5 class="card-title">Select Input Groups</h5>
+
+              <!-- Select with prepend text -->
+              <b-input-group prepend="Options" class="mb-3">
+                <b-form-select :options="['Choose...', 'One', 'Two', 'Three']"></b-form-select>
+              </b-input-group>
+
+              <!-- Select with append text -->
+              <b-input-group append="Options" class="mb-3">
+                <b-form-select :options="['Choose...', 'One', 'Two', 'Three']"></b-form-select>
+              </b-input-group>
+
+              <!-- Select with button -->
+              <b-input-group class="mb-3">
+                <b-form-select :options="['Choose...', 'One', 'Two', 'Three']"></b-form-select>
+                <template #append>
+                  <b-button variant="outline-secondary">Button</b-button>
+                </template>
+              </b-input-group>
+
+              <!-- Button with select -->
+              <b-input-group>
+                <template #prepend>
+                  <b-button variant="outline-secondary">Button</b-button>
+                </template>
+                <b-form-select :options="['Choose...', 'One', 'Two', 'Three']"></b-form-select>
+              </b-input-group>
             </div>
           </div>
         </div>
@@ -460,7 +442,10 @@ export default {
         checkbox: false,
         radio: '',
         customRadio: '',
-        customSelect: ''
+        customSelect: '',
+        checkboxGroup: [],
+        inlineCheckboxes: [],
+        customMultiSelect: []
       }
     }
   },
@@ -476,136 +461,419 @@ export default {
 }
 </script>
 
-<style scoped>
-/* Enhanced form styling */
-.form-control:focus,
-.form-select:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+<style>
+/* Bootstrap 5 Input Group Fixes for BootstrapVueNext */
+
+/* Override Bootstrap 4 input groups with Bootstrap 5 behavior */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
 }
 
-/* Input group improvements */
-.input-group > .form-control:not(:last-child) {
+/* Fix double borders by using negative margins (Bootstrap 5 approach) */
+.input-group > .form-control,
+.input-group > .form-select,
+.input-group > .form-floating {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+/* Use negative margins to overlap borders and eliminate double borders */
+.input-group > .form-control + .form-control,
+.input-group > .form-control + .form-select,
+.input-group > .form-control + .input-group-text,
+.input-group > .form-control + .btn,
+.input-group > .form-select + .form-control,
+.input-group > .form-select + .form-select,
+.input-group > .form-select + .input-group-text,
+.input-group > .form-select + .btn,
+.input-group > .input-group-text + .form-control,
+.input-group > .input-group-text + .form-select,
+.input-group > .input-group-text + .input-group-text,
+.input-group > .input-group-text + .btn,
+.input-group > .btn + .form-control,
+.input-group > .btn + .form-select,
+.input-group > .btn + .input-group-text,
+.input-group > .btn + .btn {
+  margin-left: -1px;
+}
+
+/* Remove border radius from middle elements */
+.input-group > .form-control:not(:first-child):not(:last-child),
+.input-group > .form-select:not(:first-child):not(:last-child),
+.input-group > .input-group-text:not(:first-child):not(:last-child),
+.input-group > .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* Remove right border radius from first element when not last */
+.input-group > .form-control:not(:last-child),
+.input-group > .form-select:not(:last-child),
+.input-group > .input-group-text:not(:last-child),
+.input-group > .btn:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .form-control:not(:first-child) {
+/* Remove left border radius from last element when not first */
+.input-group > .form-control:not(:first-child),
+.input-group > .form-select:not(:first-child),
+.input-group > .input-group-text:not(:first-child),
+.input-group > .btn:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* Custom spacing for input groups */
-.input-group {
-  margin-bottom: 1rem;
+/* Input group text styling with Bootstrap 5 defaults */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
 }
 
-.input-group:last-child {
+/* Button styling in input groups */
+.input-group > .btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* Focus states - bring focused element to top */
+.input-group > .form-control:focus,
+.input-group > .form-select:focus {
+  z-index: 5;
+}
+
+.input-group .btn:focus {
+  z-index: 5;
+}
+
+/* Size variations */
+.input-group-sm > .form-control,
+.input-group-sm > .form-select,
+.input-group-sm > .input-group-text,
+.input-group-sm > .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text,
+.input-group-lg > .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+}
+
+/* Bootstrap 5 form-check styling - comprehensive fix for alignment and spacing */
+
+/* Bootstrap 5 Form check container - minimal left spacing */
+.form-check {
+  display: block;
+  min-height: 1.25rem;
+  padding-left: 1.125em;
+  margin-bottom: 0.25rem;
+}
+
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.125em;
+}
+
+/* Fix for BootstrapVueNext form-radio wrapper */
+.form-radio {
   margin-bottom: 0;
 }
 
-/* Form control sizing consistency */
-.form-control-lg {
-  min-height: calc(3rem + 2px);
-  padding: 0.75rem 1rem;
-  font-size: 1.125rem;
+.form-radio .form-check {
+  margin-bottom: 0.25rem;
 }
 
-.form-control-sm {
-  min-height: calc(2rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
+.form-radio .form-check:last-child {
+  margin-bottom: 0;
 }
 
-/* Enhanced card styling */
-.main-card {
-  transition: all 0.3s ease;
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.125em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  print-color-adjust: exact;
 }
 
-.main-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.form-check-label {
+  color: #212529;
+  cursor: pointer;
 }
 
-/* Form check improvements */
-.form-check {
-  margin-bottom: 0.75rem;
+/* BootstrapVueNext specific fixes */
+.form-check-input[type='checkbox'] {
+  border-radius: 0.25em;
 }
 
-.form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+.form-check-input[type='radio'] {
+  border-radius: 50%;
 }
 
+/* Input group specific overrides */
+.input-group-text .form-check-input {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  position: static !important;
+  float: none !important;
+}
+
+.input-group-text .form-check-input[type='checkbox'],
+.form-check-input[type='checkbox'] {
+  border-radius: 0.25em;
+}
+
+.input-group-text .form-check-input[type='radio'],
+.form-check-input[type='radio'] {
+  border-radius: 50%;
+}
+
+.input-group-text .form-check-input:active,
+.form-check-input:active {
+  filter: brightness(90%);
+}
+
+.input-group-text .form-check-input:focus,
 .form-check-input:focus {
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-/* Inline form checks */
-.form-check-inline {
-  margin-right: 1.5rem;
+.input-group-text .form-check-input:checked,
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 
-/* Input group text styling */
-.input-group-text {
-  background-color: #f8f9fa;
-  border-color: #ced4da;
+.input-group-text .form-check-input:checked[type='checkbox'],
+.form-check-input:checked[type='checkbox'] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
 
-/* Disabled state styling */
-.form-control:disabled,
-.form-select:disabled {
-  background-color: #e9ecef;
-  opacity: 1;
+.input-group-text .form-check-input:checked[type='radio'],
+.form-check-input:checked[type='radio'] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 
-/* File input specific styling */
-input[type='file'].form-control {
+.input-group-text .form-check-input[type='checkbox']:indeterminate,
+.form-check-input[type='checkbox']:indeterminate {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+
+.input-group-text .form-check-input:disabled,
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+
+/* Bootstrap 5 File Input Styling */
+.form-control[type='file']:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+.form-control[type='file'] {
+  overflow: hidden;
+}
+
+.form-control[type='file']:not(:disabled):not([readonly])::-webkit-file-upload-button {
   padding: 0.375rem 0.75rem;
-}
-
-/* Button group in input groups */
-.input-group .btn-group {
-  position: relative;
-  display: flex;
-  vertical-align: middle;
-}
-
-/* Responsive improvements */
-@media (max-width: 768px) {
-  .input-group {
-    flex-wrap: wrap;
-  }
-
-  .input-group .form-control {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-
-  .input-group .btn {
-    flex: 0 0 auto;
-  }
-}
-
-/* Enhanced dropdown styling in input groups */
-.input-group .dropdown {
-  position: relative;
-  display: flex;
-}
-
-.input-group .dropdown .btn {
+  margin: -0.375rem -0.75rem;
+  margin-inline-end: 0.75rem;
+  color: #212529;
+  background-color: #e9ecef;
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1px;
   border-radius: 0;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
-.input-group .dropdown:first-child .btn {
-  border-top-left-radius: 0.375rem;
-  border-bottom-left-radius: 0.375rem;
+.form-control[type='file']:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: #ddd6fe;
 }
 
-.input-group .dropdown:last-child .btn {
-  border-top-right-radius: 0.375rem;
-  border-bottom-right-radius: 0.375rem;
+.form-control[type='file']::-webkit-file-upload-button {
+  padding: 0.375rem 0.75rem;
+  margin: -0.375rem -0.75rem;
+  margin-inline-end: 0.75rem;
+  color: #212529;
+  background-color: #e9ecef;
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1px;
+  border-radius: 0;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.form-control-sm[type='file']::-webkit-file-upload-button {
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.form-control-lg[type='file']::-webkit-file-upload-button {
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1rem;
+  margin-inline-end: 1rem;
+}
+
+/* Firefox file upload button styling */
+.form-control[type='file']::-moz-file-upload-button {
+  padding: 0.375rem 0.75rem;
+  margin: -0.375rem -0.75rem;
+  margin-inline-end: 0.75rem;
+  color: #212529;
+  background-color: #e9ecef;
+  pointer-events: none;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  border-inline-end-width: 1px;
+  border-radius: 0;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+/* BootstrapVueNext specific file input fixes */
+.form-file .form-file-button {
+  padding: 0.375rem 0.75rem;
+  margin-left: -1px;
+  color: #212529;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.form-file .form-control {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+/* BootstrapVueNext component specific fixes */
+
+/* Fix spacing for BootstrapVueNext form checkboxes and radios */
+.form-check,
+.form-radio {
+  margin-bottom: 0.5rem;
+}
+
+/* Fix spacing between checkbox/radio and text - Bootstrap 5 standard */
+.form-check-label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* Ensure proper spacing when input is floated left - reduced padding */
+.form-check .form-check-input + .form-check-label {
+  padding-left: 0.25rem;
+}
+
+.form-radio .form-check .form-check-input + .form-check-label {
+  padding-left: 0.25rem;
+}
+
+/* Inline checkboxes/radios spacing - reduced spacing */
+.form-check-inline {
+  display: inline-block;
+  margin-right: 0.75rem;
+}
+
+.form-check-inline .form-check-input {
+  position: static;
+  margin-top: 0.125em;
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+
+.form-check-inline .form-check-label {
+  padding-left: 0;
+}
+
+/* Inline radio groups */
+.form-radio-inline {
+  margin-right: 0.75rem;
+}
+
+.form-radio-inline .form-check-input {
+  margin-right: 0.25rem;
+  margin-left: 0;
+  margin-top: 0.125em;
+}
+
+/* BootstrapVueNext group components */
+.form-group .form-check:last-child,
+.form-group .form-radio:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure consistent vertical alignment - improved alignment */
+.form-check-input,
+.form-radio-input {
+  margin-top: 0.125em;
+}
+
+/* Fix for disabled state text color */
+.form-check-input:disabled + .form-check-label,
+.form-radio-input:disabled + .form-check-label {
+  opacity: 0.5;
+  color: #6c757d;
+}
+</style>
+
+<style scoped>
+/* Component specific styling */
+.main-card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
 }
 </style>

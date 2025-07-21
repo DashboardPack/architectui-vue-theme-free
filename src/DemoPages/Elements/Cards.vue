@@ -276,20 +276,20 @@ export default {
       }, 1500)
 
       switch (type) {
-        case 'primary':
-          alert('Primary action triggered!')
-          break
-        case 'secondary':
-          this.cardStats.likes++
-          break
-        case 'warning':
-          this.cardStats.shares++
-          break
-        case 'danger':
-          this.cardStats.views++
-          break
-        default:
-          break
+      case 'primary':
+        alert('Primary action triggered!')
+        break
+      case 'secondary':
+        this.cardStats.likes++
+        break
+      case 'warning':
+        this.cardStats.shares++
+        break
+      case 'danger':
+        this.cardStats.views++
+        break
+      default:
+        break
       }
     },
     handleCardLink(linkType) {

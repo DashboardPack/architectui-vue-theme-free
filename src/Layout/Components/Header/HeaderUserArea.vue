@@ -1,32 +1,50 @@
 <template>
-  <div class="d-flex">
-    <div class="header-btn-lg pe-0">
+  <div class="header-user-area d-flex align-items-center">
+    <div class="header-btn-lg d-flex align-items-center">
       <div class="widget-content p-0">
-        <div class="widget-content-wrapper">
+        <div class="widget-content-wrapper d-flex align-items-center">
+          <!-- User Avatar and Dropdown -->
           <div class="widget-content-left">
-            <b-dropdown variant="link" class="p-0 me-2" menu-class="dropdown-menu-lg" right>
+            <b-dropdown variant="link" no-caret right class="p-0 border-0 bg-transparent" menu-class="dropdown-menu-lg">
               <template #button-content>
                 <div class="icon-wrapper icon-wrapper-alt rounded-circle">
-                  <img width="42" class="rounded-circle" src="@/assets/images/avatars/1.jpg" alt="" />
+                  <img
+                    width="42"
+                    height="42"
+                    class="rounded-circle"
+                    src="@/assets/images/avatars/1.jpg"
+                    alt="User Avatar"
+                  />
                 </div>
               </template>
-              <b-dropdown-item-button>Menus</b-dropdown-item-button>
-              <b-dropdown-item-button>Settings</b-dropdown-item-button>
-              <b-dropdown-header>Header</b-dropdown-header>
-              <b-dropdown-item-button>Actions</b-dropdown-item-button>
+
+              <b-dropdown-header>User Menu</b-dropdown-header>
+              <b-dropdown-item @click="handleMenuAction('profile')">Profile</b-dropdown-item>
+              <b-dropdown-item @click="handleMenuAction('settings')">Settings</b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
-              <b-dropdown-item-button>Dividers</b-dropdown-item-button>
+              <b-dropdown-item @click="handleMenuAction('logout')">Logout</b-dropdown-item>
             </b-dropdown>
           </div>
+
+          <!-- User Info -->
           <div class="widget-content-left ms-3 header-user-info">
             <div class="widget-heading">{{ user.name }}</div>
             <div class="widget-subheading">{{ user.role }}</div>
           </div>
-          <div class="widget-content-right header-user-info ms-3">
-            <b-tooltip target="calendar-btn" placement="bottom"> Calendar Events </b-tooltip>
-            <button id="calendar-btn" class="btn btn-info btn-sm btn-shadow p-1" @click="handleCalendarClick">
-              <font-awesome-icon icon="calendar-alt" class="me-1 ms-1" />
-            </button>
+
+          <!-- Calendar Button -->
+          <div class="widget-content-right ms-3">
+            <b-button
+              id="calendar-btn"
+              variant="info"
+              size="sm"
+              class="btn-shadow d-flex align-items-center justify-content-center"
+              style="width: 32px; height: 32px"
+              @click="handleCalendarClick"
+              :title="'Calendar Events'"
+            >
+              <font-awesome-icon icon="calendar-alt" />
+            </b-button>
           </div>
         </div>
       </div>
@@ -40,7 +58,6 @@ import { defineComponent, ref } from 'vue'
 export default defineComponent({
   name: 'HeaderUserArea',
   setup() {
-    // User data - in a real app, this would come from a user store
     const user = ref({
       name: 'Alina Mclourd',
       role: 'VP People Manager',
@@ -48,13 +65,23 @@ export default defineComponent({
     })
 
     const handleCalendarClick = () => {
-      // In a real app, this would open calendar functionality
       console.log('Calendar clicked')
     }
 
     const handleMenuAction = action => {
-      // Handle user menu actions
       console.log('User menu action:', action)
+
+      switch (action) {
+      case 'profile':
+        // Navigate to profile
+        break
+      case 'settings':
+        // Navigate to settings
+        break
+      case 'logout':
+        // Handle logout
+        break
+      }
     }
 
     return {

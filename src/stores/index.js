@@ -9,6 +9,7 @@ import { createPinia } from 'pinia'
 import { useDashboardStore } from './dashboard'
 import { useUIStore } from './ui'
 import { useNotificationsStore } from './notifications'
+import { useSidebarStore } from './sidebar'
 
 // Create pinia instance
 const pinia = createPinia()
@@ -21,6 +22,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Export stores for easy importing
-export { useDashboardStore, useUIStore, useNotificationsStore }
+export { useDashboardStore, useUIStore, useNotificationsStore, useSidebarStore }
 
 export default pinia

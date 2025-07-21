@@ -72,10 +72,10 @@
         <div class="row">
           <div class="col-sm">
             <div class="clearfix">
-              <div class="d-inline-block float-start h-50p bg-light p-5 me-5 mb-5">50px</div>
-              <div class="d-inline-block float-start h-75p bg-light p-5 me-5 mb-5">75px</div>
-              <div class="d-inline-block float-start h-100p bg-light p-5 me-5 mb-5">100px</div>
-              <div class="d-inline-block float-start h-125p bg-light p-5 me-5 mb-5">125px</div>
+              <div class="d-inline-block float-start h-50p bg-light p-2 me-5 mb-5">50px</div>
+              <div class="d-inline-block float-start h-75p bg-light p-2 me-5 mb-5">75px</div>
+              <div class="d-inline-block float-start h-100p bg-light p-2 me-5 mb-5">100px</div>
+              <div class="d-inline-block float-start h-125p bg-light p-2 me-5 mb-5">125px</div>
             </div>
             <div class="table-wrap mt-40">
               <table class="table table-bordered mb-0">
@@ -115,11 +115,11 @@
         <div class="row">
           <div class="col-sm">
             <div class="h-200p d-flex flex-wrap">
-              <div class="h-auto bg-light p-5 me-5 mb-2">auto</div>
-              <div class="h-25 bg-light p-5 me-5 mb-2">25%</div>
-              <div class="h-50 bg-light p-5 me-5 mb-2">50%</div>
-              <div class="h-75 bg-light p-5 me-5 mb-2">75%</div>
-              <div class="h-100 bg-light p-5 me-5 mb-2">100%</div>
+              <div class="h-auto bg-light p-2 me-5 mb-2">auto</div>
+              <div class="h-25 bg-light p-2 me-5 mb-2">25%</div>
+              <div class="h-50 bg-light p-2 me-5 mb-2">50%</div>
+              <div class="h-75 bg-light p-2 me-5 mb-2">75%</div>
+              <div class="h-100 bg-light p-2 me-5 mb-2">100%</div>
             </div>
             <div class="table-wrap mt-40">
               <table class="table table-bordered mb-0">

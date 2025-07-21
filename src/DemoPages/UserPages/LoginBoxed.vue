@@ -35,7 +35,7 @@
               </div>
               <div class="modal-footer clearfix">
                 <div class="float-start">
-                  <a href="javascript:void(0);" class="btn-lg btn btn-link">Recover Password</a>
+                  <b-button variant="link" size="lg" href="javascript:void(0);">Recover Password</b-button>
                 </div>
                 <div class="float-end">
                   <b-button variant="primary" size="lg">Login to Dashboard</b-button>

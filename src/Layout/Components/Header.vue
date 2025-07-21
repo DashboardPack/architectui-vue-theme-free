@@ -14,8 +14,8 @@
         <button
           type="button"
           class="hamburger close-sidebar-btn hamburger--elastic"
-          :class="{ 'is-active': isOpen }"
-          @click="toggleMobile('closed-sidebar-open')"
+          :class="{ 'is-active': uiStore.mobileSidebarOpen }"
+          @click="toggleMobileSidebar"
         >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -25,63 +25,50 @@
     </div>
     <div class="app-header__menu">
       <span>
-        <button
-          class="btn btn-primary btn-sm btn-icon btn-icon-only"
-          :class="{ active: isOpenMobileMenu }"
-          @click="toggleMobile2('header-menu-open')"
+        <b-button
+          variant="primary"
+          size="sm"
+          class="btn-icon btn-icon-only"
+          :class="{ active: uiStore.mobileMenuOpen }"
+          @click="toggleMobileMenu"
         >
           <div class="btn-icon-wrapper">
             <font-awesome-icon icon="ellipsis-vertical" />
           </div>
-        </button>
+        </b-button>
       </span>
     </div>
   </div>
 </template>
 
 <script>
+import { defineComponent } from 'vue'
+import { useUIStore } from '@/stores/ui'
 import SearchBox from './Header/SearchBox.vue'
 import UserArea from './Header/HeaderUserArea.vue'
 
-export default {
+export default defineComponent({
   name: 'Header',
   components: {
     SearchBox,
     UserArea
   },
-  data() {
+  setup() {
+    const uiStore = useUIStore()
+
+    const toggleMobileSidebar = () => {
+      uiStore.toggleMobileSidebar()
+    }
+
+    const toggleMobileMenu = () => {
+      uiStore.toggleMobileMenu()
+    }
+
     return {
-      mobileSidebarOpen: false,
-      mobileMenuOpen: false
-    }
-  },
-  computed: {
-    isOpen() {
-      return this.mobileSidebarOpen
-    },
-    isOpenMobileMenu() {
-      return this.mobileMenuOpen
-    }
-  },
-  methods: {
-    toggleMobile() {
-      this.mobileSidebarOpen = !this.mobileSidebarOpen
-      const body = document.body
-      if (this.mobileSidebarOpen) {
-        body.classList.add('closed-sidebar-open')
-      } else {
-        body.classList.remove('closed-sidebar-open')
-      }
-    },
-    toggleMobile2() {
-      this.mobileMenuOpen = !this.mobileMenuOpen
-      const body = document.body
-      if (this.mobileMenuOpen) {
-        body.classList.add('header-menu-open')
-      } else {
-        body.classList.remove('header-menu-open')
-      }
+      uiStore,
+      toggleMobileSidebar,
+      toggleMobileMenu
     }
   }
-}
+})
 </script>

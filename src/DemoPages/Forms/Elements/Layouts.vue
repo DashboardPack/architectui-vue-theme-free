@@ -7,7 +7,7 @@
       <div class="main-card mb-3 card">
         <div class="card-header">
           <div class="card-header-title font-size-lg text-capitalize fw-normal">
-            <i class="header-icon lnr-layers icon-gradient bg-love-kiss"></i>
+            <i class="header-icon pe-7s-albums icon-gradient bg-love-kiss"></i>
             Grid Rows Layout
           </div>
         </div>
@@ -115,7 +115,7 @@
       <div class="main-card mb-3 card">
         <div class="card-header">
           <div class="card-header-title font-size-lg text-capitalize fw-normal">
-            <i class="header-icon lnr-layers icon-gradient bg-amy-crisp"></i>
+            <i class="header-icon pe-7s-albums icon-gradient bg-amy-crisp"></i>
             Inline Layout
           </div>
         </div>
@@ -200,7 +200,7 @@
       <div class="main-card mb-3 card">
         <div class="card-header">
           <div class="card-header-title font-size-lg text-capitalize fw-normal">
-            <i class="header-icon lnr-layers icon-gradient bg-happy-fisher"></i>
+            <i class="header-icon pe-7s-albums icon-gradient bg-happy-fisher"></i>
             Horizontal Layout
           </div>
         </div>
@@ -332,7 +332,7 @@
       <div class="main-card mb-3 card">
         <div class="card-header">
           <div class="card-header-title font-size-lg text-capitalize fw-normal">
-            <i class="header-icon lnr-layers icon-gradient bg-plum-plate"></i>
+            <i class="header-icon pe-7s-albums icon-gradient bg-plum-plate"></i>
             Advanced Layout Examples
           </div>
         </div>
@@ -344,9 +344,9 @@
                 <div class="mb-3">
                   <label for="websiteInput" class="form-label">Website</label>
                   <b-input-group>
-                    <b-input-group-prepend>
+                    <template #prepend>
                       <b-input-group-text>https://</b-input-group-text>
-                    </b-input-group-prepend>
+                    </template>
                     <b-form-input
                       id="websiteInput"
                       v-model="advancedForm.website"
@@ -358,18 +358,18 @@
                 <div class="mb-3">
                   <label for="priceInput" class="form-label">Price</label>
                   <b-input-group>
-                    <b-input-group-prepend>
+                    <template #prepend>
                       <b-input-group-text>$</b-input-group-text>
-                    </b-input-group-prepend>
+                    </template>
                     <b-form-input
                       id="priceInput"
                       v-model="advancedForm.price"
                       type="number"
                       placeholder="0.00"
                     ></b-form-input>
-                    <b-input-group-append>
+                    <template #append>
                       <b-input-group-text>.00</b-input-group-text>
-                    </b-input-group-append>
+                    </template>
                   </b-input-group>
                 </div>
 
@@ -377,11 +377,11 @@
                   <label for="searchInput" class="form-label">Search</label>
                   <b-input-group>
                     <b-form-input id="searchInput" v-model="advancedForm.search" placeholder="Search..."></b-form-input>
-                    <b-input-group-append>
+                    <template #append>
                       <b-button variant="outline-secondary" class="search-button">
-                        <i class="fas fa-search"></i>
+                        <font-awesome-icon icon="search" />
                       </b-button>
-                    </b-input-group-append>
+                    </template>
                   </b-input-group>
                 </div>
               </div>
@@ -641,6 +641,57 @@ export default {
 }
 </script>
 
+<style>
+/* Global CSS to fix BootstrapVueNext BFormFile component styling - Bootstrap 5 compliant */
+
+/* Target all file input pseudo-elements with comprehensive browser support */
+input[type='file']::file-selector-button,
+input[type='file']::-webkit-file-upload-button,
+input[type='file']::-moz-file-upload-button {
+  padding: 0.375rem 0.75rem !important;
+  margin: -0.375rem -0.75rem !important;
+  margin-inline-end: 0.75rem !important;
+  color: #212529 !important;
+  background-color: #e9ecef !important;
+  border: 1px solid #ced4da !important;
+  border-right: 1px solid #ced4da !important;
+  border-radius: 0.375rem 0 0 0.375rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out !important;
+}
+
+/* Hover effects for file input buttons */
+input[type='file']:hover::file-selector-button,
+input[type='file']:hover::-webkit-file-upload-button {
+  background-color: #ddd6fe !important;
+}
+
+/* Ensure the file input itself has proper Bootstrap 5 styling */
+input[type='file'] {
+  border: 1px solid #ced4da !important;
+  border-radius: 0.375rem !important;
+  padding: 0.375rem 0.75rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  color: #212529 !important;
+  background-color: #fff !important;
+}
+
+/* Specific targeting for the horizontal file input */
+#horizontalFile {
+  border: 1px solid #ced4da !important;
+  border-radius: 0.375rem !important;
+  padding: 0.375rem 0.75rem !important;
+}
+</style>
+
 <style scoped>
 /* Custom form styling */
 .form-label {
@@ -712,47 +763,107 @@ export default {
   font-size: 1rem;
 }
 
-/* Input group alignment improvements */
+/* Bootstrap 5 Input Group Fixes - consistent with Controls.vue */
 .input-group {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
+  width: 100%;
 }
 
-.input-group .form-control {
-  border-radius: 0.375rem;
-  min-height: 2.25rem;
-  font-size: 1rem;
+/* Fix double borders by using negative margins (Bootstrap 5 approach) */
+.input-group > .form-control,
+.input-group > .form-select,
+.input-group > .form-floating {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
 }
 
-.input-group .form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+/* Use negative margins to overlap borders and eliminate double borders */
+.input-group > .form-control + .form-control,
+.input-group > .form-control + .form-select,
+.input-group > .form-control + .input-group-text,
+.input-group > .form-control + .btn,
+.input-group > .form-select + .form-control,
+.input-group > .form-select + .form-select,
+.input-group > .form-select + .input-group-text,
+.input-group > .form-select + .btn,
+.input-group > .input-group-text + .form-control,
+.input-group > .input-group-text + .form-select,
+.input-group > .input-group-text + .input-group-text,
+.input-group > .input-group-text + .btn,
+.input-group > .btn + .form-control,
+.input-group > .btn + .form-select,
+.input-group > .btn + .input-group-text,
+.input-group > .btn + .btn {
+  margin-left: -1px;
 }
 
-.input-group .form-control:not(:last-child) {
+/* Remove border radius from middle elements */
+.input-group > .form-control:not(:first-child):not(:last-child),
+.input-group > .form-select:not(:first-child):not(:last-child),
+.input-group > .input-group-text:not(:first-child):not(:last-child),
+.input-group > .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* Remove right border radius from first element when not last */
+.input-group > .form-control:not(:last-child),
+.input-group > .form-select:not(:last-child),
+.input-group > .input-group-text:not(:last-child),
+.input-group > .btn:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-/* Ensure input group prepend/append elements match form control height */
-.input-group-prepend .input-group-text,
-.input-group-append .input-group-text {
-  min-height: 2.25rem;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Remove left border radius from last element when not first */
+.input-group > .form-control:not(:first-child),
+.input-group > .form-select:not(:first-child),
+.input-group > .input-group-text:not(:first-child),
+.input-group > .btn:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
-/* Button styling within input groups */
-.input-group .btn {
+/* Input group text styling with Bootstrap 5 defaults */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+}
+
+/* Button styling in input groups */
+.input-group > .btn {
+  position: relative;
+  z-index: 2;
   min-height: 2.25rem;
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.375rem 0.75rem;
-  border-radius: 0.375rem;
+}
+
+/* Focus states - bring focused element to top */
+.input-group > .form-control:focus,
+.input-group > .form-select:focus {
+  z-index: 5;
+}
+
+.input-group .btn:focus {
+  z-index: 5;
 }
 
 /* Search button specific styling */
@@ -765,13 +876,153 @@ export default {
   padding: 0.375rem 0.75rem !important;
 }
 
+.search-button svg,
 .search-button i {
   font-size: 0.875rem;
+  width: 0.875rem;
+  height: 0.875rem;
   color: #6c757d;
 }
 
+.search-button:hover svg,
 .search-button:hover i {
   color: #495057;
+}
+
+/* Bootstrap 5 File Input Styling - BootstrapVueNext compatible */
+.form-control[type='file']:not(:disabled):not([readonly]) {
+  cursor: pointer;
+}
+
+.form-control[type='file'] {
+  overflow: hidden;
+}
+
+/* Modern browsers (Chrome 89+, Firefox 82+) - NEW STANDARD - High Specificity */
+.form-control[type='file']::file-selector-button,
+input.form-control[type='file']::file-selector-button {
+  padding: 0.375rem 0.75rem !important;
+  margin: -0.375rem -0.75rem !important;
+  margin-inline-end: 0.75rem !important;
+  color: #212529 !important;
+  background-color: #e9ecef !important;
+  cursor: pointer !important;
+  border: 0 !important;
+  border-inline-end: 1px solid #ced4da !important;
+  border-radius: 0 !important;
+  transition: background-color 0.15s ease-in-out !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+}
+
+.form-control[type='file']:hover::file-selector-button,
+input.form-control[type='file']:hover::file-selector-button {
+  background-color: #ddd6fe !important;
+}
+
+.form-control[type='file']:not(:disabled):not([readonly])::-webkit-file-upload-button,
+input.form-control[type='file']:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  padding: 0.375rem 0.75rem !important;
+  margin: -0.375rem -0.75rem !important;
+  margin-inline-end: 0.75rem !important;
+  color: #212529 !important;
+  background-color: #e9ecef !important;
+  cursor: pointer !important;
+  border: 0 !important;
+  border-inline-end: 1px solid #ced4da !important;
+  border-radius: 0 !important;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+}
+
+.form-control[type='file']:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
+input.form-control[type='file']:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: #ddd6fe !important;
+}
+
+.form-control[type='file']::-webkit-file-upload-button,
+input.form-control[type='file']::-webkit-file-upload-button {
+  padding: 0.375rem 0.75rem !important;
+  margin: -0.375rem -0.75rem !important;
+  margin-inline-end: 0.75rem !important;
+  color: #212529 !important;
+  background-color: #e9ecef !important;
+  cursor: pointer !important;
+  border: 0 !important;
+  border-inline-end: 1px solid #ced4da !important;
+  border-radius: 0 !important;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+}
+
+.form-control-sm[type='file']::-webkit-file-upload-button {
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.form-control-lg[type='file']::-webkit-file-upload-button {
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1rem;
+  margin-inline-end: 1rem;
+}
+
+/* Modern browser size variants for file selector button */
+.form-control-sm[type='file']::file-selector-button {
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.form-control-lg[type='file']::file-selector-button {
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1rem;
+  margin-inline-end: 1rem;
+}
+
+/* Firefox file upload button styling - High Specificity */
+.form-control[type='file']::-moz-file-upload-button,
+input.form-control[type='file']::-moz-file-upload-button {
+  padding: 0.375rem 0.75rem !important;
+  margin: -0.375rem -0.75rem !important;
+  margin-inline-end: 0.75rem !important;
+  color: #212529 !important;
+  background-color: #e9ecef !important;
+  cursor: pointer !important;
+  border: 0 !important;
+  border-inline-end: 1px solid #ced4da !important;
+  border-radius: 0 !important;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+}
+
+/* BootstrapVueNext specific file input fixes */
+.form-file .form-file-button {
+  padding: 0.375rem 0.75rem;
+  margin-left: -1px;
+  color: #212529;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.form-file .form-control {
+  border-radius: 0 0.375rem 0.375rem 0;
 }
 
 /* Responsive improvements */

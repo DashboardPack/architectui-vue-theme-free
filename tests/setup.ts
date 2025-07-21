@@ -1,9 +1,10 @@
 import { config } from '@vue/test-utils'
+import { vi } from 'vitest'
 
 // Mock global objects
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: vi.fn().mockImplementation(query => ({
+  value: vi.fn().mockImplementation((query: string) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -34,13 +35,13 @@ Object.defineProperty(window, 'scrollTo', {
 config.global.stubs = {
   // Stub FontAwesome components
   'font-awesome-icon': true,
-  
+
   // Stub router components
   'router-link': true,
   'router-view': true,
-  
+
   // Stub perfect scrollbar
-  'PerfectScrollbar': true
+  PerfectScrollbar: true
 }
 
 // Global test configuration - minimal setup

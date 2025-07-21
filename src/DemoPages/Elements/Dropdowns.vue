@@ -25,12 +25,12 @@
                 :key="variant"
               >
                 <b-dropdown no-flip :text="variant" class="mb-2 me-2" :variant="variant">
-                  <button type="button" tabindex="0" class="dropdown-item">Menus</button>
-                  <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                  <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                  <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                  <div tabindex="-1" class="dropdown-divider"></div>
-                  <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                  <b-dropdown-item>Menus</b-dropdown-item>
+                  <b-dropdown-item>Settings</b-dropdown-item>
+                  <b-dropdown-header>Header</b-dropdown-header>
+                  <b-dropdown-item>Actions</b-dropdown-item>
+                  <b-dropdown-divider></b-dropdown-divider>
+                  <b-dropdown-item>Dividers</b-dropdown-item>
                 </b-dropdown>
               </template>
             </div>
@@ -55,12 +55,12 @@
                 :key="variant"
               >
                 <b-dropdown no-flip split :text="variant" class="mb-2 me-2" :variant="variant">
-                  <button type="button" tabindex="0" class="dropdown-item">Menus</button>
-                  <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                  <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                  <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                  <div tabindex="-1" class="dropdown-divider"></div>
-                  <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                  <b-dropdown-item>Menus</b-dropdown-item>
+                  <b-dropdown-item>Settings</b-dropdown-item>
+                  <b-dropdown-header>Header</b-dropdown-header>
+                  <b-dropdown-item>Actions</b-dropdown-item>
+                  <b-dropdown-divider></b-dropdown-divider>
+                  <b-dropdown-item>Dividers</b-dropdown-item>
                 </b-dropdown>
               </template>
             </div>
@@ -85,12 +85,12 @@
                 :key="variant"
               >
                 <b-dropdown no-flip split :text="variant" class="mb-2 me-2" :variant="variant">
-                  <button type="button" tabindex="0" class="dropdown-item">Menus</button>
-                  <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                  <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                  <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                  <div tabindex="-1" class="dropdown-divider"></div>
-                  <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                  <b-dropdown-item>Menus</b-dropdown-item>
+                  <b-dropdown-item>Settings</b-dropdown-item>
+                  <b-dropdown-header>Header</b-dropdown-header>
+                  <b-dropdown-item>Actions</b-dropdown-item>
+                  <b-dropdown-divider></b-dropdown-divider>
+                  <b-dropdown-item>Dividers</b-dropdown-item>
                 </b-dropdown>
               </template>
             </div>
@@ -117,12 +117,12 @@
                 :key="variant"
               >
                 <b-dropdown no-flip :text="variant" class="mb-2 me-2" :variant="variant">
-                  <button type="button" tabindex="0" class="dropdown-item">Menus</button>
-                  <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                  <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                  <button type="button" tabindex="0" class="dropdown-item">Actions</button>
-                  <div tabindex="-1" class="dropdown-divider"></div>
-                  <button type="button" tabindex="0" class="dropdown-item">Dividers</button>
+                  <b-dropdown-item>Menus</b-dropdown-item>
+                  <b-dropdown-item>Settings</b-dropdown-item>
+                  <b-dropdown-header>Header</b-dropdown-header>
+                  <b-dropdown-item>Actions</b-dropdown-item>
+                  <b-dropdown-divider></b-dropdown-divider>
+                  <b-dropdown-item>Dividers</b-dropdown-item>
                 </b-dropdown>
               </template>
             </div>

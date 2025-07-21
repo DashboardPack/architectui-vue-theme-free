@@ -114,7 +114,7 @@ export default {
   data() {
     return {
       heading: 'Tooltips & Popovers',
-      subheading: "These Vue components are used to add interaction or extra information for your app's content.",
+      subheading: 'These Vue components are used to add interaction or extra information for your app\'s content.',
       icon: 'pe-7s-note2 icon-gradient bg-happy-fisher',
       showManualPopover: false,
       placements: [

@@ -198,4 +198,31 @@ app.component('default-layout', Default)
 app.component('userpages-layout', Pages)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
+// Suppress browser extension errors in development
+if (import.meta.env.DEV) {
+  window.addEventListener('error', event => {
+    if (
+      event.message?.includes('message channel closed') ||
+      event.message?.includes('listener indicated an asynchronous response') ||
+      event.message?.includes('Extension context invalidated')
+    ) {
+      event.preventDefault()
+      return false
+    }
+  })
+
+  window.addEventListener('unhandledrejection', event => {
+    if (
+      event.reason?.message?.includes('message channel closed') ||
+      event.reason?.message?.includes('Could not establish connection') ||
+      event.reason?.message?.includes('Receiving end does not exist') ||
+      event.reason?.message?.includes('listener indicated an asynchronous response') ||
+      event.reason?.message?.includes('Extension context invalidated')
+    ) {
+      event.preventDefault()
+      return false
+    }
+  })
+}
+
 app.mount('#app')

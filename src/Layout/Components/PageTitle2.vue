@@ -10,13 +10,13 @@
         </div>
       </div>
       <div class="page-title-actions">
-        <button type="button" class="btn-shadow me-3 btn btn-dark">
+        <b-button variant="dark" class="btn-shadow" style="margin-right: 0.375rem !important">
           <font-awesome-icon icon="star" />
-        </button>
-        <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
+        </b-button>
+        <b-button variant="success" class="btn-shadow d-inline-flex align-items-center">
           <font-awesome-icon class="me-2" icon="plus" />
           Create New
-        </button>
+        </b-button>
       </div>
     </div>
   </div>

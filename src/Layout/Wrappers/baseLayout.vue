@@ -1,7 +1,7 @@
 <template>
   <div class="app-container app-theme-white">
     <Header />
-    <Sidebar />
+    <SidebarNav />
     <div class="app-main__outer">
       <div class="app-main__inner">
         <slot></slot>
@@ -14,14 +14,14 @@
 <script>
 import { defineComponent } from 'vue'
 import Header from '../Components/Header.vue'
-import Sidebar from '../Components/Sidebar.vue'
+import SidebarNav from '../../components/SidebarNav.vue'
 import Footer from '../Components/Footer.vue'
 
 export default defineComponent({
   name: 'BaseLayout',
   components: {
     Header,
-    Sidebar,
+    SidebarNav,
     Footer
   }
 })

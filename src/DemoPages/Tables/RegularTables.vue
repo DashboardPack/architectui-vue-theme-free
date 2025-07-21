@@ -31,24 +31,29 @@
           <b-col md="6">
             <div class="d-flex align-items-center">
               <label class="form-label me-2 mb-0">Show:</label>
-              <select v-model="perPage" class="form-select form-select-sm" style="width: auto">
-                <option :value="5">5</option>
-                <option :value="10">10</option>
-                <option :value="25">25</option>
-                <option :value="50">50</option>
-              </select>
+              <b-form-select
+                v-model="perPage"
+                :options="[
+                  { value: 5, text: '5' },
+                  { value: 10, text: '10' },
+                  { value: 25, text: '25' },
+                  { value: 50, text: '50' }
+                ]"
+                size="sm"
+                style="width: auto"
+              ></b-form-select>
               <span class="ms-2 text-muted">entries</span>
             </div>
           </b-col>
           <b-col md="6">
             <div class="d-flex justify-content-end">
-              <input
+              <b-form-input
                 v-model="filter"
                 type="text"
-                class="form-control form-control-sm"
+                size="sm"
                 placeholder="Search..."
                 style="width: 200px"
-              />
+              ></b-form-input>
             </div>
           </b-col>
         </b-row>
@@ -93,24 +98,14 @@
           Showing {{ (currentPage - 1) * perPage + 1 }} to {{ Math.min(currentPage * perPage, totalRows) }} of
           {{ totalRows }} entries
         </div>
-        <nav aria-label="Table pagination">
-          <ul class="pagination pagination-sm mb-0">
-            <li class="page-item" :class="{ disabled: currentPage === 1 }">
-              <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)">Previous</a>
-            </li>
-            <li
-              v-for="page in getVisiblePages()"
-              :key="page"
-              class="page-item"
-              :class="{ active: page === currentPage }"
-            >
-              <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
-            </li>
-            <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-              <a class="page-link" href="#" @click.prevent="changePage(currentPage + 1)">Next</a>
-            </li>
-          </ul>
-        </nav>
+        <b-pagination
+          v-model="currentPage"
+          :total-rows="totalRows"
+          :per-page="perPage"
+          size="sm"
+          class="mb-0"
+          aria-label="Table pagination"
+        ></b-pagination>
       </div>
     </b-card>
 
@@ -305,9 +300,6 @@ export default {
     },
     totalRows() {
       return Array.isArray(this.filteredItems) ? this.filteredItems.length : 0
-    },
-    totalPages() {
-      return Math.ceil(this.totalRows / this.perPage)
     }
   },
   mounted() {
@@ -341,31 +333,6 @@ export default {
           }
         }
       }
-    },
-    changePage(page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.currentPage = page
-      }
-    },
-    getVisiblePages() {
-      if (this.totalPages <= 1) return [1]
-
-      const pages = []
-      const maxPages = Math.min(5, this.totalPages)
-
-      let start = Math.max(1, this.currentPage - 2)
-      const end = Math.min(this.totalPages, start + maxPages - 1)
-
-      // Adjust start if we're near the end
-      if (end - start < maxPages - 1) {
-        start = Math.max(1, end - maxPages + 1)
-      }
-
-      for (let i = start; i <= end; i++) {
-        pages.push(i)
-      }
-
-      return pages
     }
   }
 }
