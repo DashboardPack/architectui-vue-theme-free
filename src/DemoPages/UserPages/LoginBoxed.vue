@@ -1,50 +1,86 @@
 <template>
-  <div>
-    <div class="h-100 bg-plum-plate bg-animation">
-      <div class="d-flex h-100 justify-content-center align-items-center">
-        <b-col md="8" class="mx-auto app-login-box">
-          <div class="app-logo-inverse mx-auto mb-3" />
-
-          <div class="modal-dialog w-100 mx-auto">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="h5 modal-title text-center">
-                  <h4 class="mt-2">
-                    <div>Welcome back,</div>
-                    <span>Please sign in to your account below.</span>
-                  </h4>
-                </div>
-                <div
-                  class="mb-3"
-                  id="exampleInputGroup1"
-                  label-for="exampleInput1"
-                  description="We'll never share your email with anyone else."
-                >
-                  <b-form-input id="exampleInput1" type="email" required placeholder="Enter email..."> </b-form-input>
-                </div>
-                <div class="mb-3" id="exampleInputGroup2" label-for="exampleInput2">
-                  <b-form-input id="exampleInput2" type="password" required placeholder="Enter password...">
-                  </b-form-input>
-                </div>
-                <b-form-checkbox name="check" id="exampleCheck"> Keep me logged in </b-form-checkbox>
-                <div class="divider" />
-                <h6 class="mb-0">
-                  No account?
-                  <a href="javascript:void(0);" class="text-primary">Sign up now</a>
-                </h6>
-              </div>
-              <div class="modal-footer clearfix">
-                <div class="float-start">
-                  <b-button variant="link" size="lg" href="javascript:void(0);">Recover Password</b-button>
-                </div>
-                <div class="float-end">
-                  <b-button variant="primary" size="lg">Login to Dashboard</b-button>
-                </div>
-              </div>
-            </div>
+  <div class="min-vh-100 d-flex">
+    <!-- Left Panel - Brand/Marketing -->
+    <div class="d-none d-lg-flex col-lg-6 bg-dark position-relative overflow-hidden">
+      <div
+        class="position-absolute w-100 h-100"
+        style="background: linear-gradient(135deg, #007bff 0%, #69aa8a 100%)"
+      ></div>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center text-white p-5 position-relative"
+        style="z-index: 2"
+      >
+        <div class="mb-4">
+          <div class="bg-white bg-opacity-10 rounded-4 p-4">
+            <i class="pe-7s-home text-white" style="font-size: 3rem"></i>
           </div>
-          <div class="text-center text-white opacity-8 mt-3">Copyright &copy; ArchitectUI 2025</div>
-        </b-col>
+        </div>
+        <h2 class="text-white text-center mb-3 fw-bold">Welcome to ArchitectUI</h2>
+        <p class="text-white-50 text-center mb-0 fs-5">
+          The modern admin dashboard template built with Vue 3 and Bootstrap 5
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Panel - Login Form -->
+    <div class="col-12 col-lg-6 bg-white d-flex align-items-center justify-content-center p-4">
+      <div class="w-100" style="max-width: 420px">
+        <!-- Mobile Logo -->
+        <div class="d-lg-none text-center mb-5">
+          <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-3 p-3 mb-3">
+            <i class="pe-7s-home text-white" style="font-size: 2rem"></i>
+          </div>
+          <h4 class="text-primary fw-bold mb-0">ArchitectUI</h4>
+        </div>
+
+        <!-- Login Header -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-dark mb-2">Sign in to your account</h2>
+          <p class="text-secondary mb-0">Welcome back! Please enter your details.</p>
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <div class="mb-4">
+            <label for="email" class="form-label text-dark fw-medium mb-2">Email address</label>
+            <b-form-input id="email" type="email" size="lg" placeholder="Enter your email" class="py-3" required />
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="form-label text-dark fw-medium mb-2">Password</label>
+            <b-form-input
+              id="password"
+              type="password"
+              size="lg"
+              placeholder="Enter your password"
+              class="py-3"
+              required
+            />
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <b-form-checkbox id="remember" class="text-secondary"> Remember me </b-form-checkbox>
+            <b-link href="javascript:void(0);" class="text-primary text-decoration-none fw-medium">
+              Forgot password?
+            </b-link>
+          </div>
+
+          <div class="d-grid mb-4">
+            <b-button variant="primary" size="lg" class="fw-medium py-3"> Sign in to Dashboard </b-button>
+          </div>
+
+          <div class="text-center">
+            <span class="text-secondary">Don't have an account? </span>
+            <b-link href="javascript:void(0);" class="text-primary text-decoration-none fw-medium">
+              Sign up now
+            </b-link>
+          </div>
+        </form>
+
+        <!-- Copyright -->
+        <div class="text-center mt-5">
+          <p class="text-secondary small mb-0">© 2025 ArchitectUI. All rights reserved.</p>
+        </div>
       </div>
     </div>
   </div>

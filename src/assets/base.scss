@@ -1,49 +1,12 @@
-// BOOTSTRAP 4 VARIABLES
+// =====================================
+// BOOTSTRAP 5 WITH CUSTOM THEME
+// =====================================
 
-@import 'components/bootstrap4/functions';
-@import 'components/bootstrap4/variables';
-@import 'components/bootstrap4/mixins';
+// 1. Include our custom Bootstrap 5 theme variables
+@import 'scss/bootstrap-custom';
 
-// ArchitectUI Themes Variables
-
-@import 'themes/layout-variables';
-
-// BOOTSTRAP 4 IMPORTS
-
-@import 'components/bootstrap4/root';
-@import 'components/bootstrap4/reboot';
-@import 'components/bootstrap4/type';
-@import 'components/bootstrap4/images';
-@import 'components/bootstrap4/code';
-@import 'components/bootstrap4/grid';
-@import 'components/bootstrap4/tables';
-@import 'components/bootstrap4/forms';
-@import 'components/bootstrap4/buttons';
-@import 'components/bootstrap4/transitions';
-@import 'components/bootstrap4/dropdown';
-@import 'components/bootstrap4/button-group';
-@import 'components/bootstrap4/input-group';
-@import 'components/bootstrap4/custom-forms';
-@import 'components/bootstrap4/nav';
-@import 'components/bootstrap4/navbar';
-@import 'components/bootstrap4/card';
-@import 'components/bootstrap4/breadcrumb';
-@import 'components/bootstrap4/pagination';
-@import 'components/bootstrap4/badge';
-@import 'components/bootstrap4/jumbotron';
-@import 'components/bootstrap4/alert';
-@import 'components/bootstrap4/progress';
-@import 'components/bootstrap4/media';
-@import 'components/bootstrap4/list-group';
-@import 'components/bootstrap4/close';
-@import 'components/bootstrap4/toasts';
-@import 'components/bootstrap4/modal';
-@import 'components/bootstrap4/tooltip';
-@import 'components/bootstrap4/popover';
-@import 'components/bootstrap4/carousel';
-@import 'components/bootstrap4/spinners';
-@import 'components/bootstrap4/utilities';
-@import 'components/bootstrap4/print';
+// 2. Import complete Bootstrap 5 SCSS (handles all dependencies)
+@import 'bootstrap/scss/bootstrap';
 
 // LAYOUT
 
@@ -78,7 +41,7 @@
 
 // Perfect Scrollbar
 
-@import 'components/perfect-scrollbar/perfect-scrollbar';
+// @import 'components/perfect-scrollbar/perfect-scrollbar'; // Using vue3-perfect-scrollbar package
 
 // Hamburger button
 

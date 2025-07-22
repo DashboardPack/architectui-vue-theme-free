@@ -44,9 +44,9 @@
   }
 }
 
-// Links
+// Links (Bootstrap 5 compatible)
 
-$link-color: theme-color('primary');
+$link-color: $primary;
 $link-hover-color: darken($link-color, 15%);
 
 .btn {
@@ -56,4 +56,46 @@ $link-hover-color: darken($link-color, 15%);
 
 .btn-light {
   border-color: darken(#f5f5f5, 10%);
+}
+
+// Dark background buttons should have white text
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-dark,
+.btn-secondary {
+  color: $white !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $white !important;
+  }
+}
+
+// Custom brand/theme color buttons
+.btn-brand,
+.btn-focus,
+.btn-alt,
+.btn-green,
+.btn-blue,
+.btn-indigo,
+.btn-purple,
+.btn-pink,
+.btn-red,
+.btn-orange,
+.btn-yellow,
+.btn-teal,
+.btn-cyan {
+  color: $white !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $white !important;
+  }
 }

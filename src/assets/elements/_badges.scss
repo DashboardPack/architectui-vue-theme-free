@@ -1,8 +1,9 @@
-// Badges
+// Badges (Bootstrap 5 compatible - no badge-variant mixin needed)
 
 @each $color, $value in $theme-colors {
   .badge-#{$color} {
-    @include badge-variant($value);
+    background-color: $value;
+    color: if($value == $light, $dark, $white);
   }
 }
 
