@@ -1,20 +1,40 @@
 # ArchitectUI Vue 3 Admin Dashboard v2.0
 
+![ArchitectUI Vue 3 Preview](https://colorlib.com/wp/wp-content/uploads/sites/2/architectui-vue-free-preview.png.avif)
+
+**Live Demo**: [https://demo.dashboardpack.com/architectui-vue-free/](https://demo.dashboardpack.com/architectui-vue-free/)
+
 [ArchitectUI](https://dashboardpack.com/theme-details/architectui-dashboard-html-pro) is one of the most popular admin dashboard templates ever released. It is used by thousands of developers to create webapps and SaaS totaling 100 million monthly active users. We have converted this template to support various frontend frameworks such as [Angular](https://dashboardpack.com/theme-details/architectui-angular-7-bootstrap-material-design-pro?v=7516fd43adaa), [Vue](https://dashboardpack.com/theme-details/architectui-dashboard-vue-pro) and [React](https://dashboardpack.com/theme-details/architectui-dashboard-react-pro?v=7516fd43adaa). This particular version of ArchitectUI is based on Vue 3 with modern tooling and best practices.
 
 ## 🚀 **Vue 3 Modernization Complete**
 
-This template has been **completely modernized** to Vue 3 with:
+**Last Updated**: July 23, 2025
+
+This template has been **completely modernized** and enhanced with significant improvements:
+
+### **Latest Enhancements (July 2025)**
+
+- **UI/UX Improvements**: Fixed jumpy popover animations for smoother user interactions
+- **Color Scheme Restoration**: Restored original professional green theme (#69aa8a) throughout the application
+- **Footer Enhancement**: Implemented fully functional social media and quick links dropdowns with proper positioning
+- **Dashboard Widget Optimization**: Left-aligned numbers in dashboard statistics for improved readability
+- **CSS Animation Fixes**: Resolved animation conflicts that caused visual glitches
+- **FontAwesome Integration**: Added complete brand icons support with proper tree-shaking
+- **Production Deployment**: Successfully deployed to live demo with subdirectory routing support
+- **Asset Path Optimization**: Fixed all asset loading issues for production deployment
+
+### **Core Modernization Features**
 
 - ✅ **Zero vulnerabilities** (migrated from 21 vulnerabilities to 0)
 - ✅ **Vue 3.5.17** with latest features and optimizations
-- ✅ **Modern build system** with Vite
+- ✅ **Modern build system** with Vite 7.x
 - ✅ **Vue 3 Composition API** throughout key components
 - ✅ **Pinia 3.x** for state management
-- ✅ **Bootstrap 5** integration
+- ✅ **Bootstrap 5** integration with BootstrapVueNext
 - ✅ **Chart.js 4.x** with modern API usage
 - ✅ **FontAwesome Vue 3** with tree-shaking optimization
 - ✅ **TypeScript-ready** component structure
+- ✅ **Professional styling** with original design integrity maintained
 
 ## 📊 **Key Features**
 

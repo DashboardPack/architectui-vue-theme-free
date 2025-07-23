@@ -5,6 +5,159 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2025-07-23 - **Production Enhancements & UX Improvements**
+
+### 🎯 **Enhanced Production Release - UI/UX Refinements**
+
+This release focuses on production-ready enhancements, user experience improvements, and deployment optimizations based on the complete Vue 3 modernization.
+
+### ✅ **Added**
+
+#### **UI/UX Enhancements**
+- **NEW**: Smooth popover and tooltip animations without visual glitches
+- **NEW**: Fully functional footer dropdowns with social media and quick links
+- **NEW**: Professional footer dropdown positioning above trigger buttons
+- **NEW**: Left-aligned numbers in dashboard statistics widgets for improved readability
+- **NEW**: Social media icons with brand-specific colors (Twitter, Facebook, LinkedIn, GitHub)
+- **NEW**: FontAwesome brand icons integration with proper tree-shaking
+- **NEW**: Click-outside functionality for dropdown management
+- **NEW**: Animated dropdown transitions with fade-in effects
+
+#### **Production Deployment Features**
+- **NEW**: Environment-specific base path configuration for subdirectory deployment
+- **NEW**: Production-optimized asset loading with correct paths
+- **NEW**: Subdirectory routing support for complex deployment scenarios
+- **NEW**: CORS-compliant asset serving for production environments
+- **NEW**: Optimized build configuration for live demo deployment
+
+#### **Developer Experience**
+- **NEW**: Local preview server testing capabilities
+- **NEW**: Production build verification workflow
+- **NEW**: Deployment documentation with step-by-step process
+- **NEW**: Asset path debugging and optimization tools
+
+### 🔄 **Changed**
+
+#### **UI Components**
+- **IMPROVED**: Footer component completely rewritten with native HTML dropdowns
+- **IMPROVED**: Popover animations simplified to eliminate transform conflicts
+- **IMPROVED**: Dashboard widget layouts optimized for better number display
+- **IMPROVED**: Footer styling with high-specificity CSS overrides for positioning
+- **IMPROVED**: Social media dropdown items with proper icon placement
+
+#### **Color Scheme**
+- **RESTORED**: Original professional green theme (#69aa8a) throughout application
+- **UPDATED**: All instances of bright green (#3ac47d) replaced with original muted green
+- **ENHANCED**: Consistent color application across components, charts, and UI elements
+- **OPTIMIZED**: Theme variables properly configured in Bootstrap custom SCSS
+
+#### **Build System**
+- **UPDATED**: Vite configuration with environment-specific base paths
+- **UPDATED**: Vue Router configuration for production subdirectory support
+- **ENHANCED**: Asset path resolution for both development and production
+- **OPTIMIZED**: Build output structure for deployment compatibility
+
+### 🛠️ **Fixed**
+
+#### **Critical Animation Issues**
+- **FIXED**: Jumpy popover animations caused by conflicting CSS transforms
+- **FIXED**: Tooltip positioning glitches during show/hide transitions
+- **FIXED**: Animation timing conflicts between Vue components and global SCSS
+- **FIXED**: Visual jumping when popovers repositioned after initial display
+
+#### **Footer Functionality**
+- **FIXED**: Non-working social media dropdown links
+- **FIXED**: Empty dropdown fields showing instead of functional menus
+- **FIXED**: Dropdown positioning appearing above wrong elements
+- **FIXED**: Footer dropdowns appearing above dashboard widgets instead of buttons
+- **FIXED**: Missing social media functionality and external link handling
+
+#### **Production Deployment Issues**
+- **FIXED**: Asset loading errors in subdirectory deployment (404 and CORS errors)
+- **FIXED**: Incorrect asset paths causing MIME type errors
+- **FIXED**: Router configuration for subdirectory base paths
+- **FIXED**: FontAwesome brand icons build errors in production
+- **FIXED**: CSS and JavaScript asset loading from wrong paths
+
+#### **Color Scheme Issues**
+- **FIXED**: Bright green color (#3ac47d) replaced with original theme color
+- **FIXED**: Inconsistent color application across different components
+- **FIXED**: Chart color schemes updated to match original design
+- **FIXED**: Progress bars and UI elements color consistency
+
+#### **Dashboard Widget Issues**
+- **FIXED**: Number alignment in statistics widgets (changed to left-aligned)
+- **FIXED**: Widget layout inconsistencies with original design
+- **FIXED**: Typography and spacing in dashboard stat displays
+
+### 🎯 **Production Deployment**
+
+#### **Live Demo**
+- **DEPLOYED**: https://demo.dashboardpack.com/architectui-vue-free/
+- **STATUS**: Successfully deployed and fully functional
+- **VERIFIED**: All features working correctly in production environment
+- **TESTED**: Cross-browser compatibility and responsive design confirmed
+
+#### **Deployment Configuration**
+- **CONFIGURED**: Subdirectory routing for production environment
+- **OPTIMIZED**: Asset loading and caching for optimal performance
+- **SECURED**: CORS and security headers properly configured
+- **VALIDATED**: All console errors resolved and functionality verified
+
+### 📊 **Technical Improvements**
+
+#### **Asset Management**
+- **OPTIMIZED**: Production build asset paths for subdirectory deployment
+- **ENHANCED**: FontAwesome integration with brand icons support
+- **IMPROVED**: CSS cascade management with proper specificity
+- **STREAMLINED**: Build process for consistent production deployments
+
+#### **Component Architecture**
+- **REFINED**: Footer component with native dropdown implementation
+- **ENHANCED**: Animation system with conflict-free CSS transitions
+- **IMPROVED**: Store integration patterns for UI state management
+- **OPTIMIZED**: Component lifecycle management for better performance
+
+### 🔧 **Development Workflow**
+
+#### **Build Process**
+- **ADDED**: Production build testing with local HTTP server
+- **ENHANCED**: Asset path validation for deployment scenarios
+- **IMPROVED**: Build configuration for both development and production
+- **STREAMLINED**: Deployment preparation and verification steps
+
+#### **Quality Assurance**
+- **IMPLEMENTED**: Comprehensive testing of UI animations and interactions
+- **VERIFIED**: Cross-component compatibility and state management
+- **VALIDATED**: Production deployment process and functionality
+- **CONFIRMED**: Original design integrity maintained throughout enhancements
+
+### 📋 **Migration Notes**
+
+This release maintains full backward compatibility with the Vue 3 modernization while adding significant production-ready enhancements:
+
+#### **No Breaking Changes**
+- All existing Vue 3 components remain fully compatible
+- Pinia stores continue to work without modification
+- Existing routing and navigation patterns preserved
+- Component APIs and props remain unchanged
+
+#### **Enhanced Features**
+- Footer dropdowns now fully functional (previously placeholder)
+- Animations significantly smoother and more professional
+- Color scheme restored to original professional appearance
+- Dashboard widgets optimized for better readability
+
+### 🚀 **What's Next**
+
+This release establishes a solid foundation for:
+- Continued Vue 3 ecosystem updates
+- Additional UI component enhancements
+- Performance optimizations
+- Extended feature development
+
+---
+
 ## [2.0.0] - 2025-01-21 - **Vue 3 Modernization Complete**
 
 ### 🚀 **Major Release - Complete Vue 3 Migration**
