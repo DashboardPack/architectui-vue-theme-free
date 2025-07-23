@@ -4,7 +4,7 @@
     <div class="d-none d-lg-flex col-lg-6 bg-dark position-relative overflow-hidden">
       <div
         class="position-absolute w-100 h-100"
-        style="background: linear-gradient(135deg, #007bff 0%, #69aa8a 100%)"
+        style="background: linear-gradient(135deg, #69aa8a 0%, #5a9677 100%)"
       ></div>
       <div
         class="d-flex flex-column justify-content-center align-items-center text-white p-5 position-relative"

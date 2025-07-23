@@ -125,7 +125,7 @@
               </div>
             </div>
             <div class="widget-progress-wrapper">
-              <div class="progress-bar-xs progress">
+              <div class="progress progress-bar-xs">
                 <div
                   class="progress-bar bg-primary"
                   role="progressbar"
@@ -156,7 +156,7 @@
               </div>
             </div>
             <div class="widget-progress-wrapper">
-              <div class="progress-bar-lg progress-bar-animated progress">
+              <div class="progress progress-bar-lg progress-bar-animated">
                 <div
                   class="progress-bar bg-warning"
                   role="progressbar"
@@ -187,7 +187,7 @@
               </div>
             </div>
             <div class="widget-progress-wrapper">
-              <div class="progress-bar-xs progress-bar-animated-alt progress">
+              <div class="progress progress-bar-xs progress-bar-animated-alt">
                 <div
                   class="progress-bar bg-danger"
                   role="progressbar"
@@ -218,7 +218,7 @@
               </div>
             </div>
             <div class="widget-progress-wrapper">
-              <div class="progress-bar-sm progress-bar-animated-alt progress">
+              <div class="progress progress-bar-sm progress-bar-animated-alt">
                 <div
                   class="progress-bar bg-success"
                   role="progressbar"
@@ -410,7 +410,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-primary"
                     role="progressbar"
@@ -441,7 +441,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-warning"
                     role="progressbar"
@@ -472,7 +472,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
@@ -503,7 +503,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-success"
                     role="progressbar"
@@ -539,7 +539,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-primary"
                     role="progressbar"
@@ -570,7 +570,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-danger"
                     role="progressbar"
@@ -601,7 +601,7 @@
                 </div>
               </div>
               <div class="widget-progress-wrapper">
-                <div class="progress-bar-sm progress-bar-animated-alt progress">
+                <div class="progress progress-bar-sm progress-bar-animated-alt">
                   <div
                     class="progress-bar bg-success"
                     role="progressbar"
@@ -639,7 +639,7 @@
                     </div>
                   </div>
                   <div class="widget-progress-wrapper">
-                    <div class="progress-bar-xs progress">
+                    <div class="progress progress-bar-xs">
                       <div
                         class="progress-bar bg-primary"
                         role="progressbar"
@@ -670,7 +670,7 @@
                     </div>
                   </div>
                   <div class="widget-progress-wrapper">
-                    <div class="progress-bar-lg progress-bar-animated progress">
+                    <div class="progress progress-bar-lg progress-bar-animated">
                       <div
                         class="progress-bar bg-warning"
                         role="progressbar"
@@ -701,7 +701,7 @@
                     </div>
                   </div>
                   <div class="widget-progress-wrapper">
-                    <div class="progress-bar-sm progress-bar-animated-alt progress">
+                    <div class="progress progress-bar-sm progress-bar-animated-alt">
                       <div
                         class="progress-bar bg-success"
                         role="progressbar"
@@ -732,7 +732,7 @@
                     </div>
                   </div>
                   <div class="widget-progress-wrapper">
-                    <div class="progress-bar-xs progress-bar-animated-alt progress">
+                    <div class="progress progress-bar-xs progress-bar-animated-alt">
                       <div
                         class="progress-bar bg-danger"
                         role="progressbar"

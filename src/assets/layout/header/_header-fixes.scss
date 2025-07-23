@@ -84,13 +84,13 @@
   }
 }
 
-// Dropdown Fixes - Ensure proper positioning and z-index
-.dropdown {
+// Header-specific dropdown fixes - Ensure proper positioning and z-index
+.app-header .dropdown {
   position: relative;
 
   .dropdown-toggle {
     &::after {
-      display: none; // Hide Bootstrap's default caret
+      display: none; // Hide Bootstrap's default caret only in header
     }
   }
 

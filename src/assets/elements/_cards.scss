@@ -1,0 +1,1277 @@
+// ArchitectUI Card Enhancements
+// Bootstrap 5 Card Styling Improvements
+// Removes gaps between card-header and card-body
+// Ensures proper content padding alignment
+
+// =====================================
+// CARD HEADER/BODY ALIGNMENT
+// =====================================
+
+// Remove padding from card headers (titles)
+.card-header {
+  padding: 0.75rem 1.25rem; // Standard Bootstrap padding
+  margin-bottom: 0; // Remove any margin
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+  // Remove extra spacing around titles
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .card-title {
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+// Align card body directly with header
+.card-body {
+  padding: 1.25rem; // Standard Bootstrap padding for content areas
+
+  // Remove top padding when following header
+  .card-header + & {
+    padding-top: 1.25rem;
+  }
+
+  // Proper spacing for titles within body
+  .card-title {
+    margin-bottom: 0.75rem; // Spacing below titles in content
+    padding: 0; // No padding around titles
+  }
+
+  // Proper spacing for subtitles
+  .card-subtitle {
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  // Content paragraphs and text
+  p,
+  .card-text {
+    margin-bottom: 1rem;
+  }
+
+  // Last element spacing
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Remove gaps between adjacent card sections
+.card-header + .card-body,
+.card-body + .card-footer,
+.card-header + .card-footer {
+  border-top: none; // Remove duplicate borders
+}
+
+// Card footer alignment
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  margin-top: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+// =====================================
+// BOOTSTRAP-VUE-NEXT ADJUSTMENTS
+// =====================================
+
+// Override Bootstrap-Vue-Next spacing
+.b-card {
+  .card-header,
+  .b-card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .card-body,
+  .b-card-body {
+    padding: 1.25rem;
+
+    .card-title {
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+  }
+
+  .card-footer,
+  .b-card-footer {
+    padding: 0.75rem 1.25rem;
+    margin-top: 0;
+  }
+}
+
+// =====================================
+// MAIN-CARD SPECIFIC ADJUSTMENTS
+// =====================================
+
+// ArchitectUI specific main-card class
+.main-card {
+  .card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+
+    // No padding around header titles
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .card-title {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .card-body {
+    padding: 1.25rem; // Content padding
+
+    // Title spacing within body
+    .card-title {
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+  }
+
+  .card-footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+// =====================================
+// CARD BOTTOM BORDER VARIANTS (Original ArchitectUI Style)
+// =====================================
+
+// Simple colored bottom border cards (like original design)
+.card-btm-border {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #dee2e6 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Override Bootstrap 5 border utilities for widget cards specifically
+.widget-chart.card-btm-border.border-primary {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #0d6efd !important;
+}
+
+.widget-chart.card-btm-border.border-secondary {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #6c757d !important;
+}
+
+.widget-chart.card-btm-border.border-success {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #198754 !important;
+}
+
+.widget-chart.card-btm-border.border-warning {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #ffc107 !important;
+}
+
+.widget-chart.card-btm-border.border-danger {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #dc3545 !important;
+}
+
+.widget-chart.card-btm-border.border-info {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #0dcaf0 !important;
+}
+
+.widget-chart.card-btm-border.border-dark {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #212529 !important;
+}
+
+.widget-chart.card-btm-border.border-light {
+  border: 1px solid #dee2e6 !important;
+  border-bottom: 3px solid #f8f9fa !important;
+}
+
+// =====================================
+// LEGACY CARD SHADOW VARIANTS (Keep for backward compatibility)
+// =====================================
+
+// ArchitectUI Card Shadow Variants with Enhanced Visual Design
+.card-shadow-primary {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.03) 0%, rgba(0, 123, 255, 0.08) 100%);
+  border: 2px solid rgba(0, 123, 255, 0.2);
+  box-shadow:
+    0 4px 20px rgba(0, 123, 255, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(0, 123, 255, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #0d6efd;
+  }
+}
+
+.card-shadow-secondary {
+  background: linear-gradient(135deg, rgba(108, 117, 125, 0.03) 0%, rgba(108, 117, 125, 0.08) 100%);
+  border: 2px solid rgba(108, 117, 125, 0.2);
+  box-shadow:
+    0 4px 20px rgba(108, 117, 125, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #6c757d;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(108, 117, 125, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #6c757d;
+  }
+}
+
+.card-shadow-success {
+  background: linear-gradient(135deg, rgba(25, 135, 84, 0.03) 0%, rgba(25, 135, 84, 0.08) 100%);
+  border: 2px solid rgba(25, 135, 84, 0.2);
+  box-shadow:
+    0 4px 20px rgba(25, 135, 84, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #198754;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(25, 135, 84, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #198754;
+  }
+}
+
+.card-shadow-warning {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.03) 0%, rgba(255, 193, 7, 0.08) 100%);
+  border: 2px solid rgba(255, 193, 7, 0.2);
+  box-shadow:
+    0 4px 20px rgba(255, 193, 7, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #e0a800;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(255, 193, 7, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #ffc107;
+  }
+}
+
+.card-shadow-danger {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.03) 0%, rgba(220, 53, 69, 0.08) 100%);
+  border: 2px solid rgba(220, 53, 69, 0.2);
+  box-shadow:
+    0 4px 20px rgba(220, 53, 69, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #dc3545;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(220, 53, 69, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #dc3545;
+  }
+}
+
+.card-shadow-info {
+  background: linear-gradient(135deg, rgba(13, 202, 240, 0.03) 0%, rgba(13, 202, 240, 0.08) 100%);
+  border: 2px solid rgba(13, 202, 240, 0.2);
+  box-shadow:
+    0 4px 20px rgba(13, 202, 240, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #0dcaf0;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(13, 202, 240, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #0dcaf0;
+  }
+}
+
+.card-shadow-dark {
+  background: linear-gradient(135deg, rgba(33, 37, 41, 0.03) 0%, rgba(33, 37, 41, 0.08) 100%);
+  border: 2px solid rgba(33, 37, 41, 0.2);
+  box-shadow:
+    0 4px 20px rgba(33, 37, 41, 0.15),
+    0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(33, 37, 41, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #212529;
+  }
+}
+
+.card-shadow-light {
+  background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.8) 100%);
+  border: 2px solid rgba(248, 249, 250, 0.8);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-title {
+    color: #495057;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.12),
+      0 4px 8px rgba(0, 0, 0, 0.08);
+    border-color: #e9ecef;
+  }
+}
+
+// Common styling for all shadow cards
+.card-shadow-primary,
+.card-shadow-secondary,
+.card-shadow-success,
+.card-shadow-warning,
+.card-shadow-danger,
+.card-shadow-info,
+.card-shadow-dark,
+.card-shadow-light {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle animated background pattern
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  // Enhanced typography
+  p,
+  .card-text {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+}
+
+// =====================================
+// BORDER VARIANT CARDS (Bootstrap-Vue-Next Style)
+// =====================================
+
+// Enhanced Border Cards with ArchitectUI styling
+.card.border-primary,
+.b-card.border-primary {
+  border: 2px solid #0d6efd;
+  background: rgba(13, 110, 253, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #0d6efd;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+    border-color: #0a58ca;
+  }
+}
+
+.card.border-secondary,
+.b-card.border-secondary {
+  border: 2px solid #6c757d;
+  background: rgba(108, 117, 125, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #6c757d;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.15);
+    border-color: #5a6268;
+  }
+}
+
+.card.border-success,
+.b-card.border-success {
+  border: 2px solid #198754;
+  background: rgba(25, 135, 84, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #198754;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(25, 135, 84, 0.15);
+    border-color: #146c43;
+  }
+}
+
+.card.border-danger,
+.b-card.border-danger {
+  border: 2px solid #dc3545;
+  background: rgba(220, 53, 69, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #dc3545;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(220, 53, 69, 0.15);
+    border-color: #b02a37;
+  }
+}
+
+.card.border-warning,
+.b-card.border-warning {
+  border: 2px solid #ffc107;
+  background: rgba(255, 193, 7, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #e0a800;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.15);
+    border-color: #e0a800;
+  }
+}
+
+.card.border-info,
+.b-card.border-info {
+  border: 2px solid #0dcaf0;
+  background: rgba(13, 202, 240, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #0dcaf0;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 202, 240, 0.15);
+    border-color: #31d2f2;
+  }
+}
+
+.card.border-dark,
+.b-card.border-dark {
+  border: 2px solid #212529;
+  background: rgba(33, 37, 41, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #212529;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(33, 37, 41, 0.15);
+    border-color: #000;
+  }
+}
+
+.card.border-light,
+.b-card.border-light {
+  border: 2px solid #f8f9fa;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      color: #495057;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+
+    .card-text,
+    p {
+      color: #495057;
+      line-height: 1.6;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: #e9ecef;
+  }
+}
+
+// =====================================
+// BACKGROUND COLOR CARDS
+// =====================================
+
+// Enhanced Background Color Cards with ArchitectUI Styling
+.card.bg-primary,
+.card.text-bg-primary,
+.b-card.text-bg-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(13, 110, 253, 0.3);
+  transition: all 0.3s ease;
+
+  .card-header,
+  .b-card-header {
+    background: rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .card-title {
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+    }
+  }
+
+  .card-body,
+  .b-card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      // Special title treatment underline
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+        border-radius: 2px;
+      }
+    }
+
+    .card-text,
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  .card-footer,
+  .b-card-footer {
+    background: rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 1.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(13, 110, 253, 0.4);
+  }
+}
+
+.card.text-bg-secondary,
+.b-card.text-bg-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(108, 117, 125, 0.3);
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+        border-radius: 2px;
+      }
+    }
+
+    .card-text,
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(108, 117, 125, 0.4);
+  }
+}
+
+.card.text-bg-success,
+.b-card.text-bg-success {
+  background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(25, 135, 84, 0.3);
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+        border-radius: 2px;
+      }
+    }
+
+    .card-text,
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(25, 135, 84, 0.4);
+  }
+}
+
+.card.text-bg-danger,
+.b-card.text-bg-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  box-shadow: 0 4px 20px rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+        border-radius: 2px;
+      }
+    }
+
+    .card-text,
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(220, 53, 69, 0.4);
+  }
+}
+
+.card.text-bg-warning,
+.b-card.text-bg-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: #212529;
+  box-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: #212529;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.4));
+        border-radius: 2px;
+      }
+    }
+
+    .card-text,
+    p {
+      color: rgba(33, 37, 41, 0.8);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(255, 193, 7, 0.4);
+  }
+}
+
+.card.text-bg-info,
+.b-card.text-bg-info {
+  background: linear-gradient(135deg, #0dcaf0 0%, #31d2f2 100%);
+  border: none;
+  border-radius: 0.75rem;
+  color: #212529;
+  box-shadow: 0 4px 20px rgba(13, 202, 240, 0.3);
+  transition: all 0.3s ease;
+
+  .card-body,
+  .b-card-body {
+    padding: 2rem;
+
+    .card-title {
+      color: #212529;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.4));
+        border-radius: 2px;
+      }
+    }
+
+    .card-text,
+    p {
+      color: rgba(33, 37, 41, 0.8);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(13, 202, 240, 0.4);
+  }
+}
+
+// =====================================
+// SPECIAL TITLE TREATMENT CARDS
+// =====================================
+
+// Base Special Title Treatment styling
+.b-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .b-card-body {
+    padding: 2rem;
+    position: relative;
+
+    // Special title treatment styling
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #212529;
+      margin-bottom: 1rem;
+      position: relative;
+
+      // Add subtle underline accent
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, #0d6efd, #6610f2);
+        border-radius: 2px;
+        opacity: 0.8;
+      }
+    }
+
+    .card-text {
+      color: #6c757d;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-transform: none;
+      letter-spacing: 0.025rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+// Text Center Special Title Treatment
+.b-card.text-center {
+  .b-card-body {
+    text-align: center;
+
+    .card-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #dc3545, #e83e8c);
+    }
+
+    .btn {
+      min-width: 140px;
+    }
+  }
+}
+
+// Text End (Right) Special Title Treatment
+.b-card.text-end {
+  .b-card-body {
+    text-align: right;
+
+    .card-title::after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(90deg, #6c757d, #495057);
+    }
+  }
+}
+
+// Card with Header/Footer Special Treatment
+.b-card.main-card {
+  .b-card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .b-card-body {
+    .card-title::after {
+      background: linear-gradient(90deg, #ffc107, #fd7e14);
+    }
+  }
+
+  .b-card-footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 2rem;
+    color: #6c757d;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+// Custom background card (rgb(51,51,51) style)
+.b-card[style*='background-color: rgb(51, 51, 51)'] {
+  background: linear-gradient(135deg, #333333 0%, #2c2c2c 100%) !important;
+  border: none !important;
+
+  .b-card-body {
+    .card-title {
+      color: #ffffff !important;
+
+      &::after {
+        background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.7));
+      }
+    }
+
+    .card-text {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+  }
+}
+
+// =====================================
+// ENHANCED MAIN CARD STYLING
+// =====================================
+
+// Enhanced styling for all main cards (native HTML cards)
+.main-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .card-img-top {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  .card-img-bottom {
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .card-img-top,
+  &:hover .card-img-bottom {
+    transform: scale(1.02);
+  }
+
+  .card-title {
+    color: #212529;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-subtitle {
+    color: #6c757d;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-text,
+  p {
+    color: #495057;
+    line-height: 1.6;
+  }
+}
+
+// =====================================
+// RESPONSIVE CARD SPACING
+// =====================================
+
+@media (max-width: 768px) {
+  .card-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+
+    .card-title {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .card-footer {
+    padding: 0.5rem 1rem;
+  }
+
+  // Bootstrap-Vue-Next mobile adjustments
+  .b-card {
+    .card-header,
+    .b-card-header {
+      padding: 0.5rem 1rem;
+    }
+
+    .card-body,
+    .b-card-body {
+      padding: 1rem;
+    }
+
+    .card-footer,
+    .b-card-footer {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

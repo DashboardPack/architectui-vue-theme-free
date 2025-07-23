@@ -96,6 +96,12 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
+
+  i {
+    font-size: 1.5rem;
+    z-index: 2;
+    color: white !important;
+  }
 }
 
 .icon-wrapper-bg {
@@ -105,6 +111,39 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  z-index: 1;
+
+  &.bg-primary {
+    background-color: #0d6efd !important;
+  }
+
+  &.bg-secondary {
+    background-color: #6c757d !important;
+  }
+
+  &.bg-success {
+    background-color: #198754 !important;
+  }
+
+  &.bg-warning {
+    background-color: #ffc107 !important;
+  }
+
+  &.bg-danger {
+    background-color: #dc3545 !important;
+  }
+
+  &.bg-info {
+    background-color: #0dcaf0 !important;
+  }
+
+  &.bg-dark {
+    background-color: #212529 !important;
+  }
+
+  &.bg-light {
+    background-color: #f8f9fa !important;
+  }
 }
 
 .widget-numbers {

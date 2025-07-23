@@ -28,6 +28,14 @@
             </div>
           </router-link>
 
+          <router-link to="/dashboards/analytics-enhanced" class="menu-link">
+            <div class="menu-link-content">
+              <i class="metismenu-icon pe-7s-graph3"></i>
+              <span class="menu-text">Enhanced Dashboard</span>
+              <span class="badge bg-success ms-auto">NEW</span>
+            </div>
+          </router-link>
+
           <!-- User Pages Section -->
           <div class="menu-header">User Pages</div>
 

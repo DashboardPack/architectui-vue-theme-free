@@ -109,12 +109,17 @@ export default defineComponent({
 <style scoped>
 /* Profile section - eliminate all gaps and padding */
 .profile-section {
-  gap: 6px;
+  gap: 4px;
 }
 
 .profile-dropdown {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+/* Hide Bootstrap's default dropdown chevron */
+.profile-dropdown .dropdown-toggle::after {
+  display: none !important;
 }
 
 .header-user-info {

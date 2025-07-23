@@ -27,7 +27,7 @@ $black: #000 !default;
 
 // Brand colors (ArchitectUI specific)
 $brand: #69aa8a !default;
-$primary: #007bff !default;
+$primary: #69aa8a !default; // ArchitectUI original green theme
 $secondary: #6c757d !default;
 $success: #69aa8a !default; // Using brand color for success
 $info: #17a2b8 !default;
@@ -47,6 +47,10 @@ $yellow: #ffc107 !default;
 $green: #69aa8a !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
+
+// ArchitectUI specific theme colors
+$focus: #69aa8a !default;
+$alternate: #6c757d !default;
 
 // Body
 $body-bg: #fff !default;
@@ -125,7 +129,9 @@ $custom-colors: (
   'yellow': $yellow,
   'green': $green,
   'teal': $teal,
-  'cyan': $cyan
+  'cyan': $cyan,
+  'focus': $focus,
+  'alternate': $alternate
 ) !default;
 
 // Merge custom colors with theme colors
@@ -155,5 +161,7 @@ $theme-colors-rgb: (
   'yellow': to-rgb($yellow),
   'green': to-rgb($green),
   'teal': to-rgb($teal),
-  'cyan': to-rgb($cyan)
+  'cyan': to-rgb($cyan),
+  'focus': to-rgb($focus),
+  'alternate': to-rgb($alternate)
 ) !default;

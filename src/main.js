@@ -39,7 +39,10 @@ import {
   BProgressBar,
   BTable,
   BTabs,
-  BTab
+  BTab,
+  BCarousel,
+  BCarouselSlide,
+  BPagination
 } from 'bootstrap-vue-next'
 
 // Import directives separately
@@ -95,13 +98,21 @@ import {
   faExclamationCircle,
   faExclamationTriangle,
   faEllipsisVertical,
+  faEllipsisV,
   faCoffee,
   faSpinner,
   faCheckSquare,
   faAngry,
   faStar,
-  faChevronDown
+  faChevronDown,
+  faUsers,
+  faUserCheck,
+  faDollarSign,
+  faChartLine
 } from '@fortawesome/free-solid-svg-icons'
+
+// Import FontAwesome brand icons for social media
+import { faTwitter, faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import App from './App.vue'
 
@@ -155,12 +166,22 @@ library.add(
   faExclamationCircle,
   faExclamationTriangle,
   faEllipsisVertical,
+  faEllipsisV,
   faCoffee,
   faSpinner,
   faCheckSquare,
   faAngry,
   faStar,
-  faChevronDown
+  faChevronDown,
+  faUsers,
+  faUserCheck,
+  faDollarSign,
+  faChartLine,
+  // Brand icons
+  faTwitter,
+  faFacebook,
+  faLinkedin,
+  faGithub
 )
 
 const app = createApp(App)
@@ -199,6 +220,9 @@ app.component('b-progress-bar', BProgressBar)
 app.component('b-table', BTable)
 app.component('b-tabs', BTabs)
 app.component('b-tab', BTab)
+app.component('b-carousel', BCarousel)
+app.component('b-carousel-slide', BCarouselSlide)
+app.component('b-pagination', BPagination)
 
 app.component('default-layout', Default)
 app.component('userpages-layout', Pages)
@@ -206,25 +230,33 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 
 // Suppress browser extension errors in development
 if (import.meta.env.DEV) {
+  // List of extension-related error patterns
+  const extensionErrorPatterns = [
+    'message channel closed',
+    'listener indicated an asynchronous response',
+    'Extension context invalidated',
+    'Could not establish connection',
+    'Receiving end does not exist',
+    'A listener indicated an asynchronous response',
+    'The message port closed before a response was received',
+    'Extension context invalidated'
+  ]
+
+  const isExtensionError = message => {
+    if (!message) return false
+    return extensionErrorPatterns.some(pattern => message.toLowerCase().includes(pattern.toLowerCase()))
+  }
+
   window.addEventListener('error', event => {
-    if (
-      event.message?.includes('message channel closed') ||
-      event.message?.includes('listener indicated an asynchronous response') ||
-      event.message?.includes('Extension context invalidated')
-    ) {
+    if (isExtensionError(event.message) || isExtensionError(event.error?.message)) {
       event.preventDefault()
       return false
     }
   })
 
   window.addEventListener('unhandledrejection', event => {
-    if (
-      event.reason?.message?.includes('message channel closed') ||
-      event.reason?.message?.includes('Could not establish connection') ||
-      event.reason?.message?.includes('Receiving end does not exist') ||
-      event.reason?.message?.includes('listener indicated an asynchronous response') ||
-      event.reason?.message?.includes('Extension context invalidated')
-    ) {
+    const message = event.reason?.message || event.reason?.toString?.() || ''
+    if (isExtensionError(message)) {
       event.preventDefault()
       return false
     }

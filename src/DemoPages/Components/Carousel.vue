@@ -12,13 +12,14 @@
           background="#ababab"
           style="text-shadow: 1px 1px 2px #333"
         >
-          <b-carousel-slide v-for="(slide, index) in slides" :key="index" :img-src="slide.image">
-            <template #img>
-              <img :src="slide.image" class="d-block w-100" :alt="slide.alt" style="height: 400px; object-fit: cover" />
-            </template>
-
-            <h5 v-if="slide.caption">{{ slide.caption }}</h5>
-            <p v-if="slide.text">{{ slide.text }}</p>
+          <b-carousel-slide
+            v-for="(slide, index) in slides"
+            :key="index"
+            :img-src="slide.image"
+            :caption="slide.caption"
+            :text="slide.text"
+            :alt="slide.alt"
+          >
             <div v-if="slide.customContent" v-html="slide.customContent"></div>
           </b-carousel-slide>
         </b-carousel>

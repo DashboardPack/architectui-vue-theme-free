@@ -242,7 +242,7 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-xl-3">
-        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-success border-success">
+        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border border-success">
           <div class="widget-chat-wrapper-outer">
             <div class="widget-chart-content pt-3 ps-3 pb-1">
               <div class="widget-chart-flex">
@@ -261,7 +261,7 @@
         </div>
       </div>
       <div class="col-md-6 col-xl-3">
-        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-primary border-primary">
+        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border border-primary">
           <div class="widget-chat-wrapper-outer">
             <div class="widget-chart-content pt-3 ps-3 pb-1">
               <div class="widget-chart-flex">
@@ -280,7 +280,7 @@
         </div>
       </div>
       <div class="col-md-6 col-xl-3">
-        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-warning border-warning">
+        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border border-warning">
           <div class="widget-chat-wrapper-outer">
             <div class="widget-chart-content pt-3 ps-3 pb-1">
               <div class="widget-chart-flex">
@@ -299,7 +299,7 @@
         </div>
       </div>
       <div class="col-md-6 col-xl-3">
-        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border card-shadow-danger border-danger">
+        <div class="card mb-3 widget-chart widget-chart2 text-start card-btm-border border-danger">
           <div class="widget-chat-wrapper-outer">
             <div class="widget-chart-content pt-3 ps-3 pb-1">
               <div class="widget-chart-flex">

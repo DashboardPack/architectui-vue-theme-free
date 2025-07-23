@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.PROD ? '/architectui-vue-free/' : '/'),
   scrollBehavior() {
     return { top: 0, behavior: 'smooth' }
   },
@@ -12,6 +12,11 @@ export default createRouter({
       path: '/',
       name: 'analytics',
       component: () => import('../DemoPages/Dashboards/Analytics.vue')
+    },
+    {
+      path: '/dashboards/analytics-enhanced',
+      name: 'analytics-enhanced',
+      component: () => import('../DemoPages/Dashboards/AnalyticsEnhanced.vue')
     },
 
     // Pages
