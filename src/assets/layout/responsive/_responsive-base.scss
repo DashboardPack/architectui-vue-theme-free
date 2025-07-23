@@ -7,7 +7,6 @@
 }
 
 @include media-breakpoint-down(md) {
-
   .dropdown-menu {
     &::before,
     &::after {
@@ -65,7 +64,7 @@
       left: 5%;
       width: 90%;
       top: 0;
-      transition: all .2s;
+      transition: all 0.2s;
       background: $white;
       @include border-radius(50px);
       padding: 0 10px !important;
@@ -80,8 +79,8 @@
       }
 
       .header-btn-lg {
-        margin-left: .5rem;
-        padding: 0 .5rem;
+        margin-left: 0.5rem;
+        padding: 0 0.5rem;
 
         .hamburger-box {
           margin-top: 5px;
@@ -97,14 +96,12 @@
           display: none;
         }
       }
-
     }
 
     .app-header__menu {
       display: flex;
       order: 3;
     }
-
   }
 
   .header-menu-open {
@@ -128,7 +125,6 @@
     .btn-icon-vertical .btn-icon-wrapper {
       display: none;
     }
-
   }
 
   .popover {
@@ -196,7 +192,6 @@
   }
 
   .tabs-lg-alternate.card-header {
-
     & > .nav .nav-item {
       .widget-number {
         font-size: 1.5rem;
@@ -210,14 +205,14 @@
 
   .app-header.text-lighter {
     .logo-src {
-      background: url('./assets/images/logo.png');
+      background: url('@/assets/images/logo.png');
     }
 
     .app-header__menu {
       & > span .btn,
       & > .btn {
-        background: rgba(255, 255, 255, .1);
-        border-color: rgba(255, 255, 255, .1);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.1);
       }
     }
 
@@ -228,7 +223,6 @@
 }
 
 @include media-breakpoint-between(xs, md) {
-
   .app-page-title .page-title-icon,
   .ui-theme-settings {
     display: none;
@@ -262,7 +256,6 @@
 }
 
 @include media-breakpoint-up(lg) {
-
   .slick-slider-sm {
     .slick-slider {
       max-width: 850px !important;

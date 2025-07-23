@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "public"
+  ]
+}

@@ -1,5 +1,20 @@
 // Modals
 
+// Global z-index fix to ensure modals appear above all other elements
+.modal {
+  z-index: 1055 !important;
+}
+
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.modal-dialog {
+  z-index: 1056 !important;
+  box-shadow: $box-shadow-lg-default;
+  @include border-radius($border-radius);
+}
+
 .modal-header,
 .modal-footer {
   background: $gray-100;
@@ -7,9 +22,4 @@
 
 .modal-footer {
   @include border-bottom-radius($border-radius);
-}
-
-.modal-dialog {
-  box-shadow: $box-shadow-lg-default;
-  @include border-radius($border-radius);
 }

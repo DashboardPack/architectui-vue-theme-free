@@ -62,7 +62,7 @@
 .loader-wrapper {
   width: 150px;
   height: 100px;
-  @include float-left;
+  float: left; // Bootstrap 5 compatible - replaced float-left mixin
 }
 
 // Slick slider
@@ -78,7 +78,7 @@
   line-height: 150px;
   text-align: center;
   margin: 0 $layout-spacer-x;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .slick-center {

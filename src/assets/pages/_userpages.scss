@@ -3,13 +3,13 @@
 .app-logo {
   height: $logo-height;
   width: $logo-width;
-  background: url('./assets/images/logo-inverse.png');
+  background: url('@/assets/images/logo-inverse.png');
 }
 
 .app-logo-inverse {
   height: $logo-height;
   width: $logo-width;
-  background: url('./assets/images/logo.png');
+  background: url('@/assets/images/logo.png');
 }
 
 .app-login-box {
@@ -22,7 +22,7 @@
     font-weight: normal;
 
     div {
-      opacity: .6;
+      opacity: 0.6;
     }
 
     span {

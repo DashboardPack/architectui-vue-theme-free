@@ -1,0 +1,167 @@
+// ArchitectUI Bootstrap 5 Custom Theme
+// This file customizes Bootstrap 5 variables for ArchitectUI
+
+// =====================================
+// BOOTSTRAP 5 CUSTOM VARIABLES
+// =====================================
+
+// Enable/disable features (Bootstrap 5 format)
+$enable-caret: true !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+
+// Color system (Bootstrap 5 format)
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f7f7f9 !default;
+$gray-300: #eceeef !default;
+$gray-400: #ced4da !default;
+$gray-500: #aaa !default;
+$gray-600: #888 !default;
+$gray-700: #5a5a5a !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+// Brand colors (ArchitectUI specific)
+$brand: #69aa8a !default;
+$primary: #69aa8a !default; // ArchitectUI original green theme
+$secondary: #6c757d !default;
+$success: #69aa8a !default; // Using brand color for success
+$info: #17a2b8 !default;
+$warning: #ffc107 !default;
+$danger: #ff7851 !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+// Custom colors (ArchitectUI specific)
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #ff7851 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #69aa8a !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+// ArchitectUI specific theme colors
+$focus: #69aa8a !default;
+$alternate: #6c757d !default;
+
+// Body
+$body-bg: #fff !default;
+$body-color: $gray-900 !default;
+
+// Typography
+$font-size-base: 1rem !default;
+$font-size-lg: $font-size-base * 1.125 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-xs: $font-size-base * 0.75 !default;
+
+// Box shadows (ArchitectUI specific)
+$box-shadow: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-sm: 0 0.0625rem 0.125rem rgba($black, 0.075) !default;
+$box-shadow-lg: 0 0.5rem 1rem rgba($black, 0.15) !default;
+
+// Custom ArchitectUI shadows
+$box-shadow-default: $box-shadow !default;
+$box-shadow-default-right: 0.25rem 0 0.25rem rgba($black, 0.075) !default;
+$box-shadow-default-inverse: 0 -0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-lg-default:
+  0 0.76875rem 2.4875rem rgba($gray-800, 0.3),
+  0 1.3375rem 1.70625rem rgba($gray-800, 0.3),
+  0 0.55rem 0.53125rem rgba(darken($gray-800, 50%), 0.05),
+  0 0.225rem 0.4375rem rgba($gray-800, 0.3) !default;
+
+// Border radius
+$border-radius: 0.375rem !default;
+$border-radius-sm: 0.25rem !default;
+$border-radius-lg: 0.5rem !default;
+$border-radius-pill: 50rem !default;
+
+// Custom ArchitectUI radius
+$border-radius-default: $border-radius !default;
+
+// =====================================
+// ARCHITECTUI LAYOUT VARIABLES
+// =====================================
+
+// Layout dimensions
+$app-sidebar-width: 280px !default;
+$app-sidebar-width-collapsed: 80px !default;
+$app-header-height: 60px !default;
+
+// Layout spacing
+$app-content-padding: 1.5rem !default;
+$app-gutter: 1rem !default;
+$layout-spacer-x: 1.5rem !default;
+$layout-spacer-y: 1rem !default;
+
+// =====================================
+// BOOTSTRAP 5 THEME MAP UPDATES
+// =====================================
+
+// Update theme colors map for Bootstrap 5
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark
+) !default;
+
+// Custom color map for ArchitectUI
+$custom-colors: (
+  'brand': $brand,
+  'blue': $blue,
+  'indigo': $indigo,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'focus': $focus,
+  'alternate': $alternate
+) !default;
+
+// Merge custom colors with theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors) !default;
+
+// =====================================
+// BOOTSTRAP 5 RGB COLOR MAPS
+// =====================================
+
+// Generate RGB values for theme colors (Bootstrap 5 requirement)
+$theme-colors-rgb: (
+  'primary': to-rgb($primary),
+  'secondary': to-rgb($secondary),
+  'success': to-rgb($success),
+  'info': to-rgb($info),
+  'warning': to-rgb($warning),
+  'danger': to-rgb($danger),
+  'light': to-rgb($light),
+  'dark': to-rgb($dark),
+  'brand': to-rgb($brand),
+  'blue': to-rgb($blue),
+  'indigo': to-rgb($indigo),
+  'purple': to-rgb($purple),
+  'pink': to-rgb($pink),
+  'red': to-rgb($red),
+  'orange': to-rgb($orange),
+  'yellow': to-rgb($yellow),
+  'green': to-rgb($green),
+  'teal': to-rgb($teal),
+  'cyan': to-rgb($cyan),
+  'focus': to-rgb($focus),
+  'alternate': to-rgb($alternate)
+) !default;

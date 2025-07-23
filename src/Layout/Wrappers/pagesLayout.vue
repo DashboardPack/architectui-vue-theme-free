@@ -5,13 +5,9 @@
 </template>
 
 <script>
-
-  export default {
-    name: 'app',
-    components: {
-    },
-    methods:{
-
-    }
-  }
+export default {
+  name: 'app',
+  components: {},
+  methods: {}
+}
 </script>

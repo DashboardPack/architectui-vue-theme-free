@@ -1,53 +1,56 @@
 <template>
-    <div class="app-page-title">
-        <div class="page-title-wrapper">
-            <div class="page-title-heading">
-                <div class="page-title-icon">
-                    <i :class="icon"/>
-                </div>
-                <div>
-                    {{heading}}
-                    <div
-                        class="page-title-subheading">
-                        {{subheading}}
-                    </div>
-                </div>
-            </div>
-            <div class="page-title-actions">
-                <button type="button" class="btn-shadow mr-3 btn btn-dark">
-                    <font-awesome-icon icon="star"/>
-                </button>
-                <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success">
-                    <font-awesome-icon class="mr-2" icon="plus"/>
-                    Create New
-                </button>
-            </div>
+  <div class="app-page-title">
+    <div class="page-title-wrapper">
+      <div class="page-title-heading">
+        <div class="page-title-icon">
+          <i :class="icon"></i>
         </div>
+        <div>
+          {{ heading }}
+          <div class="page-title-subheading">
+            {{ subheading }}
+          </div>
+        </div>
+      </div>
+      <div class="page-title-actions">
+        <b-button
+          variant="dark"
+          class="btn-shadow"
+          style="min-width: 38px; min-height: 38px; margin-right: 0.375rem !important"
+        >
+          <font-awesome-icon :icon="['fas', 'star']" style="font-size: 1rem" />
+        </b-button>
+        <b-button
+          variant="success"
+          class="btn-shadow d-inline-flex align-items-center"
+          style="min-height: 38px; padding: 0.375rem 0.75rem"
+        >
+          <font-awesome-icon :icon="['fas', 'plus']" class="me-2" style="font-size: 1rem" />
+          Create New
+        </b-button>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-    import {library} from '@fortawesome/fontawesome-svg-core'
-    import {
-        faStar,
-        faPlus
-    } from '@fortawesome/free-solid-svg-icons'
-    import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import { defineComponent } from 'vue'
 
-    library.add(
-        faStar,
-        faPlus,
-    );
-
-    export default {
-        components: {
-            'font-awesome-icon': FontAwesomeIcon,
-        },
-        props: {
-            icon: String,
-            heading: String,
-            subheading: String,
-
-        }
+export default defineComponent({
+  name: 'PageTitle',
+  props: {
+    icon: {
+      type: String,
+      default: 'pe-7s-home'
+    },
+    heading: {
+      type: String,
+      default: 'Dashboard'
+    },
+    subheading: {
+      type: String,
+      default: 'Welcome to ArchitectUI'
     }
+  }
+})
 </script>

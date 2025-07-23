@@ -1,0 +1,193 @@
+// Header Component Fixes
+// Consistent alignment and dropdown positioning
+
+.app-header {
+  // Ensure proper flexbox alignment
+  .app-header__content {
+    .app-header-left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .app-header-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+  }
+}
+
+// Header User Area Fixes
+.header-user-area {
+  .widget-content-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem;
+
+    .widget-content-left,
+    .widget-content-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 140px;
+
+      .widget-heading {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0;
+        white-space: nowrap;
+      }
+
+      .widget-subheading {
+        font-size: 0.75rem;
+        opacity: 0.7;
+        line-height: 1.2;
+        margin: 0;
+        white-space: nowrap;
+      }
+    }
+
+    // Avatar container
+    .icon-wrapper {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // Calendar button
+    #calendar-btn {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Header-specific dropdown fixes - Ensure proper positioning and z-index
+.app-header .dropdown {
+  position: relative;
+
+  .dropdown-toggle {
+    &::after {
+      display: none; // Hide Bootstrap's default caret only in header
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1040;
+    min-width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+
+    &.dropdown-menu-end {
+      right: 0;
+      left: auto;
+    }
+
+    &.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      color: #212529;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: #f8f9fa;
+        color: #495057;
+      }
+    }
+
+    .dropdown-header {
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #6c757d;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+
+    .dropdown-divider {
+      margin: 0.5rem 0;
+      border-top: 1px solid #e9ecef;
+    }
+  }
+}
+
+// Header dropdown specific styling
+.app-header {
+  .dropdown-menu {
+    margin-top: 0.5rem;
+
+    &.dropdown-menu-lg {
+      min-width: 250px;
+    }
+  }
+}
+
+// Mobile menu fixes
+.app-header__mobile-menu,
+.app-header__menu {
+  .hamburger {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// Search box alignment
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+// Responsive fixes
+@media (max-width: 767.98px) {
+  .header-user-area {
+    .header-user-info {
+      display: none; // Hide user info on mobile
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-user-area {
+    .widget-content-wrapper {
+      gap: 0.5rem;
+    }
+  }
+}

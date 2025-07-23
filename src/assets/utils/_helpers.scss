@@ -1,6 +1,6 @@
 // Helpers imports
-@import "helpers/opacity";
-@import "helpers/grayscale";
+@import 'helpers/opacity';
+@import 'helpers/grayscale';
 
 // Resets
 
@@ -91,7 +91,7 @@
 }
 
 .font-size-md {
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
 }
 
 .font-size-lg {
@@ -106,8 +106,80 @@
 
 // Layout
 
+// Standard Bootstrap 5 height utilities
+.h-25 {
+  height: 25% !important;
+}
+
+.h-50 {
+  height: 50% !important;
+}
+
+.h-75 {
+  height: 75% !important;
+}
+
 .h-100 {
+  height: 100% !important;
+}
+
+// Viewport height (keep original as separate utility)
+.h-100vh {
   height: 100vh !important;
+}
+
+// Height pixel utilities (as referenced in utilities page)
+.h-200p {
+  height: 200px !important;
+}
+
+.h-50p {
+  height: 50px !important;
+}
+
+.h-75p {
+  height: 75px !important;
+}
+
+.h-100p {
+  height: 100px !important;
+}
+
+.h-125p {
+  height: 125px !important;
+}
+
+// Width pixel utilities
+.w-50p {
+  width: 50px !important;
+}
+
+.w-75p {
+  width: 75px !important;
+}
+
+.w-100p {
+  width: 100px !important;
+}
+
+.w-150p {
+  width: 150px !important;
+}
+
+// Equal height and width utilities (square dimensions)
+.d-46 {
+  width: 46px !important;
+  height: 46px !important;
+}
+
+.d-74 {
+  width: 74px !important;
+  height: 74px !important;
+}
+
+.d-100 {
+  width: 100px !important;
+  height: 100px !important;
 }
 
 .he-auto {
@@ -129,7 +201,7 @@
 // Font size
 
 .fsize-1 {
-  font-size: .95rem !important;
+  font-size: 0.95rem !important;
 }
 
 .fsize-2 {

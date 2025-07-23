@@ -1,59 +1,301 @@
-// Buttons
+// ======================================
+// BOOTSTRAP 5 + BOOTSTRAPVUENEXT BUTTONS
+// ======================================
+// This file ensures proper button styling with Bootstrap 5 and BootstrapVueNext
+// Following Bootstrap 5 conventions and ArchitectUI theming
 
+// Base button group styling
 .btn-group {
   .btn {
     font-size: $font-size-base;
   }
 }
 
+// Base button styling
 .btn {
   font-size: $font-size-base;
+  position: relative;
+  @include transition($btn-transition);
+
+  // Ensure all buttons have proper dimensions and visibility
+  &:not(.btn-link) {
+    min-height: 2.25rem;
+    min-width: 2rem;
+    border: 1px solid transparent;
+  }
+
+  // Fix for invisible buttons (like the BootstrapVueNext ID issue)
+  &[id*='BootstrapVueNext'],
+  &[id*='dropdown'] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
 }
 
+// ======================================
+// DROPDOWN CARETS - BOOTSTRAP 5 DEFAULT BEHAVIOR
+// ======================================
+// Let Bootstrap 5's native caret system work with BootstrapVueNext
+
+// Only define the no-caret class for when carets should be explicitly hidden
 .dropdown-toggle-no-caret {
   &::after {
-    display: none;
+    display: none !important;
   }
 }
 
-// Dropdown toggle
+// ======================================
+// BUTTON VARIANTS - BOOTSTRAP 5 STYLE
+// ======================================
 
-.dropdown-toggle {
-  &::after {
-    position: relative;
-    top: 2px;
-    opacity: .8;
+// Light variant needs darker border
+.btn-light {
+  border-color: darken(#f5f5f5, 10%);
+}
+
+// Custom button variants that need explicit definition
+.btn-focus {
+  @include button-variant($focus, $focus);
+}
+
+.btn-alternate {
+  @include button-variant($alternate, $alternate);
+}
+
+// Ensure dark background buttons have white text
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-dark,
+.btn-focus,
+.btn-alternate,
+.btn-brand {
+  color: $white !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $white !important;
   }
 }
 
-.dropright {
-  .dropdown-toggle {
-    &::after {
-      top: 0;
-    }
+// Custom ArchitectUI color buttons
+.btn-blue,
+.btn-indigo,
+.btn-purple,
+.btn-pink,
+.btn-red,
+.btn-orange,
+.btn-yellow,
+.btn-green,
+.btn-teal,
+.btn-cyan {
+  color: $white !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $white !important;
   }
 }
 
-.dropdown-toggle-split {
-  border-left: rgba(255, 255, 255, .1) solid 1px;
+// ======================================
+// OUTLINE BUTTON VARIANTS - COMPREHENSIVE FIX
+// ======================================
+// Force outline buttons to show visible borders
+
+// MANUAL OUTLINE VARIANTS - Since Bootstrap mixins might not be working
+// Primary outline buttons (should work automatically, but adding fallback)
+.btn-outline-primary {
+  color: $primary !important;
+  border: 1px solid $primary !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $primary !important;
+    border-color: $primary !important;
+    color: $white !important;
+  }
 }
 
+.btn-outline-secondary {
+  color: $secondary !important;
+  border: 1px solid $secondary !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $secondary !important;
+    border-color: $secondary !important;
+    color: $white !important;
+  }
+}
+
+.btn-outline-success {
+  color: $success !important;
+  border: 1px solid $success !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $success !important;
+    border-color: $success !important;
+    color: $white !important;
+  }
+}
+
+.btn-outline-danger {
+  color: $danger !important;
+  border: 1px solid $danger !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $danger !important;
+    border-color: $danger !important;
+    color: $white !important;
+  }
+}
+
+.btn-outline-warning {
+  color: $warning !important;
+  border: 1px solid $warning !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $warning !important;
+    border-color: $warning !important;
+    color: $dark !important;
+  }
+}
+
+.btn-outline-info {
+  color: $info !important;
+  border: 1px solid $info !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $info !important;
+    border-color: $info !important;
+    color: $white !important;
+  }
+}
+
+.btn-outline-light {
+  color: $gray-600 !important;
+  border: 1px solid $gray-300 !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $light !important;
+    border-color: $light !important;
+    color: $dark !important;
+  }
+}
+
+.btn-outline-dark {
+  color: $dark !important;
+  border: 1px solid $dark !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $dark !important;
+    border-color: $dark !important;
+    color: $white !important;
+  }
+}
+
+// Custom ArchitectUI outline variants
+.btn-outline-focus {
+  color: $focus !important;
+  border: 1px solid $focus !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $focus !important;
+    border-color: $focus !important;
+    color: $white !important;
+  }
+}
+
+.btn-outline-alternate {
+  color: $alternate !important;
+  border: 1px solid $alternate !important;
+  background: transparent !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $alternate !important;
+    border-color: $alternate !important;
+    color: $white !important;
+  }
+}
+
+// Link outline (special case)
+.btn-outline-link {
+  color: $primary !important;
+  border: 1px solid $primary !important;
+  background: transparent !important;
+  text-decoration: none !important;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: $primary !important;
+    border-color: $primary !important;
+    color: $white !important;
+    text-decoration: none !important;
+  }
+}
+
+// ======================================
+// BUTTON STATES AND EFFECTS
+// ======================================
+
+// Shadow buttons
 .btn.btn-shadow {
   &.active {
     box-shadow: 0 0 0 0 transparent !important;
   }
 }
 
-// Links
+// ======================================
+// BOOTSTRAP 5 LINK STYLING
+// ======================================
 
-$link-color: theme-color("primary");
+$link-color: $primary;
 $link-hover-color: darken($link-color, 15%);
-
-.btn {
-  position: relative;
-  @include transition($btn-transition);
-}
-
-.btn-light {
-  border-color: darken(#f5f5f5, 10%);
-}

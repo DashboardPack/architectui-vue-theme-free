@@ -1,78 +1,87 @@
 <template>
   <div>
-    <page-title :heading=heading :subheading=subheading :icon=icon></page-title>
+    <page-title :heading="heading" :subheading="subheading" :icon="icon"></page-title>
 
     <div class="content">
-        <b-card title="Bootstrap 4 Carousel" class="main-card mb-3">
-          <b-carousel id="carousel1"
-                      style="text-shadow: 1px 1px 2px #333;"
-                      controls
-                      indicators
-                      background="#ababab"
-                      :interval="4000"
-                      img-width="1024"
-                      img-height="480"
-                      v-model="slide"
-                      @sliding-start="onSlideStart"
-                      @sliding-end="onSlideEnd"
+      <b-card title="BootstrapVueNext Carousel" class="main-card mb-3">
+        <b-carousel
+          v-model="currentSlide"
+          :interval="4000"
+          controls
+          indicators
+          background="#ababab"
+          style="text-shadow: 1px 1px 2px #333"
+        >
+          <b-carousel-slide
+            v-for="(slide, index) in slides"
+            :key="index"
+            :img-src="slide.image"
+            :caption="slide.caption"
+            :text="slide.text"
+            :alt="slide.alt"
           >
+            <div v-if="slide.customContent" v-html="slide.customContent"></div>
+          </b-carousel-slide>
+        </b-carousel>
 
-            <!-- Text slides with image -->
-            <b-carousel-slide caption="First slide"
-                              text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-                              img-src="https://picsum.photos/1024/480/?image=52"
-            ></b-carousel-slide>
-
-            <!-- Slides with custom text -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-              <h1>Hello world!</h1>
-            </b-carousel-slide>
-
-            <!-- Slides with image only -->
-            <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">
-            </b-carousel-slide>
-
-            <!-- Slides with img slot -->
-            <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-            <b-carousel-slide>
-              <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-                   src="https://picsum.photos/1024/480/?image=55" alt="image slot">
-            </b-carousel-slide>
-
-            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
-                ut lacus vel interdum.
-              </p>
-            </b-carousel-slide>
-
-          </b-carousel>
-          <div class="divider"></div>
-          <p class="mt-4">
-            Slide #: {{ slide }}<br>
-            Sliding: {{ sliding }}
-          </p>
-        </b-card>
-      </div>
+        <div class="divider"></div>
+        <p class="mt-4">
+          Current Slide: {{ currentSlide + 1 }} of {{ slides.length }}<br />
+          Auto-play: On (4 second interval)
+        </p>
+      </b-card>
     </div>
+  </div>
 </template>
 
 <script>
+import PageTitle from '../../Layout/Components/PageTitle.vue'
 
-  import PageTitle from "../../Layout/Components/PageTitle.vue";
-
-  export default {
-    components: {
-      PageTitle,
-    },
-    data: () => ({
-        heading: 'Carousels & Slideshows',
-        subheading: 'Create easy and beautiful slideshows with these Vue components.',
-        icon: 'pe-7s-album icon-gradient bg-sunny-morning',
-    }),
-
-
+export default {
+  name: 'Carousel',
+  components: {
+    PageTitle
+  },
+  data() {
+    return {
+      heading: 'Carousels & Slideshows',
+      subheading: 'Create easy and beautiful slideshows with these BootstrapVueNext components.',
+      icon: 'pe-7s-album icon-gradient bg-sunny-morning',
+      currentSlide: 0,
+      slides: [
+        {
+          image: 'https://picsum.photos/1024/480/?image=52',
+          caption: 'First slide',
+          text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
+          alt: 'First slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=54',
+          caption: 'Hello world!',
+          text: '',
+          customContent: '<h1>Hello world!</h1>',
+          alt: 'Second slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=58',
+          caption: '',
+          text: '',
+          alt: 'Third slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=55',
+          caption: 'Image slot example',
+          text: 'Example using direct image slot',
+          alt: 'Fourth slide'
+        },
+        {
+          image: 'https://picsum.photos/1024/480/?image=60',
+          caption: 'Fifth Slide',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.',
+          alt: 'Fifth slide'
+        }
+      ]
+    }
   }
+}
 </script>

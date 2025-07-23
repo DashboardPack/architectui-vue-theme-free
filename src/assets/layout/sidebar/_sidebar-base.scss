@@ -41,7 +41,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
   height: 100vh;
   box-shadow: $sidebar-box-shadow;
   flex-direction: column;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   padding: $app-header-height 0 0;
 
   .app-header__logo {
@@ -50,7 +50,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
     width: $app-sidebar-width;
     display: flex;
     align-items: center;
-    transition: width .2s;
+    transition: width 0.2s;
     flex-shrink: 0;
     position: absolute;
     top: 0;
@@ -72,7 +72,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
 .logo-src {
   height: $logo-height;
   width: $logo-width;
-  background: url('./assets/images/logo-inverse.png');
+  background: url('@/assets/images/logo-inverse.png');
 }
 
 // Sidebar Menu
@@ -90,7 +90,6 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
   & .vsm-item.first-item {
     & > .vsm-link {
       & > .vsm-icon {
-
       }
       &:after {
         content: '';
@@ -137,10 +136,10 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
     height: 2.4rem;
     padding: 0 1.5rem 0 45px;
     position: relative;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     color: $gray-700;
     white-space: nowrap;
-    transition: all .2s;
+    transition: all 0.2s;
     text-decoration: none;
 
     &:hover {
@@ -168,7 +167,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
     top: 50%;
     margin-top: -17px;
     font-size: 1.5rem;
-    opacity: .3;
+    opacity: 0.3;
     transition: color 300ms;
   }
 
@@ -183,7 +182,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
     margin-top: -17px;
     font-size: 1.5rem;
     font-style: normal;
-    opacity: .3;
+    opacity: 0.3;
     transition: all 300ms;
     transform: rotate(-90deg);
 
@@ -269,10 +268,9 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
 
 // Modifiers
 
-@import "modifiers/closed-sidebar";
-
+@import 'modifiers/closed-sidebar';
 
 // Sidebar Themes
 
-@import "themes/sidebar-light";
-@import "themes/sidebar-dark";
+@import 'themes/sidebar-light';
+@import 'themes/sidebar-dark';

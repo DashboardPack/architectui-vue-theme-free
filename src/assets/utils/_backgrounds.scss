@@ -93,7 +93,9 @@
 }
 
 .bg-slick-carbon {
-  background-image: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%) !important;
+  background-image:
+    linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%) !important;
   background-blend-mode: multiply;
 }
 
@@ -112,25 +114,25 @@
 // Background Images
 
 .dd-header-bg-1 {
-  background: url('./assets/images/dropdown-header/abstract1.jpg');
+  background: url('@/assets/images/dropdown-header/abstract1.jpg');
 }
 
 .dd-header-bg-2 {
-  background: url('./assets/images/dropdown-header/abstract2.jpg');
+  background: url('@/assets/images/dropdown-header/abstract2.jpg');
 }
 
 .dd-header-bg-3 {
-  background: url('./assets/images/dropdown-header/abstract3.jpg');
+  background: url('@/assets/images/dropdown-header/abstract3.jpg');
 }
 
 .dd-header-bg-4 {
-  background: url('./assets/images/dropdown-header/city1.jpg');
+  background: url('@/assets/images/dropdown-header/city1.jpg');
 }
 
 .dd-header-bg-5 {
-  background: url('./assets/images/dropdown-header/city2.jpg');
+  background: url('@/assets/images/dropdown-header/city2.jpg');
 }
 
 .dd-header-bg-6 {
-  background: url('./assets/images/dropdown-header/city3.jpg');
+  background: url('@/assets/images/dropdown-header/city3.jpg');
 }
