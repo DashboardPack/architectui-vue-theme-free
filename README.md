@@ -1,6 +1,6 @@
 # ArchitectUI Vue 3 Admin Dashboard v2.0
 
-![ArchitectUI Vue 3 Preview](https://colorlib.com/wp/wp-content/uploads/sites/2/architectui-vue-free-preview.png.avif)
+![ArchitectUI Vue 3 Preview](architectui-vue-free-preview.png)
 
 **Live Demo**: [https://demo.dashboardpack.com/architectui-vue-free/](https://demo.dashboardpack.com/architectui-vue-free/)
 
