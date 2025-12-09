@@ -11,6 +11,22 @@ export const useSidebarStore = defineStore('sidebar', () => {
   // Menu structure
   const menuItems = ref([
     {
+      id: 'upgrade',
+      type: 'header',
+      title: 'Upgrade'
+    },
+    {
+      id: 'pro-version',
+      type: 'external',
+      title: 'PRO Version',
+      icon: 'pe-7s-star',
+      href: 'https://dashboardpack.com/theme-details/architectui-dashboard-vue-pro/?utm_source=architectui_free&utm_medium=sidebar&utm_campaign=upgrade_to_pro',
+      badge: {
+        text: 'HOT',
+        variant: 'danger'
+      }
+    },
+    {
       id: 'main',
       type: 'header',
       title: 'Main Navigation'

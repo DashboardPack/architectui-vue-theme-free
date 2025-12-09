@@ -5,10 +5,23 @@
     </div>
   </div>
 
+  <div v-else-if="item.type === 'external'" class="vsm-item">
+    <a :href="item.href" target="_blank" rel="noopener noreferrer" class="vsm-link">
+      <i :class="`vsm-icon ${item.icon}`"></i>
+      <span class="vsm-title">{{ item.title }}</span>
+      <span v-if="item.badge" :class="`badge bg-${item.badge.variant} ms-auto`">
+        {{ item.badge.text }}
+      </span>
+    </a>
+  </div>
+
   <div v-else-if="item.type === 'link'" class="vsm-item" :class="{ 'active-item': isActiveRoute(item.route) }">
     <router-link :to="item.route" class="vsm-link">
       <i :class="`vsm-icon ${item.icon}`"></i>
       <span class="vsm-title">{{ item.title }}</span>
+      <span v-if="item.badge" :class="`badge bg-${item.badge.variant} ms-auto`">
+        {{ item.badge.text }}
+      </span>
     </router-link>
   </div>
 
