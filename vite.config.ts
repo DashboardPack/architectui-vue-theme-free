@@ -48,7 +48,8 @@ export default defineConfig({
           'global-builtin',
           'mixed-decls',
           'color-functions',
-          'slash-div'
+          'slash-div',
+          'if-function'
         ]
       }
     }

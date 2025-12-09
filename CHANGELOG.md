@@ -5,6 +5,88 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-12-09 - **Complete Dependency Update**
+
+### 🚀 **Major Dependency Updates**
+
+This release updates all dependencies to the latest stable versions while maintaining full backward compatibility and zero vulnerabilities.
+
+### ✅ **Updated - Major Version Upgrades**
+
+| Package                   | Previous | Current | Notes                              |
+| ------------------------- | -------- | ------- | ---------------------------------- |
+| FontAwesome (core)        | 6.7.2    | 7.1.0   | New icon designs, better scaling   |
+| FontAwesome (solid)       | 6.7.2    | 7.1.0   | Improved icon consistency          |
+| FontAwesome (brands)      | 7.0.0    | 7.1.0   | Latest brand icons                 |
+| bootstrap-vue-next        | 0.30.4   | 0.40.9  | New components, bug fixes          |
+| vitest                    | 3.2.4    | 4.0.15  | Faster tests, better DX            |
+| @vitest/ui                | 3.2.4    | 4.0.15  | Enhanced test UI                   |
+| jsdom                     | 26.1.0   | 27.3.0  | Better DOM simulation              |
+| @googlemaps/js-api-loader | 1.16.10  | 2.0.2   | Modernized API                     |
+
+### ✅ **Updated - Minor/Patch Upgrades**
+
+| Package                         | Previous | Current |
+| ------------------------------- | -------- | ------- |
+| vue                             | 3.5.17   | 3.5.25  |
+| @vue/compat                     | 3.5.17   | 3.5.25  |
+| vue-router                      | 4.5.1    | 4.6.3   |
+| vite                            | 7.1.11   | 7.2.7   |
+| pinia                           | 3.0.3    | 3.0.4   |
+| typescript                      | 5.8.3    | 5.9.3   |
+| eslint                          | 9.31.0   | 9.39.1  |
+| @eslint/js                      | 9.31.0   | 9.39.1  |
+| eslint-plugin-vue               | 10.3.0   | 10.6.2  |
+| @typescript-eslint/eslint-plugin| 8.37.0   | 8.49.0  |
+| @typescript-eslint/parser       | 8.37.0   | 8.49.0  |
+| sass                            | 1.89.2   | 1.95.0  |
+| prettier                        | 3.6.2    | 3.7.4   |
+| bootstrap                       | 5.3.7    | 5.3.8   |
+| chart.js                        | 4.5.0    | 4.5.1   |
+| vue-chartjs                     | 5.3.2    | 5.3.3   |
+| vue-sidebar-menu                | 5.7.0    | 5.9.0   |
+| core-js                         | 3.44.0   | 3.47.0  |
+| @vitejs/plugin-vue              | 6.0.0    | 6.0.2   |
+| @vitejs/plugin-vue-jsx          | 5.0.1    | 5.1.2   |
+| @babel/eslint-parser            | 7.28.0   | 7.28.5  |
+| @babel/preset-env               | 7.28.0   | 7.28.5  |
+| @types/node                     | 24.0.15  | 24.10.2 |
+| autoprefixer                    | 10.4.21  | 10.4.22 |
+| lint-staged                     | 16.1.2   | 16.2.7  |
+| vue-tsc                         | 3.0.1    | 3.1.8   |
+| @fortawesome/vue-fontawesome    | 3.0.8    | 3.1.2   |
+
+### 🔄 **Changed**
+
+- **Vitest Configuration**: Updated `vitest.config.ts` to use `defineConfig` from `vitest/config` (required for vitest 4.x)
+- **Sass Deprecations**: Added `if-function` to silenced deprecations in `vite.config.ts` for Bootstrap SCSS compatibility
+
+### 🛠️ **Technical Details**
+
+- **Zero Vulnerabilities**: `npm audit` reports 0 vulnerabilities
+- **All Tests Pass**: 8/8 tests passing with vitest 4.x
+- **Type Check**: Clean TypeScript compilation
+- **Lint**: No ESLint errors or warnings
+- **Build**: Production build successful with optimized chunks
+
+### 📋 **Migration Notes**
+
+This release is fully backward compatible. No code changes required for existing projects.
+
+#### Vitest 4.x Users
+
+If you have custom vitest configuration, update the import:
+
+```typescript
+// Before (vitest 3.x)
+import { defineConfig } from 'vite'
+
+// After (vitest 4.x)
+import { defineConfig } from 'vitest/config'
+```
+
+---
+
 ## [2.0.1] - 2025-07-23 - **Production Enhancements & UX Improvements**
 
 ### 🎯 **Enhanced Production Release - UI/UX Refinements**

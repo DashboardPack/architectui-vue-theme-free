@@ -1,4 +1,4 @@
-# ArchitectUI Vue 3 Admin Dashboard v2.0
+# ArchitectUI Vue 3 Admin Dashboard v2.1
 
 ![ArchitectUI Vue 3 Preview](architectui-vue-free-preview.png)
 
@@ -8,32 +8,33 @@
 
 ## 🚀 **Vue 3 Modernization Complete**
 
-**Last Updated**: July 23, 2025
+**Last Updated**: December 9, 2025
 
 This template has been **completely modernized** and enhanced with significant improvements:
 
-### **Latest Enhancements (July 2025)**
+### **Latest Enhancements (December 2025)**
 
-- **UI/UX Improvements**: Fixed jumpy popover animations for smoother user interactions
-- **Color Scheme Restoration**: Restored original professional green theme (#69aa8a) throughout the application
-- **Footer Enhancement**: Implemented fully functional social media and quick links dropdowns with proper positioning
-- **Dashboard Widget Optimization**: Left-aligned numbers in dashboard statistics for improved readability
-- **CSS Animation Fixes**: Resolved animation conflicts that caused visual glitches
-- **FontAwesome Integration**: Added complete brand icons support with proper tree-shaking
-- **Production Deployment**: Successfully deployed to live demo with subdirectory routing support
-- **Asset Path Optimization**: Fixed all asset loading issues for production deployment
+- **All Dependencies Updated**: Every package updated to the latest stable version
+- **FontAwesome 7**: Upgraded to FontAwesome 7.x with improved icon designs
+- **Vitest 4**: Modern testing framework with enhanced performance
+- **Bootstrap-Vue-Next 0.40**: Latest component library with new features
+- **Vue 3.5.25**: Latest Vue 3 with all optimizations
+- **Vite 7.2**: Fastest build times with latest Vite
+- **TypeScript 5.9**: Latest TypeScript support
+- **Zero Vulnerabilities**: Complete security audit passed
 
 ### **Core Modernization Features**
 
-- ✅ **Zero vulnerabilities** (migrated from 21 vulnerabilities to 0)
-- ✅ **Vue 3.5.17** with latest features and optimizations
-- ✅ **Modern build system** with Vite 7.x
+- ✅ **Zero vulnerabilities** - all dependencies at latest secure versions
+- ✅ **Vue 3.5.25** with latest features and optimizations
+- ✅ **Modern build system** with Vite 7.2
 - ✅ **Vue 3 Composition API** throughout key components
 - ✅ **Pinia 3.x** for state management
-- ✅ **Bootstrap 5** integration with BootstrapVueNext
+- ✅ **Bootstrap 5.3** integration with BootstrapVueNext 0.40
 - ✅ **Chart.js 4.x** with modern API usage
-- ✅ **FontAwesome Vue 3** with tree-shaking optimization
+- ✅ **FontAwesome 7** with tree-shaking optimization
 - ✅ **TypeScript-ready** component structure
+- ✅ **Vitest 4** for modern testing
 - ✅ **Professional styling** with original design integrity maintained
 
 ## 📊 **Key Features**
@@ -72,15 +73,18 @@ This template has been **completely modernized** and enhanced with significant i
 
 ## 🛠️ **Technology Stack**
 
-| Technology  | Version | Purpose            |
-| ----------- | ------- | ------------------ |
-| Vue.js      | 3.5.17  | Frontend framework |
-| Pinia       | 3.x     | State management   |
-| Vite        | 7.x     | Build tool         |
-| Bootstrap   | 5.x     | CSS framework      |
-| Chart.js    | 4.x     | Data visualization |
-| FontAwesome | 6.x     | Icons              |
-| ESLint      | 9.x     | Code quality       |
+| Technology       | Version | Purpose            |
+| ---------------- | ------- | ------------------ |
+| Vue.js           | 3.5.25  | Frontend framework |
+| Pinia            | 3.0.4   | State management   |
+| Vite             | 7.2.7   | Build tool         |
+| Bootstrap        | 5.3.8   | CSS framework      |
+| BootstrapVueNext | 0.40.9  | Vue 3 components   |
+| Chart.js         | 4.5.1   | Data visualization |
+| FontAwesome      | 7.1.0   | Icons              |
+| TypeScript       | 5.9.3   | Type safety        |
+| Vitest           | 4.0.15  | Testing framework  |
+| ESLint           | 9.39.1  | Code quality       |
 
 ## 🚀 **Getting Started**
 
@@ -112,10 +116,14 @@ npm run lint
 ### **Development Commands**
 
 ```bash
-npm run serve     # Start development server (http://localhost:8080)
-npm run build     # Build for production
-npm run lint      # Run ESLint linter
-npm run preview   # Preview production build
+npm run serve        # Start development server (http://localhost:8087)
+npm run build        # Build for production (with type-check)
+npm run lint         # Run ESLint linter with auto-fix
+npm run preview      # Preview production build
+npm run test         # Run tests in watch mode
+npm run test:run     # Run tests once
+npm run format       # Format code with Prettier
+npm run type-check   # Run TypeScript type checking
 ```
 
 ## 📁 **Project Structure**
