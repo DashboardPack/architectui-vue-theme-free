@@ -1,4 +1,4 @@
-# ArchitectUI Vue 3 Admin Dashboard v2.1
+# ArchitectUI Vue 3 Admin Dashboard v2.2
 
 ![ArchitectUI Vue 3 Preview](architectui-vue-free-preview.png)
 
@@ -8,32 +8,34 @@
 
 ## 🚀 **Vue 3 Modernization Complete**
 
-**Last Updated**: December 9, 2025
+**Last Updated**: April 16, 2026
 
 This template has been **completely modernized** and enhanced with significant improvements:
 
-### **Latest Enhancements (December 2025)**
+### **Latest Enhancements (April 2026)**
 
-- **All Dependencies Updated**: Every package updated to the latest stable version
-- **FontAwesome 7**: Upgraded to FontAwesome 7.x with improved icon designs
-- **Vitest 4**: Modern testing framework with enhanced performance
-- **Bootstrap-Vue-Next 0.40**: Latest component library with new features
-- **Vue 3.5.25**: Latest Vue 3 with all optimizations
-- **Vite 7.2**: Fastest build times with latest Vite
-- **TypeScript 5.9**: Latest TypeScript support
-- **Zero Vulnerabilities**: Complete security audit passed
+- **All Dependencies Updated**: Every package bumped to the latest stable release
+- **Vite 8**: New Rollup 5 engine with faster builds
+- **Vue Router 5**: Major upgrade, Vue 2 compat removed
+- **TypeScript 6**: Latest compiler with stricter inference
+- **ESLint 10**: New flat-config defaults
+- **jsdom 29**: Modern DOM simulation for tests
+- **FontAwesome 7.2**: Latest icon set
+- **Bootstrap-Vue-Next 0.44**: Newest components and fixes
+- **Retired Legacy Polyfills**: Removed `es6-promise`, `regenerator-runtime`, `core-js`, `@vue/compat`, and the unused Babel toolchain
+- **Zero Vulnerabilities**: Clean `npm audit`
 
 ### **Core Modernization Features**
 
 - ✅ **Zero vulnerabilities** - all dependencies at latest secure versions
-- ✅ **Vue 3.5.25** with latest features and optimizations
-- ✅ **Modern build system** with Vite 7.2
+- ✅ **Vue 3.5.32** with latest features and optimizations
+- ✅ **Modern build system** with Vite 8
 - ✅ **Vue 3 Composition API** throughout key components
 - ✅ **Pinia 3.x** for state management
-- ✅ **Bootstrap 5.3** integration with BootstrapVueNext 0.40
+- ✅ **Bootstrap 5.3** integration with BootstrapVueNext 0.44
 - ✅ **Chart.js 4.x** with modern API usage
-- ✅ **FontAwesome 7** with tree-shaking optimization
-- ✅ **TypeScript-ready** component structure
+- ✅ **FontAwesome 7.2** with tree-shaking optimization
+- ✅ **TypeScript 6** with paths-based module resolution
 - ✅ **Vitest 4** for modern testing
 - ✅ **Professional styling** with original design integrity maintained
 
@@ -73,18 +75,20 @@ This template has been **completely modernized** and enhanced with significant i
 
 ## 🛠️ **Technology Stack**
 
-| Technology       | Version | Purpose            |
-| ---------------- | ------- | ------------------ |
-| Vue.js           | 3.5.25  | Frontend framework |
-| Pinia            | 3.0.4   | State management   |
-| Vite             | 7.2.7   | Build tool         |
-| Bootstrap        | 5.3.8   | CSS framework      |
-| BootstrapVueNext | 0.40.9  | Vue 3 components   |
-| Chart.js         | 4.5.1   | Data visualization |
-| FontAwesome      | 7.1.0   | Icons              |
-| TypeScript       | 5.9.3   | Type safety        |
-| Vitest           | 4.0.15  | Testing framework  |
-| ESLint           | 9.39.1  | Code quality       |
+| Technology       | Version | Purpose             |
+| ---------------- | ------- | ------------------- |
+| Vue.js           | 3.5.32  | Frontend framework  |
+| Vue Router       | 5.0.4   | Client-side routing |
+| Pinia            | 3.0.4   | State management    |
+| Vite             | 8.0.8   | Build tool          |
+| Bootstrap        | 5.3.8   | CSS framework       |
+| BootstrapVueNext | 0.44.2  | Vue 3 components    |
+| Chart.js         | 4.5.1   | Data visualization  |
+| FontAwesome      | 7.2.0   | Icons               |
+| TypeScript       | 6.0.2   | Type safety         |
+| Vitest           | 4.1.4   | Testing framework   |
+| jsdom            | 29.0.2  | DOM simulation      |
+| ESLint           | 10.2.0  | Code quality        |
 
 ## 🚀 **Getting Started**
 

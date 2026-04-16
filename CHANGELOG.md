@@ -5,6 +5,88 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-04-16 - **Major Dependency Overhaul & 2026 Refresh**
+
+### 🚀 **Major Dependency Updates**
+
+Every dependency bumped to the latest stable release — including several major-version jumps — with breaking changes resolved and obsolete polyfills retired.
+
+### ✅ **Updated - Major Version Upgrades**
+
+| Package                    | Previous | Current | Notes                                            |
+| -------------------------- | -------- | ------- | ------------------------------------------------ |
+| vite                       | 7.2.7    | 8.0.8   | Rollup 5 engine; faster builds                   |
+| vue-router                 | 4.6.3    | 5.0.4   | Drops Vue 2 compat; modernized internals         |
+| typescript                 | 5.9.3    | 6.0.2   | Stricter type inference; `baseUrl` deprecated    |
+| eslint                     | 9.39.1   | 10.2.0  | New flat-config defaults                         |
+| @eslint/js                 | 9.39.1   | 10.0.1  | Aligned with eslint 10                           |
+| jsdom                      | 27.3.0   | 29.0.2  | Two majors — modern DOM simulation               |
+| @types/node                | 24.10.2  | 25.6.0  | Node 25 type definitions                         |
+| bootstrap-vue-next         | 0.40.9   | 0.44.2  | New components, API refinements                  |
+
+### ✅ **Updated - Minor/Patch Upgrades**
+
+| Package                          | Previous | Current |
+| -------------------------------- | -------- | ------- |
+| vue                              | 3.5.25   | 3.5.32  |
+| vue-sidebar-menu                 | 5.9.0    | 5.9.1   |
+| vue-tsc                          | 3.1.8    | 3.2.6   |
+| @vitejs/plugin-vue               | 6.0.2    | 6.0.6   |
+| @vitejs/plugin-vue-jsx           | 5.1.2    | 5.1.5   |
+| vitest                           | 4.0.15   | 4.1.4   |
+| @vitest/ui                       | 4.0.15   | 4.1.4   |
+| eslint-plugin-vue                | 10.6.2   | 10.8.0  |
+| @typescript-eslint/eslint-plugin | 8.49.0   | 8.58.2  |
+| @typescript-eslint/parser        | 8.49.0   | 8.58.2  |
+| @fortawesome/fontawesome-svg-core| 7.1.0    | 7.2.0   |
+| @fortawesome/free-solid-svg-icons| 7.1.0    | 7.2.0   |
+| @fortawesome/free-brands-svg-icons| 7.1.0   | 7.2.0   |
+| @fortawesome/vue-fontawesome     | 3.1.2    | 3.2.0   |
+| postcss                          | 8.5.6    | 8.5.10  |
+| autoprefixer                     | 10.4.22  | 10.5.0  |
+| sass                             | 1.95.0   | 1.99.0  |
+| prettier                         | 3.7.4    | 3.8.3   |
+| lint-staged                      | 16.2.7   | 16.4.0  |
+
+### 🗑️ **Removed - Retired Dependencies**
+
+The following packages were unused in `src/` and removed as they no longer serve modern Vue 3 + Vite toolchains:
+
+- `es6-promise` — obsolete Promise polyfill; native Promise is universally supported
+- `regenerator-runtime` — obsolete async/await polyfill; native support assumed
+- `core-js` — Babel runtime polyfill; Vite uses esbuild
+- `@vue/compat` — Vue 2 compatibility build; never imported
+- `@babel/eslint-parser` — not referenced by `eslint.config.js`
+- `@babel/preset-env` — no Babel pipeline in this project
+
+### 🔧 **Breaking-Change Fixes**
+
+- **TypeScript 6**: Removed deprecated `baseUrl` from `tsconfig.json` (`paths` now resolves relative to the config file automatically); disabled `declaration` / `declarationMap` to avoid portable-type inference errors emitted by `vue-chartjs` in strict mode.
+- **Vite 8 / Rollup 5**: Converted `build.rollupOptions.output.manualChunks` from the deprecated object form to the function form in `vite.config.ts`.
+
+### 📅 **2026 Refresh**
+
+- Copyright year updated from 2025 to 2026 across the LICENSE, footer component, and login / register / forgot-password pages.
+
+### ✅ **Verification**
+
+- `npm run type-check` — clean
+- `npm run build` — 5.0 s, all chunks generated
+- `npm run test:run` — 8/8 tests passing
+- `npm run lint` — no errors
+- `npm run dev` — Vite 8 boots in ~420 ms on :8087
+- `npm audit` — 0 vulnerabilities
+
+### 📋 **Migration Notes**
+
+If you maintain a fork based on 2.1.0:
+
+1. Delete `node_modules/` and `package-lock.json`, then run `npm install`.
+2. If you have a custom `tsconfig.json` extending this one, drop `baseUrl` or add `"ignoreDeprecations": "6.0"`.
+3. If you customized `vite.config.ts` with an object-form `manualChunks`, convert to the function form shown in this repo.
+
+---
+
 ## [2.1.0] - 2025-12-09 - **Complete Dependency Update**
 
 ### 🚀 **Major Dependency Updates**

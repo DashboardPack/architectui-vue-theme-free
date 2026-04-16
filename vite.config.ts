@@ -25,15 +25,21 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['vue', 'vue-router', 'pinia'],
-          bootstrap: ['bootstrap', 'bootstrap-vue-next'],
-          charts: ['chart.js', 'vue-chartjs'],
-          icons: [
-            '@fortawesome/fontawesome-svg-core',
-            '@fortawesome/free-solid-svg-icons',
-            '@fortawesome/vue-fontawesome'
-          ]
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('vue-router') || id.includes('pinia') || /node_modules\/vue\//.test(id)) {
+              return 'vendor'
+            }
+            if (id.includes('bootstrap-vue-next') || id.includes('/bootstrap/')) {
+              return 'bootstrap'
+            }
+            if (id.includes('chart.js') || id.includes('vue-chartjs')) {
+              return 'charts'
+            }
+            if (id.includes('@fortawesome')) {
+              return 'icons'
+            }
+          }
         }
       }
     }

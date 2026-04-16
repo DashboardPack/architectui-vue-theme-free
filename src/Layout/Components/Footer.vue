@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div class="footer-text">Copyright © 2025 ArchitectUI Vue Free. All rights reserved.</div>
+            <div class="footer-text">Copyright © 2026 ArchitectUI Vue Free. All rights reserved.</div>
           </div>
           <div class="col-md-6">
             <div class="footer-nav">

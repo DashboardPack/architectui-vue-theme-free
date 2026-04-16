@@ -8,8 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "jsx": "preserve",
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
     "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,9 +17,8 @@
     "noEmit": true,
     "allowJs": true,
     "checkJs": false,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "types": ["vite/client"]
   },
@@ -33,10 +31,5 @@
     "vite.config.ts",
     "vitest.config.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "public"
-  ]
+  "exclude": ["node_modules", "dist", "build", "public"]
 }

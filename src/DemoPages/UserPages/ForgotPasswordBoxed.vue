@@ -108,7 +108,7 @@
 
         <!-- Copyright -->
         <div class="text-center mt-5">
-          <p class="text-secondary small mb-0">© 2025 ArchitectUI. All rights reserved.</p>
+          <p class="text-secondary small mb-0">© 2026 ArchitectUI. All rights reserved.</p>
         </div>
       </div>
     </div>
