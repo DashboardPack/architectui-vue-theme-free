@@ -5,6 +5,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.1] - 2026-05-22 - **Security Patch & Dependency Refresh**
+
+### 🔒 **Security**
+
+- **Dependabot alert resolved**: Upgraded transitive `js-cookie` from `3.0.5` to `3.0.7` via `@vue/test-utils` bump — fixes [GHSA-qjx8-664m-686j](https://github.com/advisories/GHSA-qjx8-664m-686j) (per-instance prototype hijack in `assign()` enabling cookie-attribute injection, high severity).
+- **`npm audit`**: 2 vulnerabilities → **0 vulnerabilities** (also clears moderate `brace-expansion` advisory pulled in via the lockfile rebuild).
+
+### ✅ **Updated - Dependencies**
+
+| Package                          | Previous | Current |
+| -------------------------------- | -------- | ------- |
+| bootstrap-vue-next               | 0.44.2   | 0.45.4  |
+| lint-staged                      | 16.4.0   | 17.0.5  |
+| @vue/test-utils                  | 2.4.6    | 2.4.10  |
+| vue                              | 3.5.32   | 3.5.34  |
+| vue-router                       | 5.0.4    | 5.0.7   |
+| vue-tsc                          | 3.2.6    | 3.3.1   |
+| vite                             | 8.0.8    | 8.0.14  |
+| vitest                           | 4.1.4    | 4.1.7   |
+| @vitest/ui                       | 4.1.4    | 4.1.7   |
+| @vitejs/plugin-vue               | 6.0.6    | 6.0.7   |
+| typescript                       | 6.0.2    | 6.0.3   |
+| eslint                           | 10.2.0   | 10.4.0  |
+| eslint-plugin-vue                | 10.8.0   | 10.9.1  |
+| @typescript-eslint/eslint-plugin | 8.58.2   | 8.59.4  |
+| @typescript-eslint/parser        | 8.58.2   | 8.59.4  |
+| @types/node                      | 25.6.0   | 25.9.1  |
+| jsdom                            | 29.0.2   | 29.1.1  |
+| sass                             | 1.99.0   | 1.100.0 |
+| postcss                          | 8.5.10   | 8.5.15  |
+| perfect-scrollbar                | 1.4.0    | 1.5.6   |
+
+### ✅ **Verification**
+
+- `npm run type-check` — clean
+- `npm run build` — succeeds, all chunks generated
+- `npm run test:run` — 8/8 tests passing
+- `npm audit` — 0 vulnerabilities
+
 ## [2.2.0] - 2026-04-16 - **Major Dependency Overhaul & 2026 Refresh**
 
 ### 🚀 **Major Dependency Updates**
