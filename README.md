@@ -1,4 +1,4 @@
-# ArchitectUI Vue 3 Admin Dashboard v2.3.0
+# ArchitectUI Vue 3 Admin Dashboard v2.3.1
 
 ![ArchitectUI Vue 3 Preview](architectui-vue-free-preview.webp)
 
@@ -8,11 +8,18 @@
 
 ## 🚀 **Vue 3 Modernization Complete**
 
-**Last Updated**: August 3, 2026
+**Last Updated**: October 8, 2026
 
 This template has been **completely modernized** and enhanced with significant improvements:
 
-### **Latest Enhancements (August 2026)**
+### **Latest Enhancements (October 2026)**
+
+- **Security Patch**: `npm audit` is clean again after refreshing the Vite/Vitest/jsdom/Vue toolchain and clearing advisories in `@vue/server-renderer`, `undici`, `@vitest/mocker`, `brace-expansion`, `nanoid`, `postcss-selector-parser`, and `source-map-js`.
+- **Dependencies Refreshed**: Vue 3.5.43, Vue Router 5.4.0, Pinia 4.0.3, Bootstrap-Vue-Next 0.46.4, Vite 8.3.4, Vitest 4.1.11, ESLint 10.12, Prettier 3.9.9, sass 1.105, vue-tsc 3.3.12.
+- **Collapsed Sidebar Badge Fix**: upgrade badges now hide in desktop icon-only mode and reappear when the sidebar expands.
+- **Design Polish**: softer dashboard background, lighter card borders, calmer shadows, and cleaner headers for closer consistency with the refreshed HTML and React templates.
+
+### **Previous Enhancements (August 2026)**
 
 - **Security Patch**: Resolved **3 high-severity advisories** — the Dependabot-flagged **PostCSS path traversal** ([GHSA-r28c-9q8g-f849](https://github.com/advisories/GHSA-r28c-9q8g-f849), `postcss → 8.5.25`) plus `brace-expansion` and `immutable` DoS issues. All dev-only / transitive — none ship in the production bundle
 - **Pinia 3 → 4**: Major state-management upgrade; the template's `createPinia` / `defineStore` / plugin usage is unchanged in v4
@@ -77,18 +84,18 @@ This template has been **completely modernized** and enhanced with significant i
 
 | Technology       | Version | Purpose             |
 | ---------------- | ------- | ------------------- |
-| Vue.js           | 3.5.40  | Frontend framework  |
-| Vue Router       | 5.2.0   | Client-side routing |
-| Pinia            | 4.0.2   | State management    |
-| Vite             | 8.2.0   | Build tool          |
+| Vue.js           | 3.5.43  | Frontend framework  |
+| Vue Router       | 5.4.0   | Client-side routing |
+| Pinia            | 4.0.3   | State management    |
+| Vite             | 8.3.4   | Build tool          |
 | Bootstrap        | 5.3.8   | CSS framework       |
-| BootstrapVueNext | 0.45.9  | Vue 3 components    |
+| BootstrapVueNext | 0.46.4  | Vue 3 components    |
 | Chart.js         | 4.5.1   | Data visualization  |
 | FontAwesome      | 7.3.1   | Icons               |
 | TypeScript       | 6.0.3   | Type safety         |
-| Vitest           | 4.1.10  | Testing framework   |
-| jsdom            | 30.0.1  | DOM simulation      |
-| ESLint           | 10.8.0  | Code quality        |
+| Vitest           | 4.1.11  | Testing framework   |
+| jsdom            | 30.1.2  | DOM simulation      |
+| ESLint           | 10.12.0 | Code quality        |
 
 ## 🚀 **Getting Started**
 

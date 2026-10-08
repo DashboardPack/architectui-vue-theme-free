@@ -9,7 +9,7 @@
     <a :href="item.href" target="_blank" rel="noopener noreferrer" class="vsm-link">
       <i :class="`vsm-icon ${item.icon}`"></i>
       <span class="vsm-title">{{ item.title }}</span>
-      <span v-if="item.badge" :class="`badge bg-${item.badge.variant} ms-auto`">
+      <span v-if="item.badge" :class="`sidebar-menu-badge badge bg-${item.badge.variant} ms-auto`">
         {{ item.badge.text }}
       </span>
     </a>
@@ -19,7 +19,7 @@
     <router-link :to="item.route" class="vsm-link">
       <i :class="`vsm-icon ${item.icon}`"></i>
       <span class="vsm-title">{{ item.title }}</span>
-      <span v-if="item.badge" :class="`badge bg-${item.badge.variant} ms-auto`">
+      <span v-if="item.badge" :class="`sidebar-menu-badge badge bg-${item.badge.variant} ms-auto`">
         {{ item.badge.text }}
       </span>
     </router-link>

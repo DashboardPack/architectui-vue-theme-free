@@ -7,11 +7,18 @@
 // CARD HEADER/BODY ALIGNMENT
 // =====================================
 
+.card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.5rem;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+}
+
 // Remove padding from card headers (titles)
 .card-header {
   padding: 0.75rem 1.25rem; // Standard Bootstrap padding
   margin-bottom: 0; // Remove any margin
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 
   // Remove extra spacing around titles
   h1,
@@ -74,7 +81,7 @@
 .card-footer {
   padding: 0.75rem 1.25rem;
   margin-top: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 // =====================================
@@ -123,8 +130,8 @@
 // ArchitectUI specific main-card class
 .main-card {
   .card-header {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-bottom: 1px solid #dee2e6;
+    background: rgba(255, 255, 255, 0.72);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     font-weight: 600;
     padding: 0.75rem 1.25rem;
 
@@ -152,8 +159,8 @@
   }
 
   .card-footer {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-top: 1px solid #dee2e6;
+    background: rgba(255, 255, 255, 0.72);
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
     color: #6c757d;
     padding: 0.75rem 1.25rem;
   }
