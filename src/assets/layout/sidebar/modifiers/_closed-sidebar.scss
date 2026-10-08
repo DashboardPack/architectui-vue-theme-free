@@ -43,7 +43,8 @@
       }
 
       .vsm-arrow,
-      .vsm-title {
+      .vsm-title,
+      .sidebar-menu-badge {
         display: none;
       }
 
@@ -97,7 +98,8 @@
         padding: 0 $layout-spacer-x $layout-spacer-x;
 
         .vsm-arrow,
-        .vsm-title {
+        .vsm-title,
+        .sidebar-menu-badge {
           display: block;
         }
 

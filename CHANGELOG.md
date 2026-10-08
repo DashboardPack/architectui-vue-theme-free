@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.1] - 2026-10-08 - **Security Patch & Design Refresh**
+
+### 🔒 **Security**
+
+- **`npm audit`: 10 vulnerabilities → 0.** Refreshes Vue, Vite/Vitest, jsdom and related transitive packages, clearing advisories in `@vue/server-renderer`, `undici`, `@vitest/mocker`, `brace-expansion`, `nanoid`, `postcss-selector-parser`, and `source-map-js`.
+
+### ⬆️ **Changed**
+
+- **Version bumped to 2.3.1.**
+- **Dependencies refreshed** within the validated compatibility window: Vue 3.5.43, Vue Router 5.4.0, Pinia 4.0.3, Bootstrap-Vue-Next 0.46.4, Vite 8.3.4, Vitest 4.1.11, ESLint 10.12, TypeScript-ESLint 8.71, jsdom 30.1, sass 1.105, Prettier 3.9.9, vue-tsc 3.3.12.
+- **Kept deliberately**: TypeScript remains on 6.0.3 until `vue-tsc` supports TypeScript 7's package export changes; Vitest remains on 4.x pending a dedicated major-version pass.
+
+### 🐛 **Fixed**
+
+- **Collapsed desktop sidebar badge alignment**: upgrade badges are hidden in icon-only mode and restored when the sidebar expands on hover.
+
+### 🎨 **Design**
+
+- Softened the dashboard canvas and card treatment with a lighter page background, subtle borders, calmer shadows, and cleaner card headers for consistency with the refreshed ArchitectUI template family.
+
+### ✅ **Verification**
+
+- `npm audit` — 0 vulnerabilities
+
 ## [2.3.0] - 2026-08-03 - **Security Patch & Dependency Refresh**
 
 ### 🔒 **Security**
