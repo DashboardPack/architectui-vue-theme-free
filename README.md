@@ -88,7 +88,7 @@ This template has been **completely modernized** and enhanced with significant i
 | Vue Router       | 5.4.0   | Client-side routing |
 | Pinia            | 4.0.3   | State management    |
 | Vite             | 8.3.4   | Build tool          |
-| Bootstrap        | 5.3.8   | CSS framework       |
+| Bootstrap        | 5.3.9   | CSS framework       |
 | BootstrapVueNext | 0.46.4  | Vue 3 components    |
 | Chart.js         | 4.5.1   | Data visualization  |
 | FontAwesome      | 7.3.1   | Icons               |
