@@ -781,7 +781,16 @@ export default defineComponent({
     padding: 1.5rem;
     margin: -1rem -1rem 0;
   }
+}
 
+/* .app-main__inner only has 15px side padding below 576px; match it so the header cannot widen the page */
+@media (max-width: 575.98px) {
+  .page-header-gradient {
+    margin: -15px -15px 0;
+  }
+}
+
+@media (max-width: 768px) {
   .stat-value {
     font-size: 1.25rem;
   }
