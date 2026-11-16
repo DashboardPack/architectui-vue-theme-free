@@ -1,6 +1,6 @@
 {
   "name": "architectui-vue-free",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -26,44 +26,51 @@
     "@googlemaps/js-api-loader": "^2.1.3",
     "@popperjs/core": "^2.11.8",
     "animate-sass": "^0.8.2",
-    "bootstrap": "^5.3.8",
-    "bootstrap-vue-next": "^0.46.4",
-    "chart.js": "^4.5.1",
+    "bootstrap": "^5.3.9",
+    "bootstrap-vue-next": "^1.2.4",
+    "chart.js": "^4.6.1",
     "leaflet": "^1.9.4",
     "pe7-icon": "^1.0.4",
     "perfect-scrollbar": "^1.5.6",
-    "pinia": "^4.0.3",
-    "vue": "^3.5.43",
+    "pinia": "^4.1.0",
+    "vue": "^3.5.45",
     "vue-chartjs": "^5.3.4",
-    "vue-router": "^5.4.0",
+    "vue-router": "^5.5.1",
     "vue-sidebar-menu": "^5.9.1",
     "vue3-perfect-scrollbar": "^2.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^26.6.4",
-    "@typescript-eslint/eslint-plugin": "^8.71.1",
-    "@typescript-eslint/parser": "^8.71.1",
-    "@vitejs/plugin-vue": "^6.0.9",
+    "@types/node": "^26.6.6",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/parser": "^8.72.2",
+    "@vitejs/plugin-vue": "^6.0.11",
     "@vitejs/plugin-vue-jsx": "^5.1.6",
-    "@vitest/ui": "^4.1.11",
-    "@vue/test-utils": "^2.5.1",
-    "autoprefixer": "^10.6.1",
-    "eslint": "^10.12.0",
-    "eslint-plugin-vue": "^10.11.1",
+    "@vitest/ui": "^5.1.0",
+    "@vue/test-utils": "^2.6.0",
+    "autoprefixer": "^10.6.2",
+    "eslint": "^10.15.0",
+    "eslint-plugin-vue": "^10.12.1",
     "husky": "^9.1.7",
-    "jsdom": "^30.1.2",
-    "lint-staged": "^17.6.0",
-    "postcss": "^8.5.29",
-    "prettier": "^3.9.9",
-    "sass": "^1.105.1",
+    "jsdom": "^31.0.1",
+    "lint-staged": "^17.6.1",
+    "postcss": "^8.5.33",
+    "prettier": "^3.10.1",
+    "sass": "^1.108.2",
     "typescript": "^6.0.3",
-    "vite": "^8.3.4",
-    "vitest": "^4.1.11",
-    "vue-tsc": "^3.3.12"
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0",
+    "vue-tsc": "^3.3.14"
   },
   "overrides": {
-    "postcss": "$postcss"
+    "postcss": "$postcss",
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.8"
+    },
+    "js-beautify": {
+      "glob": "^14.0.6",
+      "editorconfig": "^4.0.1"
+    }
   },
   "engines": {
     "node": ">=22"

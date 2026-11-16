@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.2] - 2026-11-16 - **Bootstrap 5.3.9 & Dependency Refresh**
+
+### ⬆️ **Changed**
+
+- **Bootstrap 5.3.8 → 5.3.9.**
+- **Bootstrap-Vue-Next 0.46 → 1.2**: major upgrade; every component the template registers (modals, dropdowns, tabs, tables, carousel, pagination, tooltips/popovers, forms) was exercised in a browser and behaves as before.
+- **Vitest 4 → 5** and **jsdom 30 → 31**.
+- **Dependencies refreshed**: Vue 3.5.45, Vue Router 5.5, Pinia 4.1, Vite 8.3.8, Chart.js 4.6, Sass 1.108, ESLint 10.15, Prettier 3.10, typescript-eslint 8.72, vue-tsc 3.3.14.
+- **Kept deliberately**: TypeScript stays on 6.0.3 — TypeScript 7 removes the `./lib/tsc` export `vue-tsc` loads, and typescript-eslint 8 only supports TypeScript `<6.1`.
+
+### 🔒 **Security**
+
+- `npm audit`: 0 vulnerabilities. Parent-scoped overrides move `minimatch`, `glob` and `editorconfig` (pulled in by `@typescript-eslint/typescript-estree` and `js-beautify`) to patched releases.
+
+### 🐛 **Fixed**
+
+- **Leaflet markers on the Maps page** returned 404 for `marker-icon.png` / `marker-shadow.png` under the `/architectui-vue-free/` base path; the images are now bundled.
+- **Mobile horizontal overflow** on Regular Tables (sortable-column labels escaped the scroll container) and on the Enhanced Analytics dashboard header (1px at 390px).
+- **Document title** no longer carries a stale `v2.2` version string.
+
+### ✅ **Verification**
+
+- Every route loaded in Chromium at 1440px and 390px: HTTP 200, no console errors, no failed requests, no horizontal overflow; interactive components exercised; screenshots diffed against the 2.3.1 build.
+- `npm audit` — 0 vulnerabilities; type-check, lint, build and 8 unit tests pass; lockfile verified with npm 10 and npm 11.
+
 ## [2.3.1] - 2026-10-08 - **Security Patch & Design Refresh**
 
 ### 🔒 **Security**

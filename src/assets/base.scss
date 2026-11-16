@@ -12,6 +12,12 @@ body {
   background: #f5f7fb;
 }
 
+// Keep absolutely-positioned helpers (e.g. sortable-column .visually-hidden labels)
+// inside the scroll container so they cannot widen the page on small screens.
+.table-responsive {
+  position: relative;
+}
+
 .app-main__outer {
   background:
     radial-gradient(circle at top left, rgba(59, 130, 246, 0.05), transparent 32rem),
