@@ -27,7 +27,7 @@
     "@popperjs/core": "^2.11.8",
     "animate-sass": "^0.8.2",
     "bootstrap": "^5.3.9",
-    "bootstrap-vue-next": "^0.46.4",
+    "bootstrap-vue-next": "^1.2.4",
     "chart.js": "^4.6.1",
     "leaflet": "^1.9.4",
     "pe7-icon": "^1.0.4",
